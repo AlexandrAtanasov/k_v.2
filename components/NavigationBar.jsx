@@ -1,35 +1,43 @@
-import React, { Children } from 'react'
+import React from 'react'
 import Link from 'next/link'
+import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
 
 export function NavigationBar() {
     return (
-        <React.Fragment>
-            <nav>
-                <Link href={'/'}><a>Main page</a></Link>
-                <Link href={'/price'}><a>Price page</a></Link>
-                <Link href={'/contacts'}><a>Contacts page</a></Link>
-                <Link href={'/sales'}><a>Sales page</a></Link>
-            </nav>
-
-            <style jsx>{`
-                nav {
-                    position: fixed;
-                    height: 50px;
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    background: darkblue;
-                    margin: auto;
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                }
-                nav a {
-                    color: white;
-                    text-decoration: none;
-                }
-            `}
-            </style>
-        </React.Fragment>
+        <Navbar bg="light" expand="lg">
+            <Link href={'/'} passHref>
+                <Navbar.Brand href="#home">
+                    k_v.2
+                </Navbar.Brand>
+            </Link>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                    <Link href={'/'} passHref>
+                        <Nav.Link>
+                            Home
+                        </Nav.Link>
+                    </Link>
+                    <Link href={'/price'} passHref>
+                        <Nav.Link>
+                            Price
+                        </Nav.Link>
+                    </Link>
+                    <NavDropdown title="Menu" id="basic-nav-dropdown">
+                        <Link href={'/contacts'} passHref>
+                            <NavDropdown.Item>
+                                Contacts
+                            </NavDropdown.Item>
+                        </Link>
+                        <NavDropdown.Divider />
+                        <Link href={'/sales'} passHref>
+                            <NavDropdown.Item>
+                                Sales
+                            </NavDropdown.Item>
+                        </Link>
+                    </NavDropdown>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     )
 }
