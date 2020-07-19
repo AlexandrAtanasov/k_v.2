@@ -1,10 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
+import classes from '../styles/navigationbar.module.scss'
 
 export function NavigationBar() {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar 
+            className={classes.color} 
+            expand="lg"
+        >
             <Link href={'/'} passHref>
                 <Navbar.Brand href="#home">
                     k_v.2
