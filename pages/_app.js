@@ -1,6 +1,6 @@
 // import App from 'next/app'
-// import '../styles/main.scss'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '../styles/main.scss'
 
 export default function MyApp({ Component, pageProps }) {
     return (

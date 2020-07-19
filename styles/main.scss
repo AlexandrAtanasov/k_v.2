@@ -1,0 +1,11 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#__next {
+    // start of basic properties 100% heights + h-100 for tags html and body - for sticky footer
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // end of properties for sticky footer
+}
