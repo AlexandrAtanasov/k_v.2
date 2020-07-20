@@ -22,6 +22,11 @@ export function NavigationBar() {
                             Home
                         </Nav.Link>
                     </Link>
+                    <Link href={'/basicpage'} passHref>
+                        <Nav.Link>
+                            Basic
+                        </Nav.Link>
+                    </Link>
                     <Link href={'/price'} passHref>
                         <Nav.Link>
                             Price
