@@ -1,4 +1,5 @@
 import { MainLayout } from '../../layouts/MainLayout'
+import { Table } from 'react-bootstrap'
 
 export default function PricePage() {
     return (
@@ -6,23 +7,36 @@ export default function PricePage() {
             title='Price page'
             description='Description for Price page'
         >
-            <h1>Price page</h1>
-            <p>Ullamco nisi in esse ipsum sunt sit mollit irure esse amet amet excepteur.orem</p>
-            <p>Nostrud fugiat minim ipsum reprehenderit laborum do ipsum dolor. Lorem qui Lorem in quis qui irure in sunt deserunt consequat deserunt culpa. Nisi quis laboris culpa commodo exercitation do exercitation minim nulla dolor laborum. Nulla Lorem est mollit laboris. Ea minim pariatur nulla ullamco ad tempor id ad aliqua dolor et. Ipsum culpa excepteur sunt tempor veniam officia exercitation elit anim ea occaecat amet et. Nisi labore sint cupidatat proident ad occaecat dolor anim in voluptate ad eiusmod cillum.</p>
-            <p>Commodo minim nisi esse est ullamco consequat. Mollit ullamco duis esse esse voluptate proident elit eu commodo minim. Id veniam occaecat aliqua reprehenderit aliqua voluptate fugiat aute cupidatat duis. Minim laborum est ea sint anim amet irure veniam qui velit officia. Aute consequat sint enim dolor non amet veniam cupidatat. Ad consequat pariatur officia elit cupidatat excepteur duis reprehenderit duis fugiat irure nisi ipsum.</p>
-            <p>Minim magna reprehenderit in eu in aute aute aute eiusmod deserunt cillum nulla. Aute voluptate quis excepteur pariatur. Sunt eu Lorem consequat fugiat reprehenderit commodo duis minim do. Ullamco irure do ipsum nulla irure ut in laborum occaecat consequat Lorem elit in.</p>
-            <p>Ullamco nisi in esse ipsum sunt sit mollit irure esse amet amet excepteur.orem</p>
-            <p>Nostrud fugiat minim ipsum reprehenderit laborum do ipsum dolor. Lorem qui Lorem in quis qui irure in sunt deserunt consequat deserunt culpa. Nisi quis laboris culpa commodo exercitation do exercitation minim nulla dolor laborum. Nulla Lorem est mollit laboris. Ea minim pariatur nulla ullamco ad tempor id ad aliqua dolor et. Ipsum culpa excepteur sunt tempor veniam officia exercitation elit anim ea occaecat amet et. Nisi labore sint cupidatat proident ad occaecat dolor anim in voluptate ad eiusmod cillum.</p>
-            <p>Commodo minim nisi esse est ullamco consequat. Mollit ullamco duis esse esse voluptate proident elit eu commodo minim. Id veniam occaecat aliqua reprehenderit aliqua voluptate fugiat aute cupidatat duis. Minim laborum est ea sint anim amet irure veniam qui velit officia. Aute consequat sint enim dolor non amet veniam cupidatat. Ad consequat pariatur officia elit cupidatat excepteur duis reprehenderit duis fugiat irure nisi ipsum.</p>
-            <p>Minim magna reprehenderit in eu in aute aute aute eiusmod deserunt cillum nulla. Aute voluptate quis excepteur pariatur. Sunt eu Lorem consequat fugiat reprehenderit commodo duis minim do. Ullamco irure do ipsum nulla irure ut in laborum occaecat consequat Lorem elit in.</p>
-            <p>Ullamco nisi in esse ipsum sunt sit mollit irure esse amet amet excepteur.orem</p>
-            <p>Nostrud fugiat minim ipsum reprehenderit laborum do ipsum dolor. Lorem qui Lorem in quis qui irure in sunt deserunt consequat deserunt culpa. Nisi quis laboris culpa commodo exercitation do exercitation minim nulla dolor laborum. Nulla Lorem est mollit laboris. Ea minim pariatur nulla ullamco ad tempor id ad aliqua dolor et. Ipsum culpa excepteur sunt tempor veniam officia exercitation elit anim ea occaecat amet et. Nisi labore sint cupidatat proident ad occaecat dolor anim in voluptate ad eiusmod cillum.</p>
-            <p>Commodo minim nisi esse est ullamco consequat. Mollit ullamco duis esse esse voluptate proident elit eu commodo minim. Id veniam occaecat aliqua reprehenderit aliqua voluptate fugiat aute cupidatat duis. Minim laborum est ea sint anim amet irure veniam qui velit officia. Aute consequat sint enim dolor non amet veniam cupidatat. Ad consequat pariatur officia elit cupidatat excepteur duis reprehenderit duis fugiat irure nisi ipsum.</p>
-            <p>Minim magna reprehenderit in eu in aute aute aute eiusmod deserunt cillum nulla. Aute voluptate quis excepteur pariatur. Sunt eu Lorem consequat fugiat reprehenderit commodo duis minim do. Ullamco irure do ipsum nulla irure ut in laborum occaecat consequat Lorem elit in.</p>
-            <p>Ullamco nisi in esse ipsum sunt sit mollit irure esse amet amet excepteur.orem</p>
-            <p>Nostrud fugiat minim ipsum reprehenderit laborum do ipsum dolor. Lorem qui Lorem in quis qui irure in sunt deserunt consequat deserunt culpa. Nisi quis laboris culpa commodo exercitation do exercitation minim nulla dolor laborum. Nulla Lorem est mollit laboris. Ea minim pariatur nulla ullamco ad tempor id ad aliqua dolor et. Ipsum culpa excepteur sunt tempor veniam officia exercitation elit anim ea occaecat amet et. Nisi labore sint cupidatat proident ad occaecat dolor anim in voluptate ad eiusmod cillum.</p>
-            <p>Commodo minim nisi esse est ullamco consequat. Mollit ullamco duis esse esse voluptate proident elit eu commodo minim. Id veniam occaecat aliqua reprehenderit aliqua voluptate fugiat aute cupidatat duis. Minim laborum est ea sint anim amet irure veniam qui velit officia. Aute consequat sint enim dolor non amet veniam cupidatat. Ad consequat pariatur officia elit cupidatat excepteur duis reprehenderit duis fugiat irure nisi ipsum.</p>
-            <p>Minim magna reprehenderit in eu in aute aute aute eiusmod deserunt cillum nulla. Aute voluptate quis excepteur pariatur. Sunt eu Lorem consequat fugiat reprehenderit commodo duis minim do. Ullamco irure do ipsum nulla irure ut in laborum occaecat consequat Lorem elit in.</p>
+            <Table responsive>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        {Array.from({ length: 12 }).map((_, index) => (
+                            <th key={index}>Table heading</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        {Array.from({ length: 12 }).map((_, index) => (
+                            <td key={index}>Table cell {index}</td>
+                        ))}
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        {Array.from({ length: 12 }).map((_, index) => (
+                            <td key={index}>Table cell {index}</td>
+                        ))}
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        {Array.from({ length: 12 }).map((_, index) => (
+                            <td key={index}>Table cell {index}</td>
+                        ))}
+                    </tr>
+                </tbody>
+            </Table>
         </MainLayout>
     )
 }  
