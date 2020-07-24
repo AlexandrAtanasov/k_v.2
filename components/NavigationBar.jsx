@@ -4,6 +4,23 @@ import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
 import classes from '../styles/navigationbar.module.scss'
 
 export function NavigationBar() {
+
+    const menu_additional = [
+        {"id": 1, "text": "Et nostrud ullamco", "link": "Et-nostrud-ullamco-nulla"},
+        {"id": 2, "text": "Mollit voluptate voluptate", "link": "Mollit-voluptate-voluptate"},
+        {"id": 3, "text": "Nostrud duis veniam non ipsum", "link": "Nostrud-duis-veniam-non-ipsum"},
+        {"id": 4, "text": "Deserunt aliquip voluptate", "link": "Deserunt-aliquip-voluptate"},
+        {"id": 5, "text": "Anim fugiat minim nulla sint duis", "link": "Anim-fugiat-minim-nulla-sint-duis"}
+    ];
+
+    const menu_resolvable = [
+        {"id": 1, "text": "Est sit deserunt"},
+        {"id": 2, "text": "Dolore magna consequat"},
+        {"id": 3, "text": "Fugiat dolor pariatur"},
+        {"id": 4, "text": "Eiusmod aliqua minim"},
+        {"id": 5, "text": "Reprehenderit sint officia"}
+    ]
+
     return (
         <Navbar 
             className={classes.color} 
@@ -32,19 +49,42 @@ export function NavigationBar() {
                             Price
                         </Nav.Link>
                     </Link>
-                    <NavDropdown title="Menu" id="basic-nav-dropdown">
-                        <Link href={'/contacts'} passHref>
-                            <NavDropdown.Item>
-                                Contacts
-                            </NavDropdown.Item>
-                        </Link>
-                        <NavDropdown.Divider />
-                        <Link href={'/sales'} passHref>
-                            <NavDropdown.Item>
-                                Sales
-                            </NavDropdown.Item>
-                        </Link>
+                    <Link href={'/sales'} passHref>
+                        <Nav.Link>
+                            Sales
+                        </Nav.Link>
+                    </Link>
+
+                    <NavDropdown title="Additional" id="basic-nav-dropdown">
+                        {menu_additional.map(menu => {
+                            return(
+                                <div key={menu.id}>
+                                    <Link href={`/additional/[additional]`} as={`/additional/${menu.link}`} passHref>
+                                        <NavDropdown.Item>
+                                            {menu.text}
+                                        </NavDropdown.Item>
+                                    </Link>
+                                    <NavDropdown.Divider />
+                                </div>
+                            )
+                        })}
                     </NavDropdown>
+
+                    <NavDropdown title="Resolvable" id="basic-nav-dropdown">
+                        {menu_resolvable.map(menu => {
+                            return(
+                                <div key={menu.id}>
+                                    <Link href={`/resolvable/[resolvable]`} as={`/resolvable/${menu.text}`} passHref>
+                                        <NavDropdown.Item>
+                                            {menu.text}
+                                        </NavDropdown.Item>
+                                    </Link>
+                                    <NavDropdown.Divider />
+                                </div>
+                            )
+                        })}
+                    </NavDropdown>
+
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

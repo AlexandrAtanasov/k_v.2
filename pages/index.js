@@ -3,53 +3,36 @@ import { MainLayout } from '../layouts/MainLayout'
 import { Carousel } from 'react-bootstrap'
 
 export default function HomePage() {
+  
+  const images = [
+    {"id": 1, "src": "/img/carousel/img_1.png", "alt":"First", "h3":"First img", "p":"Est sit deserunt"},
+    {"id": 2, "src": "/img/carousel/img_2.png", "alt":"Second", "h3":"Second img", "p":"Qui cillum nisi commodo"},
+    {"id": 3, "src": "/img/carousel/img_3.png", "alt":"Fird", "h3":"Third img", "p":"Culpa et elit cupidatat"},
+  ]
+
   return (
     <MainLayout
       title='Main page'
       description='Description for Main page'
     >
       <h1>Main page</h1>
-
       <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
+        {images.map(img => {
+          return(
+            <Carousel.Item key={img.id}>
+              <img
+                className="d-block w-100"
+                src={`${img.src}`}
+                alt={img.alt}
+              />
+              <Carousel.Caption>
+                <h3>{img.h3}</h3>
+                <p>{img.p}</p>
+              </Carousel.Caption>
+            </Carousel.Item>            
+          )
+        })}
       </Carousel>
-
-
-
     </MainLayout>
   )
 }
