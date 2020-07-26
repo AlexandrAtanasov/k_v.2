@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { MainLayout } from '../layouts/MainLayout'
-import { Carousel } from 'react-bootstrap'
+import { CarouselComponent } from '../components/CarouselComponent'
 
 export default function HomePage() {
   
@@ -16,23 +16,8 @@ export default function HomePage() {
       description='Description for Main page'
     >
       <h1>Main page</h1>
-      <Carousel>
-        {images.map(img => {
-          return(
-            <Carousel.Item key={img.id}>
-              <img
-                className="d-block w-100"
-                src={`${img.src}`}
-                alt={img.alt}
-              />
-              <Carousel.Caption>
-                <h3>{img.h3}</h3>
-                <p>{img.p}</p>
-              </Carousel.Caption>
-            </Carousel.Item>            
-          )
-        })}
-      </Carousel>
+      <CarouselComponent />
+      
     </MainLayout>
   )
 }
