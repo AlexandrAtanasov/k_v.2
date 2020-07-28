@@ -1,25 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
+import { additional_menu, resolvable_menu } from '../data/menu'
 import classes from '../styles/navigationbar.module.scss'
 
 export function NavigationBar() {
-
-    const menu_additional = [
-        {"id": 1, "text": "Et nostrud ullamco", "link": "Et-nostrud-ullamco-nulla"},
-        {"id": 2, "text": "Mollit voluptate voluptate", "link": "Mollit-voluptate-voluptate"},
-        {"id": 3, "text": "Nostrud duis veniam non ipsum", "link": "Nostrud-duis-veniam-non-ipsum"},
-        {"id": 4, "text": "Deserunt aliquip voluptate", "link": "Deserunt-aliquip-voluptate"},
-        {"id": 5, "text": "Anim fugiat minim nulla sint duis", "link": "Anim-fugiat-minim-nulla-sint-duis"}
-    ];
-
-    const menu_resolvable = [
-        {"id": 1, "text": "Est sit deserunt"},
-        {"id": 2, "text": "Dolore magna consequat"},
-        {"id": 3, "text": "Fugiat dolor pariatur"},
-        {"id": 4, "text": "Eiusmod aliqua minim"},
-        {"id": 5, "text": "Reprehenderit sint officia"}
-    ]
 
     return (
         <Navbar 
@@ -39,11 +24,6 @@ export function NavigationBar() {
                             Home
                         </Nav.Link>
                     </Link>
-                    <Link href={'/basicpage'} passHref>
-                        <Nav.Link>
-                            Basic
-                        </Nav.Link>
-                    </Link>
                     <Link href={'/price'} passHref>
                         <Nav.Link>
                             Price
@@ -56,7 +36,7 @@ export function NavigationBar() {
                     </Link>
 
                     <NavDropdown title="Additional" id="basic-nav-dropdown">
-                        {menu_additional.map(menu => {
+                        {additional_menu.map(menu => {
                             return(
                                 <div key={menu.id}>
                                     <Link href={`/additional/[additional]`} as={`/additional/${menu.link}`} passHref>
@@ -71,10 +51,10 @@ export function NavigationBar() {
                     </NavDropdown>
 
                     <NavDropdown title="Resolvable" id="basic-nav-dropdown">
-                        {menu_resolvable.map(menu => {
+                        {resolvable_menu.map(menu => {
                             return(
                                 <div key={menu.id}>
-                                    <Link href={`/resolvable/[resolvable]`} as={`/resolvable/${menu.text}`} passHref>
+                                    <Link href={`/resolvable/[resolvable]`} as={`/resolvable/${menu.link}`} passHref>
                                         <NavDropdown.Item>
                                             {menu.text}
                                         </NavDropdown.Item>

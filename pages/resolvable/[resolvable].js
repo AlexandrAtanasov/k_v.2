@@ -1,22 +1,75 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { CardComponent } from '../../components/CardComponent'
 import { useRouter } from 'next/router'
+import { server } from '../../config'
+import useSWR from 'swr'
 
-export default function ResolvablePage() {
 
-    const router = useRouter()
-    const pageId  = router.query.resolvable
+const fetcher = async (url) => {
+    const res = await fetch(url)
+    const data = await res.json()
+    if (res.status !== 200) {
+        throw new Error(data.message)
+    }
+    return data
+}
 
-    return (
+ResolvablePage.getInitialProps = async ( {query} ) => {
+    // console.log(query)
+    // const page = (query.resolvable == 'resolvable') ?
+    const data = await fetcher(`${server}/api/resolvable/${query.resolvable}`)
+    return { data }
+}
+  
+export default function ResolvablePage (props) {
+    const { query } = useRouter()
+    const initialData = props.data
+    const { data, error } = useSWR(
+        () => query.resolvable && `/api/resolvable/${query.resolvable}`,
+            fetcher, 
+            { initialData }
+    )
+
+    // then something go wrong
+    if (error) return (
         <MainLayout
-            title={pageId}
-            description={`Description for ${pageId} page`}
+            title='Oops!'
+            description={`Something go wrong`}
+        >
+            <p>{error.message}</p>
+        </MainLayout>
+    )
+
+    // then data is loading
+    if (!data) return (
+        <MainLayout
+            title='Loading data'
+            description={`Loading data for this page`}
+        >
+            <p>Loading...</p>
+        </MainLayout>
+    )
+  
+    // then all data is loaded
+    return (
+        // <MainLayout >
+        //     <Card>
+        //         <Card.Header>{`Header for card ${data.id}`}</Card.Header>
+        //         <Card.Body>
+        //             <Card.Title>{data.title}</Card.Title>
+        //             {data.text}
+        //         </Card.Body>
+        //     </Card>
+        // </MainLayout>
+
+        <MainLayout
+            title={data.title}
+            description={`Description for ${data.id} page`}
         >
             <CardComponent
-                cardHeader={`Header for ${pageId}`}
-                cardTitle={`Title for ${pageId}`}
-                cardText={`Text for ${pageId}. Minim anim cillum dolor dolore est aliquip.`}
+                cardHeader={data.title}
+                cardText={data.text}
             />
         </MainLayout>
     )
-}  
+}
