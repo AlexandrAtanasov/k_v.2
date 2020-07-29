@@ -1,8 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
-import { additional_menu, resolvable_menu } from '../data/menu'
+import { OrderCallButton } from '../components/OrderCallButton'
 import classes from '../styles/navigationbar.module.scss'
+import { additional_menu, resolvable_menu } from '../data/menu'
 
 export function NavigationBar() {
 
@@ -67,6 +68,7 @@ export function NavigationBar() {
 
                 </Nav>
             </Navbar.Collapse>
+            <OrderCallButton />
         </Navbar>
     )
 }

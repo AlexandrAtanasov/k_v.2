@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Card, Button } from 'react-bootstrap'
+import { OrderCallButton } from '../components/OrderCallButton'
 
 export function CardComponent( {cardHeader, cardTitle, cardText} ) {
     return (
@@ -15,9 +16,7 @@ export function CardComponent( {cardHeader, cardTitle, cardText} ) {
                 <Card.Text>
                     {cardText}
                 </Card.Text>
-                <Button variant="primary">
-                    Go somewhere
-                </Button>
+                <OrderCallButton />
             </Card.Body>
         </Card>
     )
