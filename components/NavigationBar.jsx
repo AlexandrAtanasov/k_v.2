@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
-import { OrderCallButton } from '../components/OrderCallButton'
+import { OrderCallButton } from './OrderCallButtonAndModal'
 import classes from '../styles/navigationbar.module.scss'
 import { additional_menu, resolvable_menu } from '../data/menu'
 

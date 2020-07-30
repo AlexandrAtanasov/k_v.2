@@ -1,7 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import { Card, Button } from 'react-bootstrap'
-import { OrderCallButton } from '../components/OrderCallButton'
+import { OrderCallButton } from './OrderCallButtonAndModal'
 
 export function CardComponent( {cardHeader, cardTitle, cardText} ) {
     return (
