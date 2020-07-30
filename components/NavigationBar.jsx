@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
-import { OrderCallButton } from './OrderCallButtonAndModal'
+import { OrderCallButton } from '../components/OrderCallButtonAndModal'
 import classes from '../styles/navigationbar.module.scss'
 import { additional_menu, resolvable_menu } from '../data/menu'
 
@@ -35,6 +35,15 @@ export function NavigationBar() {
                             Sales
                         </Nav.Link>
                     </Link>
+
+                    <NavDropdown title="About" id="basic-nav-dropdown">
+                        <Link href={`/persons`} passHref>
+                            <NavDropdown.Item>
+                                Persons
+                            </NavDropdown.Item>
+                        </Link>
+                        <NavDropdown.Divider />
+                    </NavDropdown>
 
                     <NavDropdown title="Additional" id="basic-nav-dropdown">
                         {additional_menu.map(menu => {
