@@ -11,6 +11,7 @@ export function NavigationBar() {
         <Navbar 
             className={classes.color} 
             expand="lg"
+            sticky="top"
         >
             <Link href={'/'} passHref>
                 <Navbar.Brand href="#home">
