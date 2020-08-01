@@ -2,8 +2,10 @@ import { MainLayout } from '../../layouts/MainLayout'
 import { Container, Row, Col, Card, Button, Tabs, Tab, Nav, CardDeck } from 'react-bootstrap'
 
 import classes from '../../styles/persons.module.scss'
+import { doctors } from '../../data/persons/doctors'
 
 export default function PersonsPage() {
+    console.log(doctors)
     return (
         <MainLayout
             title='Sales page'
