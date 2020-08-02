@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { MainLayout } from '../layouts/MainLayout'
 import { CarouselComponent } from '../components/CarouselComponent'
+import { MainActivities } from '../components/Main/MainActivities'
 
 export default function HomePage() {
   
@@ -9,8 +10,8 @@ export default function HomePage() {
       title='Main page'
       description='Description for Main page'
     >
-      <h1>Main page</h1>
       <CarouselComponent />
+      <MainActivities />
       
     </MainLayout>
   )
