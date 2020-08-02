@@ -1,11 +1,13 @@
 import { MainLayout } from '../../layouts/MainLayout'
-import { Container, Row, Col, Card, Button, Tabs, Tab, Nav, CardDeck } from 'react-bootstrap'
+import { Row, Col, Card, Tab, Nav, CardDeck } from 'react-bootstrap'
+
+import { doctors } from '../../data/persons/doctors'
+import { administrators } from '../../data/persons/administrators'
+import { trainers } from '../../data/persons/trainers'
 
 import classes from '../../styles/persons.module.scss'
-import { doctors } from '../../data/persons/doctors'
 
 export default function PersonsPage() {
-    console.log(doctors)
     return (
         <MainLayout
             title='Sales page'
@@ -21,12 +23,12 @@ export default function PersonsPage() {
                         </Col>
                         <Col lg='auto'>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">Admins</Nav.Link>
+                                <Nav.Link eventKey="second">Administrators</Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col lg='auto'>
                     <Nav.Item>
-                        <Nav.Link eventKey="third">Treners</Nav.Link>
+                        <Nav.Link eventKey="third">Trainers</Nav.Link>
                     </Nav.Item>
                 </Col>
                     </Nav>
@@ -37,50 +39,23 @@ export default function PersonsPage() {
                             <Tab.Pane eventKey="first">
                                 <Card>
                                     <Card.Header>
-                                        Docs
+                                        Doctors
                                     </Card.Header>
                                     <Card.Body>
                                         <CardDeck>
-                                        <Card>
-                                            <Card.Img variant="top" src="holder.js/100px160" />
-                                            <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This is a wider card with supporting text below as a natural lead-in to
-                                                additional content. This content is a little bit longer.
-                                            </Card.Text>
-                                            </Card.Body>
-                                            <Card.Footer>
-                                            <small className="text-muted">Last updated 3 mins ago</small>
-                                            </Card.Footer>
-                                        </Card>
-                                        <Card>
-                                            <Card.Img variant="top" src="holder.js/100px160" />
-                                            <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This card has supporting text below as a natural lead-in to additional
-                                                content.{' '}
-                                            </Card.Text>
-                                            </Card.Body>
-                                            <Card.Footer>
-                                            <small className="text-muted">Last updated 3 mins ago</small>
-                                            </Card.Footer>
-                                        </Card>
-                                        <Card>
-                                            <Card.Img variant="top" src="holder.js/100px160" />
-                                            <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This is a wider card with supporting text below as a natural lead-in to
-                                                additional content. This card has even longer content than the first to
-                                                show that equal height action.
-                                            </Card.Text>
-                                            </Card.Body>
-                                            <Card.Footer>
-                                            <small className="text-muted">Last updated 3 mins ago</small>
-                                            </Card.Footer>
-                                        </Card>
+                                            {doctors.map(person => {
+                                                return(
+                                                    <Card key={person.id}>
+                                                        <Card.Img variant="top" src={person.img} />
+                                                        <Card.Body>
+                                                        <Card.Title>{person.FIO}</Card.Title>
+                                                        <Card.Text>
+                                                            {person.text}
+                                                        </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>
+                                                )
+                                            })}
                                         </CardDeck>
                                     </Card.Body>
                                 </Card>
@@ -88,50 +63,23 @@ export default function PersonsPage() {
                             <Tab.Pane eventKey="second">
                                 <Card>
                                     <Card.Header>
-                                        Adimns
+                                        Administrators
                                     </Card.Header>
                                     <Card.Body>
                                         <CardDeck>
-                                        <Card>
-                                            <Card.Img variant="top" src="holder.js/100px160" />
-                                            <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This is a wider card with supporting text below as a natural lead-in to
-                                                additional content. This content is a little bit longer.
-                                            </Card.Text>
-                                            </Card.Body>
-                                            <Card.Footer>
-                                            <small className="text-muted">Last updated 3 mins ago</small>
-                                            </Card.Footer>
-                                        </Card>
-                                        <Card>
-                                            <Card.Img variant="top" src="holder.js/100px160" />
-                                            <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This card has supporting text below as a natural lead-in to additional
-                                                content.{' '}
-                                            </Card.Text>
-                                            </Card.Body>
-                                            <Card.Footer>
-                                            <small className="text-muted">Last updated 3 mins ago</small>
-                                            </Card.Footer>
-                                        </Card>
-                                        <Card>
-                                            <Card.Img variant="top" src="holder.js/100px160" />
-                                            <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This is a wider card with supporting text below as a natural lead-in to
-                                                additional content. This card has even longer content than the first to
-                                                show that equal height action.
-                                            </Card.Text>
-                                            </Card.Body>
-                                            <Card.Footer>
-                                            <small className="text-muted">Last updated 3 mins ago</small>
-                                            </Card.Footer>
-                                        </Card>
+                                            {administrators.map(person => {
+                                                return(
+                                                    <Card key={person.id}>
+                                                        <Card.Img variant="top" src={person.img} />
+                                                        <Card.Body>
+                                                        <Card.Title>{person.FIO}</Card.Title>
+                                                        <Card.Text>
+                                                            {person.text}
+                                                        </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>
+                                                )
+                                            })}                                        
                                         </CardDeck>
                                     </Card.Body>
                                 </Card>
@@ -139,50 +87,23 @@ export default function PersonsPage() {
                             <Tab.Pane eventKey="third">
                                 <Card>
                                     <Card.Header>
-                                        Treners
+                                        Trainers
                                     </Card.Header>
                                     <Card.Body>
                                         <CardDeck>
-                                        <Card>
-                                            <Card.Img variant="top" src="holder.js/100px160" />
-                                            <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This is a wider card with supporting text below as a natural lead-in to
-                                                additional content. This content is a little bit longer.
-                                            </Card.Text>
-                                            </Card.Body>
-                                            <Card.Footer>
-                                            <small className="text-muted">Last updated 3 mins ago</small>
-                                            </Card.Footer>
-                                        </Card>
-                                        <Card>
-                                            <Card.Img variant="top" src="holder.js/100px160" />
-                                            <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This card has supporting text below as a natural lead-in to additional
-                                                content.{' '}
-                                            </Card.Text>
-                                            </Card.Body>
-                                            <Card.Footer>
-                                            <small className="text-muted">Last updated 3 mins ago</small>
-                                            </Card.Footer>
-                                        </Card>
-                                        <Card>
-                                            <Card.Img variant="top" src="holder.js/100px160" />
-                                            <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This is a wider card with supporting text below as a natural lead-in to
-                                                additional content. This card has even longer content than the first to
-                                                show that equal height action.
-                                            </Card.Text>
-                                            </Card.Body>
-                                            <Card.Footer>
-                                            <small className="text-muted">Last updated 3 mins ago</small>
-                                            </Card.Footer>
-                                        </Card>
+                                            {trainers.map(person => {
+                                                return(
+                                                    <Card key={person.id}>
+                                                        <Card.Img variant="top" src={person.img} />
+                                                        <Card.Body>
+                                                        <Card.Title>{person.FIO}</Card.Title>
+                                                        <Card.Text>
+                                                            {person.text}
+                                                        </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>
+                                                )
+                                            })}                                        
                                         </CardDeck>
                                     </Card.Body>
                                 </Card>
