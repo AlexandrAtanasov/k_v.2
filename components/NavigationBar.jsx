@@ -9,9 +9,10 @@ export function NavigationBar() {
 
     return (
         <Navbar 
-            className={classes.color} 
+            className={classes.color}
             expand="lg"
-            sticky="top"
+            fixed="top"
+            // sticky="top"
         >
             <Link href={'/'} passHref>
                 <Navbar.Brand href="#home">

@@ -1,5 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 #__next {
@@ -10,6 +12,10 @@ body {
     // end of properties for sticky footer
 }
 
+nav {
+    // height: 4rem;
+}
+
 main {
-    margin: 1rem;
+    margin-top: 56px;
 }
