@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { MainLayout } from '../layouts/MainLayout'
-import { CarouselComponent } from '../components/CarouselComponent'
+import { CarouselComponent } from '../components/Main/CarouselComponent'
 import { MainActivities } from '../components/Main/MainActivities'
 
 export default function HomePage() {

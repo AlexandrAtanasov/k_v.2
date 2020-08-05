@@ -22,16 +22,19 @@ export function NavigationBar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
+                    
                     <Link href={'/'} passHref>
                         <Nav.Link>
                             Home
                         </Nav.Link>
                     </Link>
+                    
                     <Link href={'/price'} passHref>
                         <Nav.Link>
                             Price
                         </Nav.Link>
                     </Link>
+                    
                     <Link href={'/sales'} passHref>
                         <Nav.Link>
                             Sales
@@ -79,6 +82,7 @@ export function NavigationBar() {
 
                 </Nav>
             </Navbar.Collapse>
+            
             <OrderCallButton />
         </Navbar>
     )

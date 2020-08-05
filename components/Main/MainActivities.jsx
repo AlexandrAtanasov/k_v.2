@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, Row, Col, Card, Image } from 'react-bootstrap'
-import { activities } from '../../data/img/main_activities/main_actvities'  
+import { Container, Row, Col, Image } from 'react-bootstrap'
+import { activities } from '../../data/main/activities/main_actvities'  
 
 export function MainActivities() {
     
@@ -33,5 +33,5 @@ export function MainActivities() {
                 })}
             </Row>
         </Container>
-)
+    )
 }

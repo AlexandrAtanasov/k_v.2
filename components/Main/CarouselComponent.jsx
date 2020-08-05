@@ -1,17 +1,12 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
+import { carousel } from '../../data/main/carousel/main_carousel'
 
 export function CarouselComponent() {
 
-    const images = [
-        {"id": 1, "src": "/img/main/carousel/img_1.png", "alt":"First", "h3":"First img", "p":"Est sit deserunt"},
-        {"id": 2, "src": "/img/main/carousel/img_2.png", "alt":"Second", "h3":"Second img", "p":"Qui cillum nisi commodo"},
-        {"id": 3, "src": "/img/main/carousel/img_3.png", "alt":"Fird", "h3":"Third img", "p":"Culpa et elit cupidatat"},
-      ]    
-
     return (
         <Carousel>
-            {images.map(img => {
+            {carousel.map(img => {
                 return (
                     <Carousel.Item key={img.id}>
                         <img
@@ -19,7 +14,7 @@ export function CarouselComponent() {
                             src={`${img.src}`}
                             alt={img.alt}
                         />
-                        <Carousel.Caption>
+                        <Carousel.Caption className="d-flex flex-column h-100 align-items-center justify-content-center">
                             <h3>{img.h3}</h3>
                             <p>{img.p}</p>
                         </Carousel.Caption>
