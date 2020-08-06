@@ -16,7 +16,14 @@ export function NavigationBar() {
         >
             <Link href={'/'} passHref>
                 <Navbar.Brand href="#home">
-                    k_v.2
+                    <img
+                        alt=""
+                        src="img/main/navbar/logoooo.png"
+                        width="auto"
+                        height="30"
+                        className="d-inline-block align-top"
+                    />{' '}
+                    Кинезис
                 </Navbar.Brand>
             </Link>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -82,7 +89,7 @@ export function NavigationBar() {
 
                 </Nav>
             </Navbar.Collapse>
-            
+
             <OrderCallButton />
         </Navbar>
     )
