@@ -20,9 +20,20 @@ main {
     margin-top: 56px;
 }
 
-// @media (min-width: 768px) {
-//     .carousel {
-//         height: 70vh;
-//         overflow: hidden;
-//     }
-// }
+@media (min-width: 768px) {
+    .carousel {
+        height: 90vh;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel {
+        height: 80vh;
+        overflow: hidden;
+    }  
+    .carousel-item img {
+        width: auto!important;
+        height: 80vh;
+    }
+}

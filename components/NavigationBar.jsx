@@ -87,10 +87,12 @@ export function NavigationBar() {
                         })}
                     </NavDropdown>
 
+
                 </Nav>
             </Navbar.Collapse>
 
             <OrderCallButton />
+
         </Navbar>
     )
 }
