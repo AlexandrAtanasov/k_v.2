@@ -5,7 +5,7 @@ import { carousel } from '../../data/main/carousel/main_carousel'
 export function CarouselComponent() {
 
     return (
-        <Carousel>
+        <Carousel style={{marginTop: '-56px'}}>
             {carousel.map(img => {
                 return (
                     <Carousel.Item key={img.id}>

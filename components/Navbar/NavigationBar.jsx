@@ -1,15 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
-import { OrderCallButton } from '../components/OrderCallButtonAndModal'
-import classes from '../styles/navigationbar.module.scss'
-import { additional_menu, resolvable_menu } from '../data/menu'
+import { OrderCallButton } from '../OrderCallButtonAndModal'
+// import classes from '../../styles/navigationbar.module.scss'
+import { additional_menu, resolvable_menu } from '../../data/menu'
+
+import useDocumentScrollThrottled from './useDocumentScrollThrottled';
 
 export function NavigationBar() {
 
+    const [shouldHideHeader, setShouldHideHeader] = useState(false);
+    const [shouldShowShadow, setShouldShowShadow] = useState(false);
+  
+    const MINIMUM_SCROLL = 80;
+    const TIMEOUT_DELAY = 400;
+  
+    useDocumentScrollThrottled(callbackData => {
+      const { previousScrollTop, currentScrollTop } = callbackData;
+      const isScrolledDown = previousScrollTop < currentScrollTop;
+      const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+  
+      setShouldShowShadow(currentScrollTop > 2);
+  
+      setTimeout(() => {
+        setShouldHideHeader(isScrolledDown && isMinimumScrolled);
+      }, TIMEOUT_DELAY);
+    });
+  
+    const shadowStyle = shouldShowShadow ? 'shadow' : '';
+    const hiddenStyle = shouldHideHeader ? 'hidden' : '';
+
     return (
+    <>
         <Navbar 
-            className={classes.color}
+            // className={classes.color}
+            className={`header ${shadowStyle} ${hiddenStyle}`}
             expand="lg"
             fixed="top"
             // sticky="top"
@@ -94,5 +119,39 @@ export function NavigationBar() {
             <OrderCallButton />
 
         </Navbar>
+        <style jsx global>
+            {`
+            .header {
+                // position: fixed;
+                // top: 0;
+                // left: 0;
+                // display: flex;
+                // align-items: center;
+                // justify-content: space-between;
+                // width: 100%;
+                // height: 86px;
+                // background-color: rgba(0, 0, 0, 0.0);
+                // background-color: darkgreen;
+                // color: #333;
+                transform: translateY(0);
+                transition: transform 0.3s ease;
+              }
+              .header:hover,
+              .header:active {
+                background-color: #fff;
+              }
+              
+              .header.shadow {
+                background-color: #fff;
+                transition: background-color 0.5s ease;
+                box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
+              }
+              
+              .header.hidden {
+                transform: translateY(-110%)!important;
+              }
+            `}
+        </style>
+    </>
     )
 }
