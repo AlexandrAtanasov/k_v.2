@@ -4,6 +4,7 @@ import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
 import { OrderCallButton } from '../OrderCallButtonAndModal'
 // import classes from '../../styles/navigationbar.module.scss'
 import { additional_menu, resolvable_menu } from '../../data/menu'
+import { server } from '../../config'
 
 import useDocumentScrollThrottled from './useDocumentScrollThrottled';
 
@@ -43,7 +44,7 @@ export function NavigationBar() {
                 <Navbar.Brand href="#home">
                     <img
                         alt=""
-                        src="img/main/navbar/logoooo.png"
+                        src={`${server}/img/main/navbar/logoooo.png`}
                         width="auto"
                         height="30"
                         className="d-inline-block align-top"
