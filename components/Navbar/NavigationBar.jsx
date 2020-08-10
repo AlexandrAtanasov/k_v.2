@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
-import { OrderCallButton } from '../OrderCallButtonAndModal'
-// import classes from '../../styles/navigationbar.module.scss'
-import { additional_menu, resolvable_menu } from '../../data/menu'
-import { server } from '../../config'
+import { Nav, NavDropdown, Navbar, Modal, Button } from 'react-bootstrap'
 
+import { OrderCallForm } from '../OrderCallForm'
+// import { OrderCallButton } from '../OrderCallButtonAndModal'
+
+import { server } from '../../config'
+import { additional_menu, resolvable_menu } from '../../data/menu'
 import useDocumentScrollThrottled from './useDocumentScrollThrottled';
+
+import style from '../../styles/navigationbar.module.scss'
 
 export function NavigationBar() {
 
+    // scroll logic start
     const [shouldHideHeader, setShouldHideHeader] = useState(false);
     const [shouldShowShadow, setShouldShowShadow] = useState(false);
   
@@ -28,14 +32,27 @@ export function NavigationBar() {
       }, TIMEOUT_DELAY);
     });
   
-    const shadowStyle = shouldShowShadow ? 'shadow' : '';
-    const hiddenStyle = shouldHideHeader ? 'hidden' : '';
+    const shadowStyle = shouldShowShadow ? style.shadow : '';
+    const hiddenStyle = shouldHideHeader ? style.hidden : '';
+    // scroll logic end
+
+    //modal window start
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    //modal window end
+
+    //modal_num window start TODO:rewrite!
+    const [show_num, setShow_num] = useState(false);
+    const handleClose_num = () => setShow_num(false);
+    const handleShow_num = () => setShow_num(true);
+    //modal window end
+
 
     return (
-    <>
+        <>
         <Navbar 
-            // className={classes.color}
-            className={`header ${shadowStyle} ${hiddenStyle}`}
+            className={`${style.header} ${shadowStyle} ${hiddenStyle}`}
             expand="lg"
             fixed="top"
             // sticky="top"
@@ -113,46 +130,66 @@ export function NavigationBar() {
                         })}
                     </NavDropdown>
 
+                    <NavDropdown title="Contacts" id="basic-nav-dropdown">
+                        <NavDropdown.Item onClick={handleShow}>
+                            Call me back!
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item onClick={handleShow_num}>
+                            Call on this number
+                        </NavDropdown.Item>
+                    </NavDropdown>
+
 
                 </Nav>
             </Navbar.Collapse>
 
-            <OrderCallButton />
+            {/* <OrderCallButton /> */}
 
         </Navbar>
-        <style jsx global>
-            {`
-            .header {
-                // position: fixed;
-                // top: 0;
-                // left: 0;
-                // display: flex;
-                // align-items: center;
-                // justify-content: space-between;
-                // width: 100%;
-                // height: 86px;
-                // background-color: rgba(0, 0, 0, 0.0);
-                // background-color: darkgreen;
-                // color: #333;
-                transform: translateY(0);
-                transition: transform 0.3s ease;
-              }
-              .header:hover,
-              .header:active {
-                background-color: #fff;
-              }
-              
-              .header.shadow {
-                background-color: #fff;
-                transition: background-color 0.5s ease;
-                box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
-              }
-              
-              .header.hidden {
-                transform: translateY(-110%)!important;
-              }
-            `}
-        </style>
-    </>
+
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Modal title</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <OrderCallForm />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary">Understood</Button>
+          </Modal.Footer>
+        </Modal>
+
+        TODO:rewrite!
+        <Modal show={show_num} onHide={handleClose_num}>
+            <Modal.Header closeButton>
+            <Modal.Title>Сenter numbers</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Button as='a' href='tel:666' variant="primary" size="lg" block>
+                    Call on numder 666
+                </Button>
+                <Button as='a' href='tel:777' variant="primary" size="lg" block>
+                    Call on numder 777
+                </Button>
+                <Button as='a' href='tel:888' variant="primary" size="lg" block>
+                    Call on numder 888
+                </Button>
+            </Modal.Body>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose_num}>
+                Close
+            </Button>
+            </Modal.Footer>
+        </Modal>
+        </>
     )
 }
