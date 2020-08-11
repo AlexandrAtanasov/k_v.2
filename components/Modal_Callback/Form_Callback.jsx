@@ -2,6 +2,9 @@ import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 
 export function OrderCallForm() {
+
+    const handleSubmit = () => console.log('submit');
+
     return (
         <Form>
             <Form.Group controlId="formBasicName">
@@ -29,7 +32,7 @@ export function OrderCallForm() {
                 </Form.Control>
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" onClick={handleSubmit}>
                 Submit
             </Button>
         </Form>

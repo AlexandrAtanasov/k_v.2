@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
-import { OrderCallButton } from './OrderCallButtonAndModal'
+import { ModalCallback } from './Modal_Callback/Modal_Callback'
 
 export function CardComponent( {cardHeader, cardTitle, cardText} ) {
     return (
@@ -15,7 +15,9 @@ export function CardComponent( {cardHeader, cardTitle, cardText} ) {
                 <Card.Text>
                     {cardText}
                 </Card.Text>
-                <OrderCallButton />
+                <Button variant="success">
+                    <ModalCallback />
+                </Button>
             </Card.Body>
         </Card>
     )
