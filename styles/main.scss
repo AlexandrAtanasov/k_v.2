@@ -16,10 +16,24 @@ nav {
     // height: 4rem;
 }
 
+// basic margins
 main {
     margin-top: 56px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.carousel {
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
+.card {
+    margin-bottom: 1rem;
+}
+
+// carousel media query
+// TODO: add more media breakpoints
 @media (min-width: 768px) {
     .carousel {
         height: 90vh;

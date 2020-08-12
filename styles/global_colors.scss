@@ -1,7 +1,19 @@
-$color: green;
+$color: darkgreen;
 
 // color for pills buttons on persons page
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: $color;
+}
+
+// color for active menu item
+.dropdown-item.active, .dropdown-item:active {
+    background-color: $color;
+}
+
+a {
+    color: #212529;
+}
+a:hover {
+    color: $color;
 }

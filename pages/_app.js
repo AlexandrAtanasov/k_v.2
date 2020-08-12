@@ -1,8 +1,11 @@
 // import App from 'next/app'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import NextNprogress from 'nextjs-progressbar';
+
+// import styles
 import '../styles/main.scss'
 import '../styles/global_colors.scss'
-import NextNprogress from 'nextjs-progressbar';
+
 
 export default function MyApp({ Component, pageProps }) {
     return (
