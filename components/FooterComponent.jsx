@@ -1,13 +1,31 @@
 import React from 'react'
 import Link from 'next/link'
-import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
+import { Container, Row, Col, ListGroup } from 'react-bootstrap'
 import { SocialLinks } from './Footer/SocialLinks'
 
 export function FooterComponent() {
     return (
         <footer className='footer mt-auto py-3 bg-dark text-white'>
-            <div className='container'>Place sticky footer content here.</div>
-            <SocialLinks />
+
+            <Container className="text-center">
+                <Row className="justify-content-md-center">
+                    <Col>
+                        LTD
+                    </Col>
+                </Row>
+                <Row className="justify-content-md-center">
+                    <Col md="auto">
+                        <SocialLinks />
+                    </Col>
+                    <Col md="auto">
+                        <ListGroup variant="flush">
+                            <ListGroup.Item>Sitemap</ListGroup.Item>
+                            <ListGroup.Item>Other information</ListGroup.Item>
+                        </ListGroup>
+                    </Col>
+                </Row>
+            </Container>
+
         </footer>
     )
 }
