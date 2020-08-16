@@ -11,7 +11,7 @@ export function ModalCallback() {
 
     return (
         <>
-          <div onClick={handleShow_callback}>Call me!!</div>
+          <div onClick={handleShow_callback}>Order call</div>
 
           <Modal
             onHide={handleClose_callback}

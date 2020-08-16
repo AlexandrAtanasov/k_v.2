@@ -46,7 +46,8 @@ main {
         overflow: hidden;
     }  
     .carousel-item img {
-        width: auto!important;
+        // width: auto!important;
+        object-fit: cover;
         height: 80vh;
     }
 }
@@ -58,4 +59,13 @@ main {
 }
 // Экстрабольшие девайсы (большие десктопы, >= 1200px)
 @media (min-width: 1200px) {
+    .carousel {
+        height: 100vh;
+        overflow: hidden;
+    }  
+    .carousel-item img {
+        // width: auto!important;
+        object-fit: cover;
+        height: 100vh;
+    }
 }

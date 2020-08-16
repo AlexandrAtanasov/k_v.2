@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import { Container, Row, Col, ListGroup } from 'react-bootstrap'
+import { Container, Row, Col, ListGroup, Button } from 'react-bootstrap'
+
 import { SocialLinks } from './Footer/SocialLinks'
+import { FooterContacts } from './Footer/FooterContacts'
+import { ModalCallback } from './Modal_Callback/Modal_Callback'
 
 export function FooterComponent() {
     return (
@@ -16,6 +19,9 @@ export function FooterComponent() {
                 <Row className="justify-content-md-center">
                     <Col md="auto">
                         <SocialLinks />
+                    </Col>
+                    <Col md="auto">
+                        <FooterContacts />
                     </Col>
                     <Col md="auto">
                         <ListGroup variant="flush">
