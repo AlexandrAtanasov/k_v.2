@@ -8,13 +8,13 @@ export function SocialLinks() {
                 <legend>Our social networks:</legend>
                 <ButtonGroup aria-label="Basic example" size="md">
                     <Button as='a' href="https://www.instagram.com/kinezis_perm/" target="_blank" variant="secondary">
-                        <i class="fab fa-instagram"></i>
+                        <i className="fab fa-instagram"></i>
                     </Button>
                     <Button as='a' href="https://vk.com/kinezis59" target="_blank" variant="secondary">
-                        <i class="fab fa-vk"></i>
+                        <i className="fab fa-vk"></i>
                     </Button>
                     <Button as='a' href="https://www.facebook.com/kinezisperm/" target="_blank" variant="secondary">
-                        <i class="fab fa-facebook"></i>
+                        <i className="fab fa-facebook"></i>
                     </Button>
                 </ButtonGroup>
             </form>

@@ -34,7 +34,7 @@ export function ModalCallback() {
               >
                 Close
               </Button>
-              <Button onClick={handleU_callback} variant="primary">Understood</Button>
+              <Button onClick={handleU_callback} variant="success">Understood</Button>
             </Modal.Footer>
           </Modal>
         </>

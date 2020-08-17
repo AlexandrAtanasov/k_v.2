@@ -1,5 +1,9 @@
 $color: darkgreen;
 
+.backgroundColor_darkgreen {
+    background-color: $color;
+}
+
 // color for pills buttons on persons page
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;

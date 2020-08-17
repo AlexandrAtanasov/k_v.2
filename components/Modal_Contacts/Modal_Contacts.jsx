@@ -26,8 +26,8 @@ export function ModalContacts() {
                     <Button 
                         onClick={handecall_callFirst}
                         // as='a' 
-                        // href='tel:111' 
-                        variant="primary" 
+                        // href='tel:111'
+                        variant="success" 
                         size="lg" 
                         block 
                     >
@@ -37,7 +37,7 @@ export function ModalContacts() {
                         onClick={handecall_callSecond}
                         // as='a' 
                         // href='tel:222' 
-                        variant="primary" 
+                        variant="success" 
                         size="lg" 
                         block 
                     >
@@ -47,7 +47,7 @@ export function ModalContacts() {
                         onClick={handecall_callThird}
                         // as='a' 
                         // href='tel:888' 
-                        variant="primary" 
+                        variant="success" 
                         size="lg" 
                         block 
                     >

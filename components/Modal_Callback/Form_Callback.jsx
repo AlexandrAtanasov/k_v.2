@@ -32,7 +32,7 @@ export function OrderCallForm() {
                 </Form.Control>
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={handleSubmit}>
+            <Button variant="success" type="submit" onClick={handleSubmit}>
                 Submit
             </Button>
         </Form>
