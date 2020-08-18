@@ -1,4 +1,4 @@
-.mainActivities_container {
+.activities_column_container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -9,3 +9,26 @@
     margin-right: -1rem;
     margin-bottom: -1rem;
 }
+
+.activities_row_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    text-align: center; 
+    justify-content: space-around; 
+}
+
+.activities_elem_container {
+    display: inline-block; 
+    margin: 0.2rem;
+}
+
+.activities_elem_img {
+    max-height: 5rem;
+    filter: invert(1);
+}
+
+.activities_elem_text {
+    color: white;
+}
+

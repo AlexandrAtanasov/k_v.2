@@ -9,38 +9,44 @@ export function MainActivities() {
         <>
             <div 
                 className={`
-                    ${style.mainActivities_container} 
+                    ${style.activities_column_container} 
                     backgroundColor_darkgreen
                 `}
             >
-                <p style={{ color:"white" }} class="h1" >What we do</p>
+                <p
+                    className={`
+                        h1
+                        ${style.activities_elem_text}
+                    `}
+                >
+                    What we do
+                </p>
                 <div
-                    style={{ 
-                        display: "flex", 
-                        flexDirection:"row", 
-                        flexWrap: "wrap", 
-                        textAlign: "center", 
-                        justifyContent: "space-around", 
-                    }} 
+                    className={`
+                        ${style.activities_row_container}
+                    `}
                 >
                 {activities.map(elem => {
                     return (
                         <div 
                             key={elem.id}
-                            className="justify-content-center" 
-                            style={{ 
-                                display: "inline-block", 
-                                margin: "0.2rem"
-                            }}
+                            className={`
+                                ${style.activities_elem_container}
+                                justify-content-center
+                            `} 
                         >
                             <Image 
                                 fluid 
-                                style={{maxHeight: "5rem", filter: "invert(1)"}} 
+                                className={`
+                                    ${style.activities_elem_img}
+                                `}
                                 src={elem.img} 
                             />
                             <br/>
                             <span
-                                style={{ color:"white" }}
+                                className={`
+                                    ${style.activities_elem_text}
+                                `}
                             >
                                 {elem.text}
                             </span>
