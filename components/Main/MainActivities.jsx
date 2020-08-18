@@ -1,23 +1,17 @@
 import React from 'react'
 import { CardDeck, Card, Container, Row, Col, Image } from 'react-bootstrap'
-import { activities } from '../../data/main/activities/main_actvities'  
+import { activities } from '../../data/main/activities/main_actvities'
+
+import style from '../../styles/main_activities.module.scss'
 
 export function MainActivities() {
     return (
         <>
             <div 
-                style={{ 
-                    display: "flex", 
-                    flexDirection:"column", 
-                    textAlign: "center", 
-                    justifyContent: "space-around", 
-                    paddingTop:"0.5rem",
-                    paddingBottom:"0.5rem",
-                    marginLeft: "-1rem",
-                    marginRight: "-1rem",
-                    marginBottom: "-1rem",
-                }}
-                className="backgroundColor_darkgreen"
+                className={`
+                    ${style.mainActivities_container} 
+                    backgroundColor_darkgreen
+                `}
             >
                 <p style={{ color:"white" }} class="h1" >What we do</p>
                 <div
