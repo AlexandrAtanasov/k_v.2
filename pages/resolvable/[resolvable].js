@@ -8,6 +8,8 @@ import useSWR from 'swr'
 const fetcher = async (url) => {
     const res = await fetch(url)
     const data = await res.json()
+    console.log('data - ', typeof data)
+    console.log('data - ', data)
     if (res.status !== 200) {
         throw new Error(data.message)
     }
@@ -42,7 +44,13 @@ export async function getStaticProps ( {params} ) {
     // const data = await fetcher(`${server}/api/additional/${query.additional}`)
     // const data = await fetcher(`${server}/api/additional/${params.additional}`)
     // return { data }
-    const props = await fetch(`${server}/api/resolvable/${params.resolvable}`)
+    const props = await fetcher(`${server}/api/resolvable/${params.resolvable}`)
+    // const resolvable = await props.json()
+    // JSON.stringify(props)
+    // console.log(resolvable)
+    // console.log(typeof props)
+    // console.log(typeof JSON.parse(props))
+    console.log(typeof JSON.parse(JSON.stringify(props)))
     // const props = await fetcher(`/api/additional/${params.additional}`)
     return { props: {} }
 }
@@ -50,6 +58,7 @@ export async function getStaticProps ( {params} ) {
 
 
 export default function ResolvablePage (props) {
+    console.log(props)
     const { query } = useRouter()
     const initialData = props.data
     const { data, error } = useSWR(
