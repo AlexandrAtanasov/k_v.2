@@ -14,11 +14,34 @@ const fetcher = async (url) => {
     return data
 }
 
-AdditionalPage.getInitialProps = async ( {query} ) => {
+// AdditionalPage.getInitialProps = async ( {query} ) => {
+//     // console.log(query)
+//     // const page = (query.additional == 'additional') ?
+//     const data = await fetcher(`${server}/api/additional/${query.additional}`)
+//     return { data }
+// }
+
+// This function gets called at build time
+export async function getStaticPaths() {
+    return {
+        paths: [
+          { params: { additional: 'Et-nostrud-ullamco-nulla' } },
+          { params: { additional: 'Mollit-voluptate-voluptate' } }
+        ],
+        fallback: false
+      }
+  }
+
+// This also gets called at build time
+// export async function getStaticProps ( {query} ) {
+export async function getStaticProps ( {params} ) {
     // console.log(query)
     // const page = (query.additional == 'additional') ?
-    const data = await fetcher(`${server}/api/additional/${query.additional}`)
-    return { data }
+    // const data = await fetcher(`${server}/api/additional/${query.additional}`)
+    // const data = await fetcher(`${server}/api/additional/${params.additional}`)
+    // return { data }
+    const props = await fetcher(`${server}/api/additional/${params.additional}`)
+    return { props }
 }
   
 export default function AdditionalPage (props) {
