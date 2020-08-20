@@ -42,6 +42,7 @@ export async function getStaticProps ( {params} ) {
     // return { data }
     const props = await fetch(`${server}/api/additional/${params.additional}`)
     // const props = await fetcher(`/api/additional/${params.additional}`)
+    // console.log(typeof JSON.parse(props))
     return { props: {} }
 }
   
