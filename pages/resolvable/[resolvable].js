@@ -14,13 +14,41 @@ const fetcher = async (url) => {
     return data
 }
 
-ResolvablePage.getInitialProps = async ( {query} ) => {
+// ResolvablePage.getInitialProps = async ( {query} ) => {
+//     // console.log(query)
+//     // const page = (query.resolvable == 'resolvable') ?
+//     const data = await fetcher(`${server}/api/resolvable/${query.resolvable}`)
+//     return { data }
+// }
+
+
+//
+// This function gets called at build time
+export async function getStaticPaths() {
+    return {
+        paths: [
+          { params: { resolvable: 'In-laborum-tempor' } },
+          { params: { resolvable: 'Culpa-consequat-culpa' } }
+        ],
+        fallback: false
+      }
+  }
+
+// This also gets called at build time
+// export async function getStaticProps ( {query} ) {
+export async function getStaticProps ( {params} ) {
     // console.log(query)
-    // const page = (query.resolvable == 'resolvable') ?
-    const data = await fetcher(`${server}/api/resolvable/${query.resolvable}`)
-    return { data }
+    // const page = (query.additional == 'additional') ?
+    // const data = await fetcher(`${server}/api/additional/${query.additional}`)
+    // const data = await fetcher(`${server}/api/additional/${params.additional}`)
+    // return { data }
+    const props = await fetch(`${server}/api/resolvable/${params.resolvable}`)
+    // const props = await fetcher(`/api/additional/${params.additional}`)
+    return { props: {} }
 }
-  
+//
+
+
 export default function ResolvablePage (props) {
     const { query } = useRouter()
     const initialData = props.data

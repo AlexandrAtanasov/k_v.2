@@ -40,9 +40,9 @@ export async function getStaticProps ( {params} ) {
     // const data = await fetcher(`${server}/api/additional/${query.additional}`)
     // const data = await fetcher(`${server}/api/additional/${params.additional}`)
     // return { data }
-    const props = await fetcher(`${server}/api/additional/${params.additional}`)
+    const props = await fetch(`${server}/api/additional/${params.additional}`)
     // const props = await fetcher(`/api/additional/${params.additional}`)
-    return { props }
+    return { props: {} }
 }
   
 export default function AdditionalPage (props) {
