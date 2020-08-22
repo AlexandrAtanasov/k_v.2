@@ -8,8 +8,6 @@ import useSWR from 'swr'
 const fetcher = async (url) => {
     const res = await fetch(url)
     const data = await res.json()
-    console.log('data - ', typeof data)
-    console.log('data - ', data)
     if (res.status !== 200) {
         throw new Error(data.message)
     }
@@ -29,7 +27,7 @@ const fetcher = async (url) => {
 export async function getStaticPaths() {
     return {
         paths: [
-          { params: { resolvable: 'In-laborum-tempor' } },
+          { params: { resolvable: "In-laborum-tempor" } },
           { params: { resolvable: 'Culpa-consequat-culpa' } }
         ],
         fallback: false
@@ -39,28 +37,26 @@ export async function getStaticPaths() {
 // This also gets called at build time
 // export async function getStaticProps ( {query} ) {
 export async function getStaticProps ( {params} ) {
-    // console.log(query)
     // const page = (query.additional == 'additional') ?
     // const data = await fetcher(`${server}/api/additional/${query.additional}`)
-    // const data = await fetcher(`${server}/api/additional/${params.additional}`)
-    // return { data }
-    const props = await fetcher(`${server}/api/resolvable/${params.resolvable}`)
-    // const resolvable = await props.json()
-    // JSON.stringify(props)
-    // console.log(resolvable)
-    // console.log(typeof props)
-    // console.log(typeof JSON.parse(props))
-    console.log(typeof JSON.parse(JSON.stringify(props)))
-    // const props = await fetcher(`/api/additional/${params.additional}`)
-    return { props: {} }
+    console.log("getStaticProps params - ", params.resolvable)
+    // const props = await fetch(`${server}/api/resolvable/${params.resolvable}`)
+    const res = await fetch(`${server}/api/resolvable/${params.resolvable}`)
+    // console.log('getStaticProps - ', typeof JSON.parse(JSON.stringify(res)))
+    console.log('getStaticProps res - ', res)
+    const resolvablePage = await res.json()
+    return { props: {resolvablePage} }
 }
 //
 
 
-export default function ResolvablePage (props) {
-    console.log(props)
+// export default function ResolvablePage (props) {
+export default function ResolvablePage (resolvablePage) {
+    // console.log(props)
+    console.log(resolvablePage)
     const { query } = useRouter()
-    const initialData = props.data
+    // const initialData = props.data
+    const initialData = resolvablePage.data
     const { data, error } = useSWR(
         () => query.resolvable && `/api/resolvable/${query.resolvable}`,
             fetcher, 
