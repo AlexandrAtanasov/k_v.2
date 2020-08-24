@@ -51,9 +51,9 @@ const fetcher = async (url) => {
 export async function getServerSideProps() {
     // Fetch data from external API
     // const res = await fetch(`https://.../data`)
-    const data = await fetcher(`${server}/api/additional/${query.additional}`)
+    const res = await fetch(`${server}/api/additional/${query.additional}`)
 //     return { data }
-    // const data = await res.json()
+    const data = await res.json()
   
     // Pass data to the page via props
     return { props: { data } }
