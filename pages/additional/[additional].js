@@ -21,31 +21,44 @@ const fetcher = async (url) => {
 //     return { data }
 // }
 
-// This function gets called at build time
-export async function getStaticPaths() {
-    return {
-        paths: [
-          { params: { additional: 'Et-nostrud-ullamco-nulla' } },
-          { params: { additional: 'Mollit-voluptate-voluptate' } }
-        ],
-        fallback: false
-      }
-  }
 
-// This also gets called at build time
-// export async function getStaticProps ( {query} ) {
-export async function getStaticProps ( {params} ) {
-    // console.log(query)
-    // const page = (query.additional == 'additional') ?
-    // const data = await fetcher(`${server}/api/additional/${query.additional}`)
-    // const data = await fetcher(`${server}/api/additional/${params.additional}`)
-    // return { data }
-    const props = await fetch(`${server}/api/additional/${params.additional}`)
-    // const props = await fetcher(`/api/additional/${params.additional}`)
-    // console.log(typeof JSON.parse(props))
-    return { props: {} }
-}
+// // start getStaticPaths and getStaticProps
+// // This function gets called at build time
+// export async function getStaticPaths() {
+//     return {
+//         paths: [
+//           { params: { additional: 'Et-nostrud-ullamco-nulla' } },
+//           { params: { additional: 'Mollit-voluptate-voluptate' } }
+//         ],
+//         fallback: false
+//       }
+//   }
+
+// // This also gets called at build time
+// // export async function getStaticProps ( {query} ) {
+// export async function getStaticProps ( {params} ) {
+//     // console.log(query)
+//     // const page = (query.additional == 'additional') ?
+//     // const data = await fetcher(`${server}/api/additional/${query.additional}`)
+//     // const data = await fetcher(`${server}/api/additional/${params.additional}`)
+//     // return { data }
+//     const props = await fetch(`${server}/api/additional/${params.additional}`)
+//     // const props = await fetcher(`/api/additional/${params.additional}`)
+//     // console.log(typeof JSON.parse(props))
+//     return { props: {} }
+// }
   
+export async function getServerSideProps() {
+    // Fetch data from external API
+    // const res = await fetch(`https://.../data`)
+    const data = await fetcher(`${server}/api/additional/${query.additional}`)
+//     return { data }
+    // const data = await res.json()
+  
+    // Pass data to the page via props
+    return { props: { data } }
+}
+
 export default function AdditionalPage (props) {
     const { query } = useRouter()
     const initialData = props.data
