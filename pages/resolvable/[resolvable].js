@@ -127,7 +127,7 @@ const fetcher = async (url) => {
     return data
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps({query}) {
     // Fetch data from external API
     // const res = await fetch(`https://.../data`)
     const data = await fetcher(`${server}/api/resolvable/${query.resolvable}`)

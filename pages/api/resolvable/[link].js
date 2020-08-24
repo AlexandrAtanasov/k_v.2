@@ -1,4 +1,5 @@
 import { resolvable_pages } from '../../../data/resolvable_pages'
+// import { resolvable_pages } from './data/resolvable_pages'
 
 export default function pageHandler({ query: { link } }, res) {
   const filtered = resolvable_pages.filter((p) => p.link === link)
