@@ -8,8 +8,7 @@ export default function pageHandler({ query: { link } }, res) {
     console.log('link type - ',typeof filtered[0]);
     // console.log('link text - ', JSON.parse(filtered[0]));
     console.log('link after text.');
-    // res.status(200).json(filtered[0])
-    return res.status(200).json(filtered[0])
+    res.status(200).json(filtered[0])
   } else {
     res.status(404).json({ message: `Page with link: ${link} not found.` })
   }
