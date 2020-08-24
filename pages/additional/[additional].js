@@ -48,10 +48,10 @@ const fetcher = async (url) => {
 //     return { props: {} }
 // }
   
-export async function getServerSideProps() {
+export async function getServerSideProps({query}) {
     // Fetch data from external API
     // const res = await fetch(`https://.../data`)
-    const res = await fetch(`/api/additional/${query.additional}`)
+    const res = await fetch(`${server}/api/additional/${query.additional}`)
 //     return { data }
     const data = await res.json()
   
@@ -62,24 +62,24 @@ export async function getServerSideProps() {
 export default function AdditionalPage (props) {
     const { query } = useRouter()
     const initialData = props.data
-    const { data, error } = useSWR(
-        () => query.additional && `/api/additional/${query.additional}`,
-            fetcher, 
-            { initialData }
-    )
+    // const { data, error } = useSWR(
+    //     () => query.additional && `/api/additional/${query.additional}`,
+    //         fetcher, 
+    //         { initialData }
+    // )
 
     // then something go wrong
-    if (error) return (
-        <MainLayout
-            title='Oops!'
-            description={`Something go wrong`}
-        >
-            <p>{error.message}</p>
-        </MainLayout>
-    )
+    // if (error) return (
+    //     <MainLayout
+    //         title='Oops!'
+    //         description={`Something go wrong`}
+    //     >
+    //         <p>{error.message}</p>
+    //     </MainLayout>
+    // )
 
     // then data is loading
-    if (!data) return (
+    if (!props.data) return (
         <MainLayout
             title='Loading data'
             description={`Loading data for this page`}
@@ -101,12 +101,12 @@ export default function AdditionalPage (props) {
         // </MainLayout>
 
         <MainLayout
-            title={data.title}
-            description={`Description for ${data.id} page`}
+            title={props.data.title}
+            description={`Description for ${props.data.id} page`}
         >
             <CardComponent
-                cardHeader={data.title}
-                cardText={data.text}
+                cardHeader={props.data.title}
+                cardText={props.data.text}
             />
         </MainLayout>
     )
