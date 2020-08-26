@@ -73,17 +73,14 @@ export async function getStaticProps() {
 // }
   
 export default function TryPage ( { posts }) {
-    const data = JSON.parse(JSON.stringify(posts))
-    const extra = JSON.parse(JSON.stringify(data[0].content))
-    console.log('TryPage serialize post content - ', JSON.parse(JSON.stringify(data[0].content)))
-    console.log('TryPage post content - ', posts)
-    
     const router = useRouter()
     const { pid } = router.query
+
     console.log('TryPage pid - ', pid)
+    console.log('TryPage posts - ', posts)
     
     // const data = JSON.parse(post.link)
     return (
-        <p>{posts.text}</p>
+      <div>some data at console</div>
     )
-}
+  }
