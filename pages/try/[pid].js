@@ -33,12 +33,12 @@ export async function getStaticProps() {
     console.log('2. filenames - ', filenames)
     
     const posts = filenames.map((filename) => {
-        const filePath = path.join(postsDirectory, filename)
-        console.log('3. filePath - ', filePath)
+      const filePath = path.join(postsDirectory, filename)
+      console.log('3. filePath - ', filePath)
         
-        const fileContents = fs.readFileSync(filePath, 'utf8')
-        console.log('4. fileContents - ', fileContents)
-  
+      const fileContents = fs.readFileSync(filePath, 'utf8')
+      console.log('4. fileContents - ', fileContents)
+
       // Generally you would parse/transform the contents
       // For example you can transform markdown to HTML here
   
@@ -56,31 +56,28 @@ export async function getStaticProps() {
     }
   }
 
-// export async function getStaticProps( { params } ) {
-//     console.log('try.pages page - ', params)
-//     const post = try_pages.map( (page) => {
-//         console.log("page - ", page)
-//         console.log("params.try - ", params.pid)
-//         if (page.link == params.pid) {
-//             console.log("JSON.parse(JSON.stringify(props)) page - ", JSON.parse(JSON.stringify(page)))
-//             console.log("serialize page - ", serialize(page))
-//             return (serialize(page))
-//         }
-//     } )
-  
-//     // Pass post data to the page via props
-//     return { props: { post } }
-// }
-  
 export default function TryPage ( { posts }) {
     const router = useRouter()
     const { pid } = router.query
 
-    console.log('TryPage pid - ', pid)
-    console.log('TryPage posts - ', posts)
-    
-    // const data = JSON.parse(post.link)
     return (
-      <div>some data at console</div>
+      <>
+        <div>Some data for page "{pid}". Need to serialize</div>
+        <div>
+          {
+            posts.map((items, index) => {
+              return (
+                <ul key={index}>
+                {Object.keys(items).map((key) => {
+                  return (
+                    <li key={key + index}>{key}:{items[key]}</li>
+                  )
+                })}
+                </ul>
+              )
+            })
+          }
+        </div>
+     </> 
     )
-  }
+}
