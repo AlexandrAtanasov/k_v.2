@@ -66,6 +66,12 @@ export function NavigationBar() {
                                 Home
                             </Nav.Link>
                         </Link>
+
+                        <Link href={'/try/In-laborum-tempor'} passHref>
+                            <Nav.Link>
+                                try/In-laborum-tempor
+                            </Nav.Link>
+                        </Link>
                         
                         <NavDropdown title="Prices and Sales" id="basic-nav-dropdown">
                             <Link href={`/price`} passHref>
