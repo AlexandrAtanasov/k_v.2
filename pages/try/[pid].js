@@ -24,20 +24,27 @@ export async function getStaticPaths() {
 // It won't be called on client-side, so you can even do
 // direct database queries. See the "Technical details" section.
 export async function getStaticProps() {
-    console.log('0. process.cwd() - ', process.cwd())
+    // console.log('0. process.cwd() - ', process.cwd())
     
     const postsDirectory = path.join(process.cwd(), '/data/pages/')
-    console.log('1. postsDirectory - ', postsDirectory)
+    // console.log('1. postsDirectory - ', postsDirectory)
     
     const filenames = fs.readdirSync(postsDirectory)
-    console.log('2. filenames - ', filenames)
+    // console.log('2. filenames - ', filenames)
     
     const posts = filenames.map((filename) => {
       const filePath = path.join(postsDirectory, filename)
-      console.log('3. filePath - ', filePath)
+      // console.log('3. filePath - ', filePath)
         
       const fileContents = fs.readFileSync(filePath, 'utf8')
-      console.log('4. fileContents - ', fileContents)
+      const data = JSON.parse(fileContents)
+      // console.log('4.[eq] fileContents - ', data.id )
+
+//
+        // fileContents.map( (data) => {
+        //   console.log('5. data - ', data)
+        // })
+//
 
       // Generally you would parse/transform the contents
       // For example you can transform markdown to HTML here
@@ -62,21 +69,22 @@ export default function TryPage ( { posts }) {
 
     return (
       <>
-        <div>Some data for page "{pid}". Need to serialize</div>
+        <div>Some data for page "{pid}". Has been parsed</div>
         <div>
           {
-            posts.map((items, index) => {
-              return (
-                <ul key={index}>
-                {Object.keys(items).map((key) => {
-                  return (
-                    <li key={key + index}>{key}:{items[key]}</li>
-                  )
-                })}
-                </ul>
-              )
+            posts.map( (post, index) => {
+              if (post.filename.slice(0, -5) == pid) {
+                const data = JSON.parse(post.content)
+                return (
+                  <div key={index}>
+                    <p>{data.title}</p>
+                    <p>{data.text}</p>
+                  </div>
+                )
+              }
             })
           }
+
         </div>
      </> 
     )
