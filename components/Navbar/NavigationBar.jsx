@@ -6,7 +6,8 @@ import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 import { ModalContacts } from '../Modal_Contacts/Modal_Contacts'
 
 import { server } from '../../config'
-import { additional_menu, resolvable_menu } from '../../data/menu'
+// import { additional_menu } from '../../data/menu'
+// import { resolvable_menu } from '../../data/menu'
 import useDocumentScrollThrottled from './useDocumentScrollThrottled';
 
 import style from '../../styles/navigationbar.module.scss'
@@ -35,6 +36,19 @@ export function NavigationBar() {
     const shadowStyle = shouldShowShadow ? style.shadow : '';
     const hiddenStyle = shouldHideHeader ? style.hidden : '';
     // scroll logic end
+
+    // TODO: make some storage for menu  
+
+    const additional_menu = [
+        { id: 1, pid: 'Et-nostrud-ullamco-nulla' },
+        { id: 2, pid: 'Mollit-voluptate-voluptate' },
+        { id: 3, pid: 'Nostrud-duis-veniam-non-ipsum' }
+    ]
+    const resolvable_menu = [
+        { id: 1, pid: 'In-laborum-tempor' },
+        { id: 2, pid: 'Culpa-consequat-culpa' },
+        { id: 3, pid: 'Elit-qui-officia-tempor-quis' }
+    ]
 
     return (
         <>
@@ -66,12 +80,6 @@ export function NavigationBar() {
                                 Home
                             </Nav.Link>
                         </Link>
-
-                        <Link href={'/try/In-laborum-tempor'} passHref>
-                            <Nav.Link>
-                                try/In-laborum-tempor
-                            </Nav.Link>
-                        </Link>
                         
                         <NavDropdown title="Prices and Sales" id="basic-nav-dropdown">
                             <Link href={`/price`} passHref>
@@ -100,9 +108,9 @@ export function NavigationBar() {
                             {additional_menu.map(menu => {
                                 return(
                                     <div key={menu.id}>
-                                        <Link href={`/additional/[additional]`} as={`/additional/${menu.link}`} passHref>
+                                        <Link href={`/additional/[pid]`} as={`/additional/${menu.pid}`} passHref>
                                             <NavDropdown.Item>
-                                                {menu.text}
+                                                {menu.pid}
                                             </NavDropdown.Item>
                                         </Link>
                                         <NavDropdown.Divider />
@@ -115,9 +123,9 @@ export function NavigationBar() {
                             {resolvable_menu.map(menu => {
                                 return(
                                     <div key={menu.id}>
-                                        <Link href={`/resolvable/[resolvable]`} as={`/resolvable/${menu.link}`} passHref>
+                                        <Link href={`/resolvable/[pid]`} as={`/resolvable/${menu.pid}`} passHref>
                                             <NavDropdown.Item>
-                                                {menu.text}
+                                                {menu.pid}
                                             </NavDropdown.Item>
                                         </Link>
                                         <NavDropdown.Divider />
