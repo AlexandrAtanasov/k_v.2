@@ -19,14 +19,16 @@ import path from 'path'
 // }
 
 
-// TODO: make some storage for paths
 export async function getStaticPaths() {
+    const pagesDirectory = path.join(process.cwd(), '/data/resolvable_pages/')
+    const filenames = fs.readdirSync(pagesDirectory)
+    const paths = filenames.map((filename) => {
+        return (
+            { params: { pid: filename.slice(0, -5) } }
+        )
+    })
     return {
-        paths: [
-            { params: { pid: 'In-laborum-tempor' } },
-            { params: { pid: 'Culpa-consequat-culpa' } },
-            { params: { pid: 'Elit-qui-officia-tempor-quis' } }
-        ],
+        paths,
         fallback: false
     }
 }

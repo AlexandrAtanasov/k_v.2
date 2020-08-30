@@ -19,14 +19,16 @@ import path from 'path'
 // }
 
 
-// TODO: make some storage for paths
 export async function getStaticPaths() {
+    const pagesDirectory = path.join(process.cwd(), '/data/additional_pages/')
+    const filenames = fs.readdirSync(pagesDirectory)
+    const paths = filenames.map((filename) => {
+        return (
+            { params: { pid: filename.slice(0, -5) } }
+        )
+    })
     return {
-        paths: [
-          { params: { pid: 'Et-nostrud-ullamco-nulla' } },
-          { params: { pid: 'Mollit-voluptate-voluptate' } },
-          { params: { pid: 'Nostrud-duis-veniam-non-ipsum' } }
-        ],
+        paths,
         fallback: false
     }
 }
