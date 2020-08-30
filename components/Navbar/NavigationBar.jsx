@@ -52,7 +52,8 @@ export function NavigationBar() {
 
     return (
         <>
-            <Navbar 
+            <Navbar
+                collapseOnSelect 
                 className={`${style.header} ${shadowStyle} ${hiddenStyle}`}
                 expand="lg"
                 fixed="top"
@@ -135,11 +136,11 @@ export function NavigationBar() {
                         </NavDropdown>
 
                         <NavDropdown title="Contacts" id="basic-nav-dropdown">
-                            <NavDropdown.Item>
+                            <NavDropdown.Item href="#callback"> 
                                 <ModalCallback />
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item>
+                            <NavDropdown.Item href="#contactsList">
                                 <ModalContacts />
                             </NavDropdown.Item>
                         </NavDropdown>
