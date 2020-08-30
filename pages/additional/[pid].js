@@ -1,8 +1,8 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { CardComponent } from '../../components/CardComponent'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 // import { server } from '../../config'
-import useSWR from 'swr'
+// import useSWR from 'swr'
 
 import fs from 'fs'
 import path from 'path'
@@ -19,6 +19,7 @@ import path from 'path'
 // }
 
 
+// TODO: make some storage for paths
 export async function getStaticPaths() {
     return {
         paths: [
@@ -30,35 +31,23 @@ export async function getStaticPaths() {
     }
 }
 
-
-export async function getStaticProps() {
-    const postsDirectory = path.join(process.cwd(), '/data/additional_pages/')
-    const filenames = fs.readdirSync(postsDirectory)
+export async function getStaticProps(context) {
+    const pagesDirectory = path.join(process.cwd(), '/data/additional_pages/')
+    const filenames = fs.readdirSync(pagesDirectory)
+    const pageFileName = filenames.filter(filename => filename.slice(0, -5) == context.params.pid);
+    const pageFilePath = path.join(pagesDirectory, pageFileName[0])
+    const page = fs.readFileSync(pageFilePath, 'utf8')
    
-    const posts = filenames.map((filename) => {
-        const filePath = path.join(postsDirectory, filename)
-        const fileContents = fs.readFileSync(filePath, 'utf8')
-        // Generally you would parse/transform the contents
-        // For example you can transform markdown to HTML here
-        return {
-            filename,
-            content: fileContents,
-        }
-    })
-    // By returning { props: posts }, the Blog component
-    // will receive `posts` as a prop at build time
     return {
         props: {
-            posts,
+            page,
         },
     }
 }
 
 
-export default function ResolvablePage ( {posts} ) {
-    const router = useRouter()
-    const { pid } = router.query
-    
+export default function AdditionalPage ( {page} ) {
+    const data = JSON.parse(page)
 
     // SWR
     // 
@@ -91,27 +80,16 @@ export default function ResolvablePage ( {posts} ) {
     //     </MainLayout>
     // )
   
-    // then all data is loaded
+    // static layout
     return (
-        <>
-            {posts.map( (post, index) => {
-                if (post.filename.slice(0, -5) == pid) {
-                    const data = JSON.parse(post.content)
-                    return (
-                        <MainLayout
-                            title={data.title}
-                            description={`Description for ${data.id} page`}
-                            key={index}
-                        >
-                            <CardComponent
-                                cardHeader={data.title}
-                                cardText={data.text}
-                            />
-                        </MainLayout>
-                    )
-                }
-            })
-            }
-        </>
+        <MainLayout
+            title={data.title}
+            description={`Description for ${data.id} page`}
+        >
+            <CardComponent
+                cardHeader={data.title}
+                cardText={data.text}
+            />
+        </MainLayout>
     )
 }
