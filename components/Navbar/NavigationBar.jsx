@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
 
 import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 import { ModalContacts } from '../Modal_Contacts/Modal_Contacts'
 
-import { server } from '../../config'
-// import { additional_menu } from '../../data/menu'
-// import { resolvable_menu } from '../../data/menu'
+// import { server } from '../../config'
 import useDocumentScrollThrottled from './useDocumentScrollThrottled';
 
 import style from '../../styles/navigationbar.module.scss'
@@ -50,14 +48,37 @@ export function NavigationBar() {
         { id: 3, pid: 'Elit-qui-officia-tempor-quis' }
     ]
 
+    // close dropdown by click outside. start
+    const node = useRef();
+    
+    const handleClick = e => {
+        if (node.current.contains(e.target)) {
+            // inside click
+            return;
+        }
+        // outside click
+        document.getElementById("basic-navbar-nav-button").click();
+    };
+    
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClick);
+        
+        return () => {
+            document.removeEventListener("mousedown", handleClick);
+        };
+    }, []);
+    // close dropdown by click outside. end
+
+
     return (
         <>
             <Navbar
-                collapseOnSelect 
+                collapseOnSelect
                 className={`${style.header} ${shadowStyle} ${hiddenStyle}`}
                 expand="lg"
                 fixed="top"
                 // sticky="top"
+                ref={node}
             >
                 <Link href={'/'} passHref>
                     <Navbar.Brand href="#home">
@@ -72,7 +93,10 @@ export function NavigationBar() {
                         KKK
                     </Navbar.Brand>
                 </Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle 
+                    aria-controls="basic-navbar-nav" 
+                    id="basic-navbar-nav-button"
+                />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         
