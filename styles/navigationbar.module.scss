@@ -8,7 +8,7 @@ $color: green;
 .header {
     transform: translateY(0);
     transition: transform 0.3s ease;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .header:hover,
@@ -24,6 +24,7 @@ $color: green;
 }
   
 .header.hidden {
+    transition: background-color 0.3s ease;
     transform: translateY(-110%)!important;
     transition: transform 0.3s ease;
 }
