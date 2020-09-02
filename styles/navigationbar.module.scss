@@ -8,19 +8,22 @@ $color: green;
 .header {
     transform: translateY(0);
     transition: transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .header:hover,
 .header:active {
     background-color: #fff;
+    transition: background-color 0.5s ease;
 }
   
 .header.shadow {
     background-color: #fff;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
     box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
 }
   
 .header.hidden {
     transform: translateY(-110%)!important;
+    transition: transform 0.3s ease;
 }

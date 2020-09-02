@@ -1,14 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
+// import { server } from '../../config'
 
+// import Components
 import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 import { ModalContacts } from '../Modal_Contacts/Modal_Contacts'
 
-// import { server } from '../../config'
-import useDocumentScrollThrottled from './useDocumentScrollThrottled';
+import useDocumentScrollThrottled from './useDocumentScrollThrottled'
 
 import style from '../../styles/navigationbar.module.scss'
+
 
 export function NavigationBar() {
 
@@ -35,8 +37,7 @@ export function NavigationBar() {
     const hiddenStyle = shouldHideHeader ? style.hidden : '';
     // scroll logic end
 
-    // TODO: make some storage for menu  
-
+    // TODO: make some storage for menugit
     const additional_menu = [
         { id: 1, pid: 'Et-nostrud-ullamco-nulla' },
         { id: 2, pid: 'Mollit-voluptate-voluptate' },
@@ -58,11 +59,14 @@ export function NavigationBar() {
         }
         // outside click
         
-        if (document.getElementById("basic-navbar-nav").classList.contains('show')) {
-            document.getElementById("basic-navbar-nav-button").click();
+        const basicNavbarNav = document.getElementById("basic-navbar-nav");
+        const basicBavbarNavButton = document.getElementById("basic-navbar-nav-button");
+
+        if (basicNavbarNav.classList.contains('show')) {
+            basicBavbarNavButton.click();
         } 
-
-
+        
+        // browser info
         // const browser= (function(){
         //     var ua= navigator.userAgent, tem,
         //     M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
