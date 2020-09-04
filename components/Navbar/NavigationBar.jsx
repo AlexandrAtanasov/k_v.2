@@ -192,6 +192,12 @@ export function NavigationBar() {
                             <NavDropdown.Item href="#contactsList">
                                 <ModalContacts />
                             </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <Link href={`/contacts`} passHref>
+                                <NavDropdown.Item>
+                                    How to find us
+                                </NavDropdown.Item>
+                            </Link>
                         </NavDropdown>
                     
                     </Nav>

@@ -1,12 +1,32 @@
-import { MainLayout } from '../../layouts/MainLayout'
+import { Card, Button } from 'react-bootstrap'
 
-export default function ContactsPage() {
+import { MainLayout } from '../../layouts/MainLayout'
+import { maps } from '../../data/maps/location_of_centers'
+
+export default function LocationsPage() {
     return (
         <MainLayout
-            title='Contacts page'
-            description='Description for Contacts page'
+            title='How to find us'
+            description='Description for locations page'
         >
-            <h1>Contacts page</h1>
+            {maps.map(elem => {
+                return(
+                    <Card key={elem.id}>
+                        <Card.Header>
+                            {elem.header}
+                        </Card.Header>
+                        <Card.Body>
+                            <Card.Title>
+                                {elem.title}
+                            </Card.Title>
+                            <Card.Text>
+                                {elem.text}
+                            </Card.Text>
+                            <script type="text/javascript" charSet="utf-8" async src={`${elem.map}`}></script>
+                        </Card.Body>
+                    </Card>
+                )
+            })}
         </MainLayout>
     )
 } 
