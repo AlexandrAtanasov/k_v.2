@@ -5,7 +5,8 @@ import { Container, Row, Col, CardDeck, Card } from 'react-bootstrap'
 import { doctors } from '../data/persons/doctors'
 
 export function LicencesComponent() {
-
+// TODO: styles module
+// TODO: component for card with card deck for persons, licences, persons on main page 
     return (
         <div
             style={{
