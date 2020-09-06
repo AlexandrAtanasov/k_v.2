@@ -2,9 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import { Container, Row, Col, ListGroup, Button } from 'react-bootstrap'
 
-import { SocialLinks } from './Footer/SocialLinks'
-import { FooterContacts } from './Footer/FooterContacts'
-import { ModalCallback } from './Modal_Callback/Modal_Callback'
+import { SocialLinks } from './SocialLinks'
+import { FooterContacts } from './FooterContacts'
+import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 
 export function FooterComponent() {
     return (

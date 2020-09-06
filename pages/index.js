@@ -2,7 +2,8 @@ import Link from 'next/link'
 import { MainLayout } from '../layouts/MainLayout'
 import { CarouselComponent } from '../components/Main/CarouselComponent'
 import { MainActivitiesComponent } from '../components/Main/MainActivitiesComponent'
-import { LicencesComponent } from '../components/LicencesComponent'
+import { MainDoctorsComponent } from '../components/Main/MainDoctorsComponent'
+import { MainLicensesComponent } from '../components/Main/MainLicensesComponent'
 
 export default function HomePage() {
   
@@ -13,7 +14,8 @@ export default function HomePage() {
     >
       <CarouselComponent />
       <MainActivitiesComponent />
-      <LicencesComponent />
+      <MainDoctorsComponent />
+      <MainLicensesComponent />
 
       
     </MainLayout>

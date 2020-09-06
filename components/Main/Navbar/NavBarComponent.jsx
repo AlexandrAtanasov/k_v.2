@@ -4,12 +4,12 @@ import { Nav, NavDropdown, Navbar } from 'react-bootstrap'
 // import { server } from '../../config'
 
 // import Components
-import { ModalCallback } from '../Modal_Callback/Modal_Callback'
-import { ModalContacts } from '../Modal_Contacts/Modal_Contacts'
+import { ModalCallback } from '../../Modal_Callback/Modal_Callback'
+import { ModalContacts } from '../../Modal_Contacts/Modal_Contacts'
 
 import useDocumentScrollThrottled from './useDocumentScrollThrottled'
 
-import style from '../../styles/navigationbar.module.scss'
+import style from '../../../styles/components/NavBarComponent.module.scss'
 
 
 export function NavBarComponent() {
