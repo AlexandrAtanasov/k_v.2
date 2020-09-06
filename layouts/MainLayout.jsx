@@ -1,6 +1,6 @@
 import React, { Children } from 'react'
 import Link from 'next/link'
-import { NavigationBar } from '../components/Navbar/NavigationBar'
+import { NavBarComponent } from '../components/Navbar/NavBarComponent'
 import { HeadComponent } from '../components/HeadComponent'
 import { FooterComponent } from '../components/FooterComponent'
 
@@ -12,7 +12,7 @@ export function MainLayout( {children, title, description} ) {
                 title={title}
                 description={description}
             />
-            <NavigationBar />
+            <NavBarComponent />
             <main>
                 {children}
             </main>

@@ -4,7 +4,7 @@ import { activities } from '../../data/main/activities/main_actvities'
 
 import style from '../../styles/main_activities.module.scss'
 
-export function MainActivities() {
+export function MainActivitiesComponent() {
     return (
         // <>
             <div className={` ${style.activities_column_container} backgroundColor_darkgreen `} >

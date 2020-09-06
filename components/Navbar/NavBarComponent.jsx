@@ -12,7 +12,7 @@ import useDocumentScrollThrottled from './useDocumentScrollThrottled'
 import style from '../../styles/navigationbar.module.scss'
 
 
-export function NavigationBar() {
+export function NavBarComponent() {
 
     // scroll logic start
     const [shouldHideHeader, setShouldHideHeader] = useState(false);
@@ -95,6 +95,7 @@ export function NavigationBar() {
     // close dropdown by click outside. end
 
 
+    
     return (
         <>
             <Navbar
