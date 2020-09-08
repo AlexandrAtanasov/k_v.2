@@ -24,21 +24,21 @@ export default function PersonsPage() {
                     <Nav variant="pills" className={classes.persons_cards_pills}>
                         <Col lg='auto'>
                             <Nav.Item>
-                                <Nav.Link eventKey="first">
+                                <Nav.Link eventKey="first" className={classes.button_outline_none}>
                                     Doctors
                                 </Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col lg='auto'>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">
+                                <Nav.Link eventKey="second" className={classes.button_outline_none}>
                                     Administrators
                                 </Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col lg='auto'>
                             <Nav.Item>
-                                <Nav.Link eventKey="third">
+                                <Nav.Link eventKey="third" className={classes.button_outline_none}>
                                     Trainers
                                 </Nav.Link>
                             </Nav.Item>
