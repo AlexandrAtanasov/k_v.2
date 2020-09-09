@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "formik": "^2.1.5",
     "next": "9.4.4",
     "nextjs-progressbar": "0.0.5",
     "react": "16.13.1",

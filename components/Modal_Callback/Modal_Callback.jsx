@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap'
-import { OrderCallForm } from './Form_Callback'
+import OrderCallForm  from './Form_Callback'
 
 export function ModalCallback() {
 
