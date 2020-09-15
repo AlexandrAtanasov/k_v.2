@@ -214,6 +214,11 @@ import React from 'react';
 import { useFormik } from 'formik';
 import { Form, Button } from 'react-bootstrap'
 
+import { server } from '../../config'
+
+// import{ init } from 'emailjs-com';
+// init("user_CC844BqNZGwSxOC7pxkNc");
+
 
 const OrderCallForm = () => {
   // Notice that we have to initialize ALL of fields with values. These
@@ -227,8 +232,9 @@ const OrderCallForm = () => {
     },
     onSubmit: values => {
         // console.log(JSON.stringify(values, null, 2))
-        alert(JSON.stringify(values, null, 2));
-        window.location.href = "/";
+        alert(JSON.stringify(values, null, 2))
+
+        // window.location.href = "/";
     },
   });
     return (
