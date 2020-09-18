@@ -4,6 +4,7 @@ import { CarouselComponent } from '../components/Main/CarouselComponent'
 import { MainActivitiesComponent } from '../components/Main/MainActivitiesComponent'
 import { MainDoctorsComponent } from '../components/Main/MainDoctorsComponent'
 import { MainLicensesComponent } from '../components/Main/MainLicensesComponent'
+import { CardImgComponent } from '../components/CardComponents/CardImgComponent'
 
 export default function HomePage() {
   
@@ -14,6 +15,7 @@ export default function HomePage() {
     >
       <CarouselComponent />
       <MainActivitiesComponent />
+      <CardImgComponent />
       <MainDoctorsComponent />
       <MainLicensesComponent />
 
