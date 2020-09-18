@@ -15,9 +15,13 @@ export default function HomePage() {
     >
       <CarouselComponent />
       <MainActivitiesComponent />
-      <CardImgComponent />
+      <CardImgComponent 
+        cardTitle=
+        cardText=
+        cardImg=
+      />
       <MainDoctorsComponent />
-      <MainLicensesComponent />
+      <MainLicensesComponent/>
 
       
     </MainLayout>
