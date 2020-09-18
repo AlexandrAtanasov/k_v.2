@@ -9,10 +9,10 @@ export function CardImgComponent( {cardTitle, cardText, cardImg} ) {
                     {cardTitle}
                 </Card.Title>
                 <Card.Text>
-                    
                     {cardText}
                 </Card.Text>
             </Card.Body>
+            {/* TODO: make image not so high */}
             <Card.Img variant="bottom" src={cardImg} />
         </Card>
     )
