@@ -153,6 +153,12 @@ export function NavBarComponent() {
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
+                            <Link href={`/radio`} passHref>
+                                <NavDropdown.Item>
+                                    Radio
+                                </NavDropdown.Item>
+                            </Link>
+                            <NavDropdown.Divider />
                         </NavDropdown>
 
                         <NavDropdown title="Additional" id="basic-nav-dropdown">
