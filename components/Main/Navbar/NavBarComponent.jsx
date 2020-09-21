@@ -159,6 +159,12 @@ export function NavBarComponent() {
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
+                            <Link href={`/vacancy`} passHref>
+                                <NavDropdown.Item>
+                                    Vacancy
+                                </NavDropdown.Item>
+                            </Link>
+                            <NavDropdown.Divider />
                         </NavDropdown>
 
                         <NavDropdown title="Additional" id="basic-nav-dropdown">
