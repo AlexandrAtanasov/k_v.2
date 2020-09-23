@@ -8,7 +8,7 @@ import { CardImgComponent } from '../components/CardComponents/CardImgComponent'
 
 
 // import data
-import { authors_column } from '../data/main/authors_column/authors_column'
+import { authors_column } from '../data/authors_column/authors_column'
 
 export default function HomePage() {
   

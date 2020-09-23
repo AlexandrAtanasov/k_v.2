@@ -1,8 +1,8 @@
 import { MainLayout } from '../../layouts/MainLayout'
-import { Card } from 'react-bootstrap'
+import { CardImgComponent } from '../../components/CardComponents/CardImgComponent'
 
 // import data
-import { radio } from '../../data/radio/radio'
+import { authors_column } from '../../data/authors_column/authors_column'
 
 export default function AuthorsPage() {
     return (
@@ -10,7 +10,18 @@ export default function AuthorsPage() {
             title='Authors page'
             description='Description for Authors page'
         >
-            Authors Page
+            {
+                authors_column.map( elem => {
+                    return (
+                        <CardImgComponent 
+                            key={elem.id}
+                            cardTitle={elem.title}
+                            cardText={elem.text}
+                            cardImg={elem.img}
+                        />
+                    )
+                })
+            }
         </MainLayout>
     )
 }  

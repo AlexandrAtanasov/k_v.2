@@ -5,4 +5,10 @@ export const authors_column = [
       "text":"Some quick example text to build on the card title and make up the bulk of the cards content.", 
       "img": "/img/main/authors_column/authors_column.jpg", 
     },
+    {
+      "id": 2, 
+      "title":"Authors Second Text", 
+      "text":"Ex consectetur est eiusmod voluptate elit incididunt.", 
+      "img": "/img/main/authors_column/authors_column.jpg", 
+    },
   ]
