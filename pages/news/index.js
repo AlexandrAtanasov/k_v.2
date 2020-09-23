@@ -2,13 +2,13 @@ import { MainLayout } from '../../layouts/MainLayout'
 
 // import data
 
-export default function ReviewsPage() {
+export default function NewsPage() {
     return (
         <MainLayout
-            title='Reviews page'
-            description='Description for Reviews page'
+            title='News page'
+            description='Description for News page'
         >
-            Reviews
+            News
             {/* TODO: make link to VK */}
         </MainLayout>
     )
