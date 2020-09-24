@@ -2,6 +2,7 @@ import React from 'react'
 import { CardDeck, Card, Container, Row, Col, Image } from 'react-bootstrap'
 import { activities } from '../../data/main/activities/main_actvities'
 
+// import styles
 import style from '../../styles/main_activities.module.scss'
 
 export function MainActivitiesComponent() {
