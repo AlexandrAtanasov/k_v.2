@@ -1,5 +1,5 @@
 import { MainLayout } from '../../layouts/MainLayout'
-import { CardComponent } from '../../components/CardComponent'
+import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
 
 // import data
 import { vacancy } from '../../data/vacancy/vacancy'
@@ -13,9 +13,8 @@ export default function VacancyPage() {
             {
                 vacancy.map( elem => {
                     return (
-                        <CardComponent
+                        <CardComponentWithoutHeader
                             key={elem.id}
-                            cardHeader={elem.header}
                             cardTitle={elem.title}
                             cardText={elem.text}
                         />

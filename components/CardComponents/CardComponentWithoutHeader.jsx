@@ -1,9 +1,7 @@
 import React from 'react'
-import { Card, Button } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 
-import { SocialLinks } from '../Footer/SocialLinks'
-
-export function CardComponentSocialLinks( {cardTitle, cardText} ) {
+export function CardComponentWithoutHeader ( {cardTitle, cardText} ) {
     return (
         <Card>
             <Card.Body>
@@ -13,7 +11,6 @@ export function CardComponentSocialLinks( {cardTitle, cardText} ) {
                 <Card.Text>
                     {cardText}
                 </Card.Text>
-                <SocialLinks />
             </Card.Body>
         </Card>
     )

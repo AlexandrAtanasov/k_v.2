@@ -1,7 +1,8 @@
 import { MainLayout } from '../../layouts/MainLayout'
-import { CardImgComponent } from '../../components/CardComponents/CardImgComponent'
+import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
 
 // import data
+import { organizations } from '../../data/organizations/organizations'
 
 export default function OrganizationsPage() {
     return (
@@ -9,8 +10,17 @@ export default function OrganizationsPage() {
             title='Organizations page'
             description='Description for Organizations page'
         >
-            Organizations
-            {/* TODO: content */}
+            {
+                organizations.map( elem => {
+                    return (
+                        <CardComponentWithoutHeader
+                            key={elem.id}
+                            cardTitle={elem.title}
+                            cardText={elem.text}
+                        />
+                    )
+                })
+            }
         </MainLayout>
     )
 }  

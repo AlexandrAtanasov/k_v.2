@@ -12,6 +12,7 @@ export function ModalContacts() {
   const handecall_callThird = () => window.open("tel:333","_self");
 
     return (
+        // TODO: make call to single number 
         <>
             <div onClick={handleShow_telNumbers}>Call to centers</div>
 
