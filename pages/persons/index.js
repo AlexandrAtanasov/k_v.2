@@ -2,6 +2,7 @@ import { MainLayout } from '../../layouts/MainLayout'
 import { Row, Col, Tab, Nav } from 'react-bootstrap'
 
 import { CardDeckComponent } from '../../components/CardDeckComponent'
+import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
 import { doctors } from '../../data/persons/doctors'
@@ -15,9 +16,12 @@ import classes from '../../styles/persons_page.module.scss'
 export default function PersonsPage() {
     return (
         <MainLayout
-            title='Sales page'
-            description='Description for Sales page'
+            title='Persons page'
+            description='Description for Persons page'
         >
+            <HeadingComponent 
+                heading='Persons Page'
+            />
             <Tab.Container id="persons_cards" defaultActiveKey="first" >
                 
                 <Row className="justify-content-md-center" >

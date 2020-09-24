@@ -1,5 +1,6 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { Card } from 'react-bootstrap'
+import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
 import { radio } from '../../data/radio/radio'
@@ -10,13 +11,13 @@ export default function RadioPage() {
             title='Radio page'
             description='Description for Radio page'
         >
+            <HeadingComponent 
+                heading='Radio Page'
+            />
             {
                 radio.map( elem => {
                     return (
                         <Card key={elem.id}>
-                            <Card.Header>
-                                {elem.header}
-                            </Card.Header>
                             <Card.Body>
                                 <Card.Title>
                                     {elem.title}

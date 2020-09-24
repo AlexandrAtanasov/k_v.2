@@ -1,5 +1,6 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { Card } from 'react-bootstrap'
+import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
 import { rules } from '../../data/rules/rules'
@@ -10,10 +11,10 @@ export default function RulesPage() {
             title='Rules page'
             description='Description for rules page'
         >
+            <HeadingComponent 
+                heading='Rules Page'
+            />
             <Card key={rules[0].id}>
-                <Card.Header>
-                    {rules[0].header}
-                </Card.Header>
                 <Card.Body>
                     <Card.Title>
                         {rules[0].title}
@@ -29,6 +30,7 @@ export default function RulesPage() {
                     </Card.Text>
                 </Card.Body>
             </Card>
+            
         </MainLayout>
     )
 }  

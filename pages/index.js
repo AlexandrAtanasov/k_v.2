@@ -5,7 +5,7 @@ import { MainActivitiesComponent } from '../components/Main/MainActivitiesCompon
 import { MainDoctorsComponent } from '../components/Main/MainDoctorsComponent'
 import { MainLicensesComponent } from '../components/Main/MainLicensesComponent'
 import { CardImgComponent } from '../components/CardComponents/CardImgComponent'
-
+import { HeadingComponent } from '../components/Heading/HeadingComponent'
 
 // import data
 import { authors_column } from '../data/authors_column/authors_column'
@@ -19,15 +19,22 @@ export default function HomePage() {
     >
       <CarouselComponent />
       <MainActivitiesComponent />
+      <HeadingComponent 
+        heading='Authors column'
+      />
       <CardImgComponent 
         cardTitle={authors_column[0].title}
         cardText={authors_column[0].text}
         cardImg={authors_column[0].img}
       />
+      <HeadingComponent 
+        heading='Our Doctors'
+      />
       <MainDoctorsComponent />
+      <HeadingComponent 
+        heading='Our Licenses'
+      />
       <MainLicensesComponent/>
-
-      
-    </MainLayout>
+     </MainLayout>
   )
 }
