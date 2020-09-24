@@ -1,5 +1,5 @@
 import { MainLayout } from '../../layouts/MainLayout'
-import { CardComponent } from '../../components/CardComponent'
+import { CardComponent } from '../../components/CardComponents/CardComponent'
 // import { useRouter } from 'next/router'
 // import { server } from '../../config'
 // import useSWR from 'swr'

@@ -1,6 +1,7 @@
 import { MainLayout } from '../../layouts/MainLayout'
-
+import { CardComponentSocialLinks } from '../../components/CardComponents/CardComponentSocialLinks'
 // import data
+import { reviews }  from '../../data/reviews/reviews'
 
 export default function ReviewsPage() {
     return (
@@ -8,8 +9,11 @@ export default function ReviewsPage() {
             title='Reviews page'
             description='Description for Reviews page'
         >
-            Reviews
-            {/* TODO: make link to VK */}
+            <CardComponentSocialLinks
+                cardHeader={reviews[0].header}
+                cardTitle={reviews[0].title}
+                cardText={reviews[0].text}
+            />
         </MainLayout>
     )
 }  

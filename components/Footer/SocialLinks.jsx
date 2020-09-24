@@ -3,7 +3,7 @@ import { Container, ButtonGroup, Button } from 'react-bootstrap'
 
 export function SocialLinks() {
     return (
-        <Container>
+        <Container style={{textAlign:'center'}}>
             <form>
                 <legend>Our social networks:</legend>
                 <ButtonGroup aria-label="Basic example" size="md">

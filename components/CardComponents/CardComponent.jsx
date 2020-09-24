@@ -1,8 +1,8 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
-import { ModalCallback } from './Modal_Callback/Modal_Callback'
+import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 
-export function CardComponent( {cardHeader, cardTitle, cardText} ) {
+export function CardComponent( {cardHeader, cardTitle, cardText, cardAdd} ) {
     return (
         <Card>
             <Card.Header>
