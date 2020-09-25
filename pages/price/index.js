@@ -1,6 +1,10 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { Table, Card } from 'react-bootstrap'
+import { CarouselComponent } from '../../components/Main/CarouselComponent'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
+
+// import data
+import { price_carousel } from '../../data/price/price_carousel/price_carousel'
 
 export default function PricePage() {
     return (
@@ -11,6 +15,13 @@ export default function PricePage() {
             <HeadingComponent 
                 heading='Price Page'
             />
+            {/* <div
+                style={{marginTop: '56px'}}
+            >
+                <CarouselComponent
+                    data={price_carousel}
+                />
+            </div> */}
             <Card>
                 <Card.Header>
                     Price
