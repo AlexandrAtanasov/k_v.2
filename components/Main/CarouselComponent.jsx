@@ -1,12 +1,11 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
-import { carousel } from '../../data/main/carousel/main_carousel'
 
-export function CarouselComponent() {
+export function CarouselComponent( {data} ) {
 
     return (
         <Carousel style={{marginTop: '-56px'}}>
-            {carousel.map(img => {
+            {data.map(img => {
                 return (
                     <Carousel.Item key={img.id}>
                         <img

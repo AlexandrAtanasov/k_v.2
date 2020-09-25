@@ -8,7 +8,7 @@ import { CardComponentImg } from '../components/CardComponents/CardComponentImg'
 import { HeadingComponent } from '../components/Heading/HeadingComponent'
 
 // import data
-import { carousel } from '../../data/main/carousel/main_carousel'
+import { carousel } from '../data/main/carousel/main_carousel'
 import { authors_column } from '../data/authors_column/authors_column'
 
 export default function HomePage() {
@@ -18,7 +18,9 @@ export default function HomePage() {
       title='Main page'
       description='Description for Main page'
     >
-      <CarouselComponent />
+      <CarouselComponent
+        data={carousel}
+      />
       <MainActivitiesComponent />
       <HeadingComponent 
         heading='Authors column'
