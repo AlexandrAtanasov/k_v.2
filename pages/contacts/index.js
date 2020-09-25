@@ -2,6 +2,7 @@ import { Card, Button } from 'react-bootstrap'
 import { MainLayout } from '../../layouts/MainLayout'
 import { ModalCallback } from '../../components/Modal_Callback/Modal_Callback'
 import { ModalContacts } from '../../components/Modal_Contacts/Modal_Contacts'
+import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 import ReactMarkdown from "react-markdown";
 
 // import data
@@ -17,6 +18,9 @@ export default function LocationsPage() {
             title='How to find us'
             description='Description for locations page'
         >
+            <HeadingComponent 
+                heading='Locations and contacts Page'
+            />
             {maps.map(elem => {
                 return(
                     <Card key={elem.id}>

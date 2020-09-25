@@ -1,5 +1,4 @@
 import { MainLayout } from '../../layouts/MainLayout'
-import { Card } from 'react-bootstrap'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 import { CardComponent } from '../../components/CardComponents/CardComponent'
 

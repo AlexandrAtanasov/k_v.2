@@ -1,5 +1,6 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { CardComponent } from '../../components/CardComponents/CardComponent'
+import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 // import { useRouter } from 'next/router'
 // import { server } from '../../config'
 // import useSWR from 'swr'
@@ -88,6 +89,9 @@ export default function ResolvablePage ( {page} ) {
             title={data.title}
             description={`Description for ${data.id} page`}
         >
+            <HeadingComponent 
+                heading='Resolvable Page'
+            />
             <CardComponent
                 cardHeader={data.header}
                 cardTitle={data.title}

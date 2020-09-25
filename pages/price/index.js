@@ -1,5 +1,6 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { Table, Card } from 'react-bootstrap'
+import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 export default function PricePage() {
     return (
@@ -7,7 +8,9 @@ export default function PricePage() {
             title='Price page'
             description='Description for Price page'
         >
-            
+            <HeadingComponent 
+                heading='Price Page'
+            />
             <Card>
                 <Card.Header>
                     Price
