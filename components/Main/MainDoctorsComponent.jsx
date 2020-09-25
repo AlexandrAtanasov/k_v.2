@@ -1,5 +1,6 @@
-import { CardDeckComponent } from '../CardDeckComponent'
+import { CardComponentDeck } from '../CardComponents/CardComponentDeck'
 
+// import data
 import { doctors } from '../../data/persons/doctors'
 
 
@@ -11,7 +12,7 @@ export function MainDoctorsComponent( ) {
                 marginTop: "1.5rem",
             }}
         >
-            <CardDeckComponent data={doctors}/>
+            <CardComponentDeck data={doctors}/>
         </div>
     )
 }

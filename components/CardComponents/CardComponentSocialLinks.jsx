@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
-
+import ReactMarkdown from "react-markdown";
 import { SocialLinks } from '../Footer/SocialLinks'
 
 export function CardComponentSocialLinks( {cardTitle, cardText} ) {
@@ -10,9 +10,9 @@ export function CardComponentSocialLinks( {cardTitle, cardText} ) {
                 <Card.Title>
                     {cardTitle}
                 </Card.Title>
-                <Card.Text>
-                    {cardText}
-                </Card.Text>
+                <ReactMarkdown
+                    source={cardText} 
+                />
                 <SocialLinks />
             </Card.Body>
         </Card>

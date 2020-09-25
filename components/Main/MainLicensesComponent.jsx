@@ -1,5 +1,6 @@
-import { CardDeckComponent } from '../CardDeckComponent'
+import { CardComponentDeck } from '../CardComponents/CardComponentDeck'
 
+// import data
 import { licenses } from '../../data/licenses'
 
 
@@ -11,7 +12,7 @@ export function MainLicensesComponent( ) {
                 marginTop: "1.5rem",
             }}
         >
-            <CardDeckComponent data={licenses}/>
+            <CardComponentDeck data={licenses}/>
         </div>
     )
 }

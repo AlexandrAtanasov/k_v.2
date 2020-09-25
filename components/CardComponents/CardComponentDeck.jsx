@@ -1,9 +1,11 @@
 import { CardDeck, Card } from 'react-bootstrap'
+import ReactMarkdown from "react-markdown";
 
-import style from '../styles/components/CardDeckComponent.module.scss'
+// import styles
+import style from '../../styles/components/CardDeckComponent.module.scss'
 
 
-export function CardDeckComponent( {data} ) {
+export function CardComponentDeck( {data} ) {
     const elements = data;
 
 // TODO: styles module
@@ -23,9 +25,9 @@ export function CardDeckComponent( {data} ) {
                                 <Card.Title>
                                     {elem.title}
                                 </Card.Title>
-                                <Card.Text>
-                                    {elem.text}
-                                </Card.Text>
+                                <ReactMarkdown
+                                    source={elem.text} 
+                                />
                                 </Card.Body>
                             </Card>
                         )

@@ -1,7 +1,7 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { Row, Col, Tab, Nav } from 'react-bootstrap'
 
-import { CardDeckComponent } from '../../components/CardDeckComponent'
+import { CardComponentDeck } from '../../components/CardComponents/CardComponentDeck'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
@@ -54,17 +54,17 @@ export default function PersonsPage() {
                     <Col>
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
-                                <CardDeckComponent 
+                                <CardComponentDeck 
                                     data={doctors}
                                 />
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-                                <CardDeckComponent 
+                                <CardComponentDeck 
                                     data={administrators}
                                 />
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
-                                <CardDeckComponent 
+                                <CardComponentDeck 
                                     data={trainers}
                                 />
                             </Tab.Pane>

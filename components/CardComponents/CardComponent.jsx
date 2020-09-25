@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { ModalCallback } from '../Modal_Callback/Modal_Callback'
+import ReactMarkdown from "react-markdown";
 
 export function CardComponent( {cardHeader, cardTitle, cardText} ) {
     return (
@@ -12,9 +13,9 @@ export function CardComponent( {cardHeader, cardTitle, cardText} ) {
                 <Card.Title>
                     {cardTitle}
                 </Card.Title>
-                <Card.Text>
-                    {cardText}
-                </Card.Text>
+                <ReactMarkdown
+                    source={cardText} 
+                />
                 <Button variant="success">
                     <ModalCallback />
                 </Button>
