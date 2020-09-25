@@ -3,6 +3,6 @@ export const rules = [
       id: '1',
       header: 'Rules',
       title: 'Dear ppl',
-      text: 'Labore et commodo anim sunt laboris nisi do nulla cupidatat pariatur aliquip.',
+      text: 'My favorite search engine is [Duck Duck Go](https://duckduckgo.com). \n My favorite search engine is [Duck Duck Go](https://duckduckgo.com).',
     },
 ]

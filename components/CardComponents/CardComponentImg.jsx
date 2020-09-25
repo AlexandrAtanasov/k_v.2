@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import ReactMarkdown from "react-markdown";
 
-export function CardImgComponent( {cardTitle, cardText, cardImg} ) {
+export function CardComponentImg( {cardTitle, cardText, cardImg} ) {
     return (
         <Card>
             <Card.Body>

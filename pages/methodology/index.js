@@ -1,5 +1,5 @@
 import { MainLayout } from '../../layouts/MainLayout'
-import { CardImgComponent } from '../../components/CardComponents/CardImgComponent'
+import { CardComponentImg } from '../../components/CardComponents/CardComponentImg'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
@@ -17,7 +17,7 @@ export default function AuthorsPage() {
             {
                 authors_column.map( elem => {
                     return (
-                        <CardImgComponent 
+                        <CardComponentImg 
                             key={elem.id}
                             cardTitle={elem.title}
                             cardText={elem.text}

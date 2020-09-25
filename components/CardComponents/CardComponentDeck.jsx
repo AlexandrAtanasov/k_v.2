@@ -8,8 +8,6 @@ import style from '../../styles/components/CardDeckComponent.module.scss'
 export function CardComponentDeck( {data} ) {
     const elements = data;
 
-// TODO: styles module
-// TODO: component for card with card deck for persons, licences, persons on main page 
     return (
         <Card 
             className={`${style.margin}`}

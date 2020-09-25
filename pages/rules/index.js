@@ -1,6 +1,7 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { Card } from 'react-bootstrap'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
+import { CardComponent } from '../../components/CardComponents/CardComponent'
 
 // import data
 import { rules } from '../../data/rules/rules'
@@ -14,22 +15,18 @@ export default function RulesPage() {
             <HeadingComponent 
                 heading='Rules Page'
             />
-            <Card key={rules[0].id}>
-                <Card.Body>
-                    <Card.Title>
-                        {rules[0].title}
-                    </Card.Title>
-                    <Card.Text>
-                        {rules[0].text}
-                    </Card.Text>
-                    <Card.Text>
-                        <a href='/download_data/rules/Some rules here.pdf' target="_blank">Download some rules</a>
-                    </Card.Text>
-                    <Card.Text>
-                        <a href='/download_data/rules/Some rules here.pdf' target="_blank">Download another rules</a>
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+            {
+                rules.map( elem => {
+                    return (
+                        <CardComponent 
+                            key={elem.id}
+                            cardHeader={elem.header}
+                            cardTitle={elem.title}
+                            cardText={elem.text}
+                        />
+                    )
+                })
+            }
             
         </MainLayout>
     )

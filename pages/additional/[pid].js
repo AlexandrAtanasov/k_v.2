@@ -89,7 +89,8 @@ export default function AdditionalPage ( {page} ) {
             description={`Description for ${data.id} page`}
         >
             <CardComponent
-                cardHeader={data.title}
+                cardHeader={data.header}
+                cardTitle={data.title}
                 cardText={data.text}
             />
         </MainLayout>
