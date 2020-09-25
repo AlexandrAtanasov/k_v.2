@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import ReactMarkdown from "react-markdown";
 
 export function CardImgComponent( {cardTitle, cardText, cardImg} ) {
     return (
@@ -8,9 +9,9 @@ export function CardImgComponent( {cardTitle, cardText, cardImg} ) {
                 <Card.Title>
                     {cardTitle}
                 </Card.Title>
-                <Card.Text>
-                    {cardText}
-                </Card.Text>
+                <ReactMarkdown
+                    source={cardText} 
+                />
             </Card.Body>
             {/* TODO: make image not so high */}
             <Card.Img variant="bottom" src={cardImg} />

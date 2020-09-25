@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import ReactMarkdown from "react-markdown";
 
 export function CardComponentWithoutHeader ( {cardTitle, cardText} ) {
     return (
@@ -8,9 +9,9 @@ export function CardComponentWithoutHeader ( {cardTitle, cardText} ) {
                 <Card.Title>
                     {cardTitle}
                 </Card.Title>
-                <Card.Text>
-                    {cardText}
-                </Card.Text>
+                <ReactMarkdown
+                    source={cardText} 
+                />
             </Card.Body>
         </Card>
     )
