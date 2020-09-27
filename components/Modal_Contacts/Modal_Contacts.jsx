@@ -1,22 +1,28 @@
 import React, { useState } from 'react'
-import { Button, Modal } from 'react-bootstrap'
+// import { Button, Modal } from 'react-bootstrap'
 
 export function ModalContacts() {
 
-  const [show_telNumbers, setShow_telNumbers] = useState(false);
-  const handleClose_telNumbers = () => setShow_telNumbers(false);
-  const handleShow_telNumbers = () => setShow_telNumbers(true);
+//   const [show_telNumbers, setShow_telNumbers] = useState(false);
+//   const handleClose_telNumbers = () => setShow_telNumbers(false);
+//   const handleShow_telNumbers = () => setShow_telNumbers(true);
   
-  const handecall_callFirst = () => window.open("tel:111","_self");
-  const handecall_callSecond = () => window.open("tel:222","_self");
-  const handecall_callThird = () => window.open("tel:333","_self");
+  const handecall_call = () => window.open("tel:111","_self");
+//   const handecall_callFirst = () => window.open("tel:111","_self");
+//   const handecall_callSecond = () => window.open("tel:222","_self");
+//   const handecall_callThird = () => window.open("tel:333","_self");
 
     return (
-        // TODO: make call to single number 
         <>
-            <div onClick={handleShow_telNumbers}>Call to centers</div>
+            <div 
+                // onClick={handleShow_telNumbers}
+                onClick={handecall_call}
+                >
+                Call to centers
+            </div>
 
-            <Modal 
+             {/* TODO: make call to single number  */}
+            {/* <Modal 
                 onHide={handleClose_telNumbers}
                 show={show_telNumbers} 
             >
@@ -60,7 +66,7 @@ export function ModalContacts() {
                     Close
                 </Button>
                 </Modal.Footer>
-            </Modal>
+            </Modal> */}
         </>
     )
 }
