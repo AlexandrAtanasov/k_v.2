@@ -16,7 +16,6 @@ export function CardComponentImg( {cardTitle, cardText, cardImg} ) {
                     source={cardText} 
                 />
             </Card.Body>
-            {/* TODO: make image not so high */}
             <Card.Img 
                 src={cardImg} 
                 variant="bottom"

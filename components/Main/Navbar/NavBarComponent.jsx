@@ -110,7 +110,6 @@ export function NavBarComponent() {
                     <Navbar.Brand href="#home">
                         <img
                             alt="logo"
-                            // src={`${server}/img/main/navbar/logoooo.png`}
                             src={`/img/main/navbar/logoooo.png`}
                             width="auto"
                             height="30"
