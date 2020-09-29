@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap'
 import OrderCallForm  from './Form_Callback'
+import ReactMarkdown from "react-markdown";
+
+// import data
+import { personal_data_policy } from '../../data/personal_data_policy/personal_data_policy'
 
 export function ModalCallback() {
 
@@ -28,13 +32,16 @@ export function ModalCallback() {
               <OrderCallForm />
             </Modal.Body>
             <Modal.Footer>
-              <Button 
+              {/* <Button 
                 onClick={handleClose_callback}
                 variant="secondary" 
               >
                 Close
               </Button>
-              <Button onClick={handleU_callback} variant="success">Understood</Button>
+              <Button onClick={handleU_callback} variant="success">Understood</Button> */}
+              <ReactMarkdown
+                source={personal_data_policy[0].text} 
+              />
             </Modal.Footer>
           </Modal>
         </>

@@ -74,9 +74,8 @@ const OrderCallForm = () => {
                 <Form.Label>Select Location</Form.Label>
                 <Form.Control 
                     as="select" 
-                    // defaultValue="Choose location..."
                     // type='text' 
-                    // placeholder="Your phone number" 
+                    // placeholder="Choose location" 
                     // id="userNumber"
                     name="userLocation"
                     onChange={formik.handleChange}
@@ -87,10 +86,11 @@ const OrderCallForm = () => {
                     <option>Location #3...</option>
                 </Form.Control>
             </Form.Group>
-
-            <Button variant="success" type="submit">
-                Submit
-            </Button>
+            <div style={{textAlign:'center'}}>
+                <Button variant="success" type="submit">
+                    Submit
+                </Button>
+            </div>
         </Form>
   );
 };
