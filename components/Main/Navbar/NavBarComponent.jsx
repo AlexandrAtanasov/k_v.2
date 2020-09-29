@@ -231,7 +231,7 @@ export function NavBarComponent() {
                                 <ModalCallback />
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#contactsList">
+                            <NavDropdown.Item href="#callToCenters">
                                 <ModalContacts />
                             </NavDropdown.Item>
                             <NavDropdown.Divider />

@@ -19,21 +19,19 @@ export function MainActivitiesComponent() {
             <div className={` ${style.activities_row_container} `} >
                 {activities.map(elem => {
                     return (
-                        <div >
-                            <div
-                                key={elem.id} 
-                                className={` ${style.activities_elem_container} justify-content-center`} 
-                            >
-                                    <Image 
-                                        fluid 
-                                        className={` ${style.activities_elem_img} `}
-                                        src={elem.img} 
-                                    />
-                                    <br/>
-                                    <span className={` ${style.activities_elem_text} `} >
-                                        {elem.text}
-                                    </span>
-                            </div>
+                        <div
+                            key={elem.id} 
+                            className={` ${style.activities_elem_container} justify-content-center`} 
+                        >
+                                <Image 
+                                    fluid 
+                                    className={` ${style.activities_elem_img} `}
+                                    src={elem.img} 
+                                />
+                                <br/>
+                                <span className={` ${style.activities_elem_text} `} >
+                                    {elem.text}
+                                </span>
                         </div>
                     )
                 })}
