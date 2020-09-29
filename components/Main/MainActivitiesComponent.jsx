@@ -17,16 +17,13 @@ export function MainActivitiesComponent() {
             </div>
             {/* TODO: make navigation */}
             <div className={` ${style.activities_row_container} `} >
-                <Nav>
                 {activities.map(elem => {
                     return (
-                        <div key={elem.id}>
-                            <Link 
-                                href={`/additional/[pid]`} as={`/additional/Mollit-voluptate-voluptate`}
-                                passHref
+                        <div >
+                            <div
+                                key={elem.id} 
                                 className={` ${style.activities_elem_container} justify-content-center`} 
                             >
-                                <Nav.Link>
                                     <Image 
                                         fluid 
                                         className={` ${style.activities_elem_img} `}
@@ -36,12 +33,10 @@ export function MainActivitiesComponent() {
                                     <span className={` ${style.activities_elem_text} `} >
                                         {elem.text}
                                     </span>
-                                </Nav.Link>
-                            </Link>
+                            </div>
                         </div>
                     )
                 })}
-                </Nav>
             </div>
         </div>
     )
