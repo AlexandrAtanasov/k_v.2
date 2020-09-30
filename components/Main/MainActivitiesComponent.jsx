@@ -15,7 +15,7 @@ export function MainActivitiesComponent() {
                     heading='What we do'
                 />
             </div>
-            {/* TODO: make navigation */}
+            {/* TODO: make navigation (or not)*/}
             <div className={` ${style.activities_row_container} `} >
                 {activities.map(elem => {
                     return (

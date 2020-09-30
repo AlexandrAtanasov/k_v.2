@@ -6,9 +6,9 @@ import style from '../../styles/components/HeadingComponent.module.scss'
 
 export function HeadingComponent( { heading } ) {
     return (
-        <Container style={{textAlign:'center'}}>
+        <Container className={` ${style.heading_container} `}>
             <h1
-                className={` ${style.heading_uppercase} `}
+                className={` ${style.heading_h1} `}
             >
                 { heading }
             </h1>
