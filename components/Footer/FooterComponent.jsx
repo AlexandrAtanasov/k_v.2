@@ -2,13 +2,18 @@ import React from 'react'
 import Link from 'next/link'
 import { Container, Row, Col, ListGroup, Button } from 'react-bootstrap'
 
-import { SocialLinks } from './SocialLinks'
+import { SocialLinksComponent } from './SocialLinksComponent'
 import { FooterContacts } from './FooterContacts'
 import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 
+// import styles
+import footer_style from '../../styles/components/FooterComponent.module.scss'
+
 export function FooterComponent() {
     return (
-        <footer className='footer mt-auto py-3 bg-dark text-white'>
+        <footer 
+            className={`footer mt-auto py-3 text-white footer_background_color`}
+        >
 
             <Container className="text-center">
                 <Row className="justify-content-md-center">
@@ -18,7 +23,7 @@ export function FooterComponent() {
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col md="auto">
-                        <SocialLinks />
+                        <SocialLinksComponent />
                     </Col>
                     <Col md="auto">
                         <FooterContacts />

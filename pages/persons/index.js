@@ -25,13 +25,9 @@ export default function PersonsPage() {
             <Tab.Container id="persons_cards" defaultActiveKey="first" >
                 
                 <Row 
-                    // className="justify-content-md-center"
                     className={` ${style.margin} justify-content-md-center`}
                 >
-                    <Nav 
-                        variant="pills" 
-                        // className={style.persons_cards_pills}
-                    >
+                    <Nav variant="pills">
                         <Col lg='auto'>
                             <Nav.Item>
                                 <Nav.Link eventKey="first" className={style.button_outline_none}>

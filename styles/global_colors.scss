@@ -1,18 +1,21 @@
-$color: darkgreen;
+$green_color: #8ab549;
+$blue_color: #095666;
+$light_blue_color: #6eaaa0;
+$orange_color: #ff7d01;
 
 .backgroundColor_darkgreen {
-    background-color: $color;
+    background-color: $green_color;
 }
 
 // color for pills buttons on persons page
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: $color;
+    background-color: $green_color;
 }
 
 // color for active menu item
 .dropdown-item.active, .dropdown-item:active {
-    background-color: $color;
+    background-color: $green_color;
 }
 
 a {
@@ -20,11 +23,28 @@ a {
 }
 
 a:hover {
-    color: $color;
+    color: $green_color;
 }
 
 //background color for ListGroup Item
 .list-group-item {
     background-color: rgba(0,0,0,0);
     border: 1px solid rgba(255, 255, 255, 0.20)
+}
+
+// footer background color
+.footer_background_color {
+    background-color: $blue_color;
+}
+
+// social link colors
+.social_links_color {
+    background-color: $light_blue_color;
+    border-color: $light_blue_color;
+}
+.social_links_color:active,
+.social_links_color:hover,
+.social_links_color:focus
+{
+    background-color: $orange_color!important;
 }
