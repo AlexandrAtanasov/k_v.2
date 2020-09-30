@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
 import ReactMarkdown from "react-markdown";
-import { SocialLinks } from '../Footer/SocialLinks'
+import { SocialLinksComponent } from '../Footer/SocialLinksComponent'
 
 export function CardComponentSocialLinks( {cardTitle, cardText} ) {
     return (
@@ -13,7 +13,7 @@ export function CardComponentSocialLinks( {cardTitle, cardText} ) {
                 <ReactMarkdown
                     source={cardText} 
                 />
-                <SocialLinks />
+                <SocialLinksComponent />
             </Card.Body>
         </Card>
     )
