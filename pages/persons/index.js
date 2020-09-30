@@ -10,7 +10,7 @@ import { administrators } from '../../data/persons/administrators'
 import { trainers } from '../../data/persons/trainers'
 
 // import styles
-import classes from '../../styles/persons_page.module.scss'
+import style from '../../styles/pages/persons_page.module.scss'
 
 
 export default function PersonsPage() {
@@ -24,25 +24,31 @@ export default function PersonsPage() {
             />
             <Tab.Container id="persons_cards" defaultActiveKey="first" >
                 
-                <Row className="justify-content-md-center" >
-                    <Nav variant="pills" className={classes.persons_cards_pills}>
+                <Row 
+                    // className="justify-content-md-center"
+                    className={` ${style.margin} justify-content-md-center`}
+                >
+                    <Nav 
+                        variant="pills" 
+                        // className={style.persons_cards_pills}
+                    >
                         <Col lg='auto'>
                             <Nav.Item>
-                                <Nav.Link eventKey="first" className={classes.button_outline_none}>
+                                <Nav.Link eventKey="first" className={style.button_outline_none}>
                                     Doctors
                                 </Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col lg='auto'>
                             <Nav.Item>
-                                <Nav.Link eventKey="second" className={classes.button_outline_none}>
+                                <Nav.Link eventKey="second" className={style.button_outline_none}>
                                     Administrators
                                 </Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col lg='auto'>
                             <Nav.Item>
-                                <Nav.Link eventKey="third" className={classes.button_outline_none}>
+                                <Nav.Link eventKey="third" className={style.button_outline_none}>
                                     Trainers
                                 </Nav.Link>
                             </Nav.Item>
