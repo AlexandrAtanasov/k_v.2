@@ -10,10 +10,10 @@ export function CardComponentDeck( {data} ) {
 
     return (
         <Card 
-            className={`${style.margin}`}
+            className={` ${style.margin}`}
             border="light" 
         >
-            <Card.Body>
+            <Card.Body className={` ${style.padding}`}>
                 <CardDeck>
                     {elements.map(elem => {
                         return(
