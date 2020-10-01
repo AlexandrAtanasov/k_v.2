@@ -107,7 +107,7 @@ export function NavBarComponent() {
                 ref={node}
             >
                 <Link href={'/'} passHref>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand>
                         <img
                             alt="logo"
                             src={`/img/main/navbar/logoooo.png`}
