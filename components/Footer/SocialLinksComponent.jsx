@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, ButtonGroup, Button } from 'react-bootstrap'
 
 // import style
-import style from '../../styles/components/SocialLinksComponent.module.scss'
+import style from '../../styles/components/footer/SocialLinksComponent.module.scss'
 
 export function SocialLinksComponent() {
     return (

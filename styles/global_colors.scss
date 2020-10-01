@@ -37,7 +37,7 @@ a:hover {
     background-color: $blue_color;
 }
 
-// social link colors
+// social links colors
 .social_links_color {
     background-color: $light_blue_color;
     border-color: $light_blue_color;
@@ -45,6 +45,19 @@ a:hover {
 .social_links_color:active,
 .social_links_color:hover,
 .social_links_color:focus
+{
+    background-color: $orange_color!important;
+    border-color: $orange_color!important;
+}
+
+// footer contacts buttons
+.footer_contacts_color {
+    background-color: $light_blue_color;
+    border-color: $light_blue_color;
+}
+.footer_contacts_color:active,
+.footer_contacts_color:hover,
+.footer_contacts_color:focus
 {
     background-color: $orange_color!important;
     border-color: $orange_color!important;

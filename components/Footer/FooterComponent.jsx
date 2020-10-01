@@ -3,11 +3,11 @@ import Link from 'next/link'
 import { Container, Row, Col, ListGroup, Button } from 'react-bootstrap'
 
 import { SocialLinksComponent } from './SocialLinksComponent'
-import { FooterContacts } from './FooterContacts'
+import { FooterContactsComponent } from './FooterContactsComponent'
 import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 
 // import styles
-import footer_style from '../../styles/components/FooterComponent.module.scss'
+import footer_style from '../../styles/components/footer/FooterComponent.module.scss'
 
 export function FooterComponent() {
     return (
@@ -26,7 +26,7 @@ export function FooterComponent() {
                         <SocialLinksComponent />
                     </Col>
                     <Col md="auto">
-                        <FooterContacts />
+                        <FooterContactsComponent />
                     </Col>
                     <Col md="auto">
                         <ListGroup variant="flush">
