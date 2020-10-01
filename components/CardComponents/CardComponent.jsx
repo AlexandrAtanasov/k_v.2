@@ -16,7 +16,7 @@ export function CardComponent( {cardHeader, cardTitle, cardText} ) {
                 <ReactMarkdown
                     source={cardText} 
                 />
-                <Button variant="success" href="#callback">
+                <Button className="button_green_color" href="#callback">
                     <ModalCallback />
                 </Button>
             </Card.Body>
