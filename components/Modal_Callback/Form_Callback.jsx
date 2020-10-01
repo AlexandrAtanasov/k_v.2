@@ -87,7 +87,7 @@ const OrderCallForm = () => {
                 </Form.Control>
             </Form.Group>
             <div style={{textAlign:'center'}}>
-                <Button variant="success" type="submit">
+                <Button className="button_green_color" type="submit">
                     Submit
                 </Button>
             </div>

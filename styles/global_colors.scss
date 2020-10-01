@@ -62,3 +62,18 @@ a:hover {
     background-color: $orange_color!important;
     border-color: $orange_color!important;
 }
+
+
+// buttons color
+.button_green_color {
+    background-color: $green_color;
+    border-color: $green_color;
+}
+
+.button_green_color:active,
+.button_green_color:hover,
+.button_green_color:focus
+{
+    background-color: $orange_color!important;
+    border-color: $orange_color!important;
+}
