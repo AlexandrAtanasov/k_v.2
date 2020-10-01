@@ -12,7 +12,7 @@ export default function AuthorsPage() {
             description='Description for Authors page'
         >
             <HeadingComponent 
-                heading='Authors/Methodology Page'
+                heading='Authors / Methodology Page'
             />
             {
                 authors_column.map( elem => {

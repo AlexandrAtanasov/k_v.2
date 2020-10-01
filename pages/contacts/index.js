@@ -38,13 +38,13 @@ export default function LocationsPage() {
                         </Card.Body>
 
                         <div className={` ${style.div_for_button} `} >
-                            <Button variant="success" href="#callback">
+                            <Button className="button_green_color" href="#callback">
                                 <ModalCallback />
                             </Button>
 
                         </div>
                         <div className={` ${style.div_for_button} `}>
-                            <Button variant="success" href="#callToCenters">
+                            <Button className="button_green_color" href="#callToCenters">
                                 <ModalContacts />
                             </Button>
 
