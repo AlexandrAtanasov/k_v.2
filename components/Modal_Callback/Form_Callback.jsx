@@ -6,6 +6,9 @@ import { server } from '../../config'
 
 import emailjs from 'emailjs-com';
 
+// import localization data
+import { local } from '../../data/localization_data/components/Modal_Callback/Form_Callback'
+
 // TODO: validation 
 
 const OrderCallForm = () => {
@@ -40,55 +43,44 @@ const OrderCallForm = () => {
     return (
         <Form onSubmit={formik.handleSubmit}>
             <Form.Group controlId="formBasicName">
-                <Form.Label>Your name</Form.Label>
+                <Form.Label>{local.form_name_label}</Form.Label>
                 <Form.Control 
-                    placeholder="Enter here your name" 
                     type="text"
-                    // id="userName"
                     name="userName"
                     onChange={formik.handleChange}
                     value={formik.values.firstName}
                 />
-                <Form.Text className="text-muted">
-                    Some text here...
-                </Form.Text>
             </Form.Group>
 
-            <Form.Group controlId="formBasicPassword">
-                <Form.Label>Your phone number</Form.Label>
+            <Form.Group controlId="formBasicNumber">
+                <Form.Label>{local.form_number_label}</Form.Label>
                 <Form.Control 
                     type='tel' 
-                    // placeholder="Your phone number" 
-                    // id="userNumber"
                     name="userNumber"
                     onChange={formik.handleChange}
                     value={formik.values.userNumber}
                 />
                 <Form.Text className="text-muted">
-                    Phone number like - +79999999999
+                    {local.form_number_info}
                 </Form.Text>
             </Form.Group>
 
-
             <Form.Group controlId="formBasicChoose">
-                <Form.Label>Select Location</Form.Label>
+                <Form.Label>{local.form_location_label}</Form.Label>
                 <Form.Control 
                     as="select" 
-                    // type='text' 
-                    // placeholder="Choose location" 
-                    // id="userNumber"
                     name="userLocation"
                     onChange={formik.handleChange}
                     value={formik.values.userLocation}
                 >
-                    <option>Location #1...</option>
-                    <option>Location #2...</option>
-                    <option>Location #3...</option>
+                    <option>{local.form_location_options.option_1}</option>
+                    <option>{local.form_location_options.option_2}</option>
+                    <option>{local.form_location_options.option_3}</option>
                 </Form.Control>
             </Form.Group>
             <div style={{textAlign:'center'}}>
                 <Button className="button_green_color" type="submit">
-                    Submit
+                    {local.form_button}
                 </Button>
             </div>
         </Form>
