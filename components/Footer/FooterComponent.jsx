@@ -8,6 +8,9 @@ import { FooterContactsComponent } from './FooterContactsComponent'
 import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 import { FooterNavComponent } from './FooterNavComponent'
 
+// import localization data
+import { local } from '../../data/localization_data/components/Footer/FooterComponent'
+
 export function FooterComponent() {
     return (
         <footer 
@@ -16,7 +19,7 @@ export function FooterComponent() {
             <Container className="text-center">
                 <Row className="justify-content-md-center">
                     <Col>
-                        LTD
+                        {local.company_name}
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center">
