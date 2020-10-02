@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 // import { Button, Modal } from 'react-bootstrap'
 
+// import localization data
+import { local } from '../../data/localization_data/components/Modal_Contacts/Modal_Contacts'
+
 export function ModalContacts() {
 
 //   const [show_telNumbers, setShow_telNumbers] = useState(false);
@@ -8,20 +11,16 @@ export function ModalContacts() {
 //   const handleShow_telNumbers = () => setShow_telNumbers(true);
   
   const handecall_call = () => window.open("tel:111","_self");
-//   const handecall_callFirst = () => window.open("tel:111","_self");
-//   const handecall_callSecond = () => window.open("tel:222","_self");
-//   const handecall_callThird = () => window.open("tel:333","_self");
 
     return (
         <>
             <div 
                 // onClick={handleShow_telNumbers}
                 onClick={handecall_call}
-                >
-                Call to centers
+            >
+                {local.link_text}
             </div>
 
-             {/* TODO: make call to single number  */}
             {/* <Modal 
                 onHide={handleClose_telNumbers}
                 show={show_telNumbers} 
