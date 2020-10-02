@@ -7,11 +7,15 @@ import { ModalContacts } from '../Modal_Contacts/Modal_Contacts'
 // import styles
 import style from '../../styles/components/footer/FooterContactsComponent.module.scss'
 
+
+// import localization data
+import { local } from '../../data/localization_data/components/Footer/FooterContactsComponent'
+
 export function FooterContactsComponent() {
     return (
         <Container>
             <form>
-                <legend>Our contacts:</legend>
+                <legend>{local.form_title}</legend>
                 <ButtonGroup 
                     aria-label="Basic example" 
                     size="md"
