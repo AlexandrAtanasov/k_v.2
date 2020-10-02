@@ -13,7 +13,6 @@ import { local } from '../../data/localization_data/components/Modal_Callback/Fo
 
 const OrderCallForm = () => {
 
-     
     const service = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
     const template = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
     const user = process.env.NEXT_PUBLIC_EMAIL_USER_ID;

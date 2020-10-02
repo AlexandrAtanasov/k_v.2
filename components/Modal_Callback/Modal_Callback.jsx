@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 
 // import data
 import { personal_data_policy } from '../../data/personal_data_policy/personal_data_policy'
+import { local } from '../../data/localization_data/components/Modal_Callback/Modal_Callback'
 
 export function ModalCallback() {
 
@@ -15,7 +16,9 @@ export function ModalCallback() {
 
     return (
         <>
-          <div onClick={handleShow_callback}>Order call</div>
+          <div onClick={handleShow_callback}>
+            {local.link_text}
+          </div>
 
           <Modal
             onHide={handleClose_callback}
@@ -25,7 +28,7 @@ export function ModalCallback() {
           >
             <Modal.Header closeButton>
               <Modal.Title>
-                Callback form
+                {local.modal_header_title}
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
