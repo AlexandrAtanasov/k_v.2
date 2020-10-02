@@ -2,6 +2,7 @@ $green_color: #8ab549;
 $blue_color: #095666;
 $light_blue_color: #6eaaa0;
 $orange_color: #ff7d01;
+$white_color: #fff;
 
 .backgroundColor_darkgreen {
     background-color: $green_color;
@@ -76,4 +77,10 @@ a:hover {
 {
     background-color: $orange_color!important;
     border-color: $orange_color!important;
+}
+
+// CardComponent
+.card_component_header {
+    background-color: $blue_color;
+    color: $white_color;
 }

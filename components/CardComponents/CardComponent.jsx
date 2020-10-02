@@ -6,7 +6,9 @@ import ReactMarkdown from "react-markdown";
 export function CardComponent( {cardHeader, cardTitle, cardText} ) {
     return (
         <Card>
-            <Card.Header>
+            <Card.Header
+                className={` card_component_header `}
+            >
                 {cardHeader}
             </Card.Header>
             <Card.Body>
