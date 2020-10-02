@@ -4,11 +4,14 @@ import { Container, ButtonGroup, Button } from 'react-bootstrap'
 // import style
 import style from '../../styles/components/footer/SocialLinksComponent.module.scss'
 
+// import localization data
+import { local } from '../../data/localization_data/components/Footer/SocialLinksComponent'
+
 export function SocialLinksComponent() {
     return (
         <Container style={{textAlign:'center'}}>
             <form>
-                <legend>Our social networks:</legend>
+                <legend>{local.form_title}</legend>
                 <ButtonGroup 
                     aria-label="Basic example" 
                     size="md" 

@@ -5,7 +5,6 @@ import { Nav } from 'react-bootstrap'
 // import style
 import style from '../../styles/components/footer/FooterNavComponent.module.scss'
 
-
 // import localization data
 import { local } from '../../data/localization_data/components/Footer/FooterNavComponent'
 
