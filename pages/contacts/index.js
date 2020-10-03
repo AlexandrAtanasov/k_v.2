@@ -24,7 +24,9 @@ export default function LocationsPage() {
             {maps.map(elem => {
                 return(
                     <Card key={elem.id}>
-                        <Card.Header>
+                        <Card.Header
+                            className={` card_component_header `}
+                        >
                             {elem.header}
                         </Card.Header>
                         <Card.Body>
