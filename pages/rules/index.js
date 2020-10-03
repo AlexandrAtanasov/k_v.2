@@ -1,6 +1,6 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
-import { CardComponent } from '../../components/CardComponents/CardComponent'
+import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
 
 // import data
 import { rules } from '../../data/rules/rules'
@@ -17,9 +17,8 @@ export default function RulesPage() {
             {
                 rules.map( elem => {
                     return (
-                        <CardComponent 
+                        <CardComponentWithoutHeader 
                             key={elem.id}
-                            cardHeader={elem.header}
                             cardTitle={elem.title}
                             cardText={elem.text}
                         />
