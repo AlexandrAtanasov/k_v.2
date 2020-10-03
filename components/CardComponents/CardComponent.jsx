@@ -6,7 +6,8 @@ import ReactMarkdown from "react-markdown";
 // import styles
 import style from '../../styles/components/CardComponentImg.module.scss' 
 
-export function CardComponent( {cardHeader, cardTitle, cardText, cardImg} ) {
+// TODO: rename CardComponent and CardComponentImg ... and all Components
+export function CardComponent ( {cardHeader, cardTitle, cardText, cardImg} ) {
     return (
         <Card>
             <Card.Header
