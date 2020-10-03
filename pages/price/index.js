@@ -23,7 +23,9 @@ export default function PricePage() {
                 />
             </div> */}
             <Card>
-                <Card.Header>
+                <Card.Header
+                    className={` card_component_header `}
+                >
                     Price
                 </Card.Header>
                 <Card.Body>
@@ -69,7 +71,9 @@ export default function PricePage() {
             </Card>
       
             <Card>
-                <Card.Header>
+                <Card.Header
+                    className={` card_component_header `}
+                >
                     Price
                 </Card.Header>
                 <Card.Body>
@@ -116,7 +120,9 @@ export default function PricePage() {
             </Card>
       
             <Card>
-                <Card.Header>
+                <Card.Header
+                    className={` card_component_header `}
+                >
                     Price
                 </Card.Header>
                 <Card.Body>
