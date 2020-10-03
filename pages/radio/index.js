@@ -7,6 +7,9 @@ import ReactMarkdown from "react-markdown";
 import { radio } from '../../data/radio/radio'
 import { local } from '../../data/localization_data/pages/radio/radio'
 
+// import styles
+import style  from '../../styles/pages/radio_page.module.scss'
+
 export default function RadioPage() {
     return (
         <MainLayout
@@ -27,7 +30,12 @@ export default function RadioPage() {
                                 <ReactMarkdown
                                     source={elem.text} 
                                 />
-                                <audio controls src={elem.src}></audio>
+                                <audio 
+                                    className={` ${style.audio_width} `}
+                                    controls 
+                                    src={elem.src}
+                                >
+                                </audio>
                             </Card.Body>
                         </Card>
                     )

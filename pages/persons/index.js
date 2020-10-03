@@ -12,7 +12,6 @@ import { trainers } from '../../data/persons/trainers'
 // import styles
 import style from '../../styles/pages/persons_page.module.scss'
 
-
 export default function PersonsPage() {
     return (
         <MainLayout
