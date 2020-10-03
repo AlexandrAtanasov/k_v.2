@@ -96,6 +96,7 @@ export default function AdditionalPage ( {page} ) {
                 cardHeader={data.header}
                 cardTitle={data.title}
                 cardText={data.text}
+                cardImg={data.img}
             />
         </MainLayout>
     )

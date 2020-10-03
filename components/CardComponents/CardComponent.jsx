@@ -3,7 +3,10 @@ import { Card, Button } from 'react-bootstrap'
 import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 import ReactMarkdown from "react-markdown";
 
-export function CardComponent( {cardHeader, cardTitle, cardText} ) {
+// import styles
+import style from '../../styles/components/CardComponentImg.module.scss' 
+
+export function CardComponent( {cardHeader, cardTitle, cardText, cardImg} ) {
     return (
         <Card>
             <Card.Header
@@ -22,6 +25,11 @@ export function CardComponent( {cardHeader, cardTitle, cardText} ) {
                     <ModalCallback />
                 </Button>
             </Card.Body>
+            <Card.Img 
+                src={cardImg} 
+                variant="bottom"
+                className={`${style.height}`}
+            />
         </Card>
     )
 }
