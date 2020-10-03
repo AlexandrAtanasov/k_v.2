@@ -13,7 +13,9 @@ export default function SalesPage() {
                 heading='Sales Page'
             />
             <Card>
-                <Card.Header>
+                <Card.Header
+                    className={` card_component_header `}
+                >
                     Sales
                 </Card.Header>
                 <Card.Body>
