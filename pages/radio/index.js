@@ -5,15 +5,16 @@ import ReactMarkdown from "react-markdown";
 
 // import data
 import { radio } from '../../data/radio/radio'
+import { local } from '../../data/localization_data/pages/radio/radio'
 
 export default function RadioPage() {
     return (
         <MainLayout
-            title='Radio page'
-            description='Description for Radio page'
+            title={local.main_layout_title}
+            description={local.main_layout_description}
         >
             <HeadingComponent 
-                heading='Radio Page'
+                heading={local.heading_title}
             />
             {
                 radio.map( elem => {
