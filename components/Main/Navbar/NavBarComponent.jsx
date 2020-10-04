@@ -41,7 +41,8 @@ export function NavBarComponent() {
     const additional_menu = [
         { id: 1, pid: 'Et-nostrud-ullamco-nulla' },
         { id: 2, pid: 'Mollit-voluptate-voluptate' },
-        { id: 3, pid: 'Nostrud-duis-veniam-non-ipsum' }
+        { id: 3, pid: 'Nostrud-duis-veniam-non-ipsum' },
+        { id: 4, pid: 'Sale_of_exercise_equipment' },
     ]
     const resolvable_menu = [
         { id: 1, pid: 'In-laborum-tempor' },

@@ -1,5 +1,6 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { CardComponent } from '../../components/CardComponents/CardComponent'
+import { CardComponentImg } from '../../components/CardComponents/CardComponentImg'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 // import { useRouter } from 'next/router'
 // import { server } from '../../config'
@@ -84,6 +85,33 @@ export default function AdditionalPage ( {page} ) {
     // )
   
     // static layout
+   
+   {if (data.link == "Sale_of_exercise_equipment") {
+       return (
+        <MainLayout
+            title={data.title}
+            description={`Description for ${data.id} page`}
+        >
+            <HeadingComponent 
+                heading={data.header}
+            />
+            {
+                data.equipment.map( elem => {
+                    return (
+                        <CardComponentImg 
+                            key={elem.header}
+                            cardTitle={elem.title}
+                            cardText={elem.text}
+                            cardImg={elem.img}
+                        />
+                    )
+                })
+            }
+        </MainLayout>
+       )
+    }}
+   
+   
     return (
         <MainLayout
             title={data.title}
