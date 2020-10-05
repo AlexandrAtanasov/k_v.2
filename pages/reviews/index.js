@@ -2,7 +2,7 @@ import { MainLayout } from '../../layouts/MainLayout'
 import { CardComponentSocialLinks } from '../../components/CardComponents/CardComponentSocialLinks'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 // import data
-import { reviews }  from '../../data/reviews/reviews'
+import { reviews }  from '../../data/pages/reviews/reviews'
 
 export default function ReviewsPage() {
     return (

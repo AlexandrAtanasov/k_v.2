@@ -9,7 +9,7 @@ import { HeadingComponent } from '../components/Heading/HeadingComponent'
 
 // import data
 import { carousel } from '../data/main/carousel/main_carousel'
-import { authors_column } from '../data/authors_column/authors_column'
+import { authors_column } from '../data/pages/authors_column/authors_column'
 
 export default function HomePage() {
   

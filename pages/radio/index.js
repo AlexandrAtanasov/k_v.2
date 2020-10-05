@@ -4,7 +4,7 @@ import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 import ReactMarkdown from "react-markdown";
 
 // import data
-import { radio } from '../../data/radio/radio'
+import { radio } from '../../data/pages/radio/radio'
 import { local } from '../../data/localization_data/pages/radio/radio'
 
 // import styles

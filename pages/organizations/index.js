@@ -3,7 +3,7 @@ import { CardComponentWithoutHeader } from '../../components/CardComponents/Card
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
-import { organizations } from '../../data/organizations/organizations'
+import { organizations } from '../../data/pages/organizations/organizations'
 
 export default function OrganizationsPage() {
     return (

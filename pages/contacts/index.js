@@ -6,7 +6,7 @@ import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 import ReactMarkdown from "react-markdown";
 
 // import data
-import { maps } from '../../data/maps/location_of_centers'
+import { maps } from '../../data/pages/maps/location_of_centers'
 
 // import styles
 import style from '../../styles/contacts_page.module.scss'

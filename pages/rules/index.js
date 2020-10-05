@@ -3,7 +3,7 @@ import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
 
 // import data
-import { rules } from '../../data/rules/rules'
+import { rules } from '../../data/pages/rules/rules'
 
 export default function RulesPage() {
     return (

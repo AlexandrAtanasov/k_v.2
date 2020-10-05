@@ -3,7 +3,7 @@ import { CardComponentWithoutHeader } from '../../components/CardComponents/Card
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
-import { vacancy } from '../../data/vacancy/vacancy'
+import { vacancy } from '../../data/pages/vacancy/vacancy'
 
 export default function VacancyPage() {
     return (

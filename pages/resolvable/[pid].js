@@ -21,7 +21,7 @@ import path from 'path'
 
 
 export async function getStaticPaths() {
-    const pagesDirectory = path.join(process.cwd(), '/data/resolvable_pages/')
+    const pagesDirectory = path.join(process.cwd(), '/data/pages/resolvable_pages/')
     const filenames = fs.readdirSync(pagesDirectory)
     const paths = filenames.map((filename) => {
         return (
@@ -35,7 +35,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const pagesDirectory = path.join(process.cwd(), '/data/resolvable_pages/')
+    const pagesDirectory = path.join(process.cwd(), '/data/pages/resolvable_pages/')
     const filenames = fs.readdirSync(pagesDirectory)
     const pageFileName = filenames.filter(filename => filename.slice(0, -5) == context.params.pid);
     const pageFilePath = path.join(pagesDirectory, pageFileName[0])

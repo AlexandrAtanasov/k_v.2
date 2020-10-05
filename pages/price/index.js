@@ -4,7 +4,7 @@ import { CarouselComponent } from '../../components/Main/CarouselComponent'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
-import { price_carousel } from '../../data/price/price_carousel/price_carousel'
+import { price_carousel } from '../../data/pages/price/price_carousel/price_carousel'
 
 export default function PricePage() {
     return (

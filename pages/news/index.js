@@ -3,7 +3,7 @@ import { CardComponentSocialLinks } from '../../components/CardComponents/CardCo
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
-import { news }  from '../../data/news/news'
+import { news }  from '../../data/pages/news/news'
 
 export default function NewsPage() {
     return (
