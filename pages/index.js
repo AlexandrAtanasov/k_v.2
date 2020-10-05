@@ -6,6 +6,7 @@ import { MainDoctorsComponent } from '../components/Main/MainDoctorsComponent'
 import { MainLicensesComponent } from '../components/Main/MainLicensesComponent'
 import { CardComponentImg } from '../components/CardComponents/CardComponentImg'
 import { HeadingComponent } from '../components/Heading/HeadingComponent'
+import { MainCentersComponent } from '../components/Main/MainCentersComponent'
 
 // import data
 import { carousel } from '../data/main/carousel/main_carousel'
@@ -30,6 +31,10 @@ export default function HomePage() {
         cardText={authors_column[0].text}
         cardImg={authors_column[0].img}
       />
+      <HeadingComponent 
+        heading='Our Centers'
+      />
+      <MainCentersComponent/>
       <HeadingComponent 
         heading='Our Doctors'
       />
