@@ -1,4 +1,4 @@
-import { additional_pages } from '../../../data/additional_pages'
+import { additional_pages } from '../../../data/pages/additional_pages'
 
 export default function pageHandler({ query: { link } }, res) {
   const filtered = additional_pages.filter((p) => p.link === link)

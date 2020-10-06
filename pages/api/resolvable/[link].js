@@ -1,4 +1,4 @@
-import { resolvable_pages } from '../../../data/resolvable_pages'
+import { resolvable_pages } from '../../../data/pages/resolvable_pages'
 // import { resolvable_pages } from './data/resolvable_pages'
 
 export default function pageHandler({ query: { link } }, res) {
