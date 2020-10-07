@@ -29,8 +29,9 @@ export function CardComponentContacts ( {data} ) {
                 <ReactMarkdown
                     source={elem.text} 
                 />
-        
-                <script type="text/javascript" charSet="utf-8" async src={`${elem.map}`}></script>
+                <div>
+                    <script type="text/javascript" charSet="utf-8" async src={`${elem.map}`}></script>
+                </div>
             </Card.Body>
             <div className={` ${style.div_for_button} `} >
                 <Button className="button_green_color" href="#callback">

@@ -9,7 +9,7 @@ import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 import { CardComponentContacts } from "../../components/CardComponents/CardComponentContacts"
 
 // import styles
-import style from '../../styles/contacts_page.module.scss'
+import style from '../../styles/components/TabContainer.module.scss'
 
 // import data
 import { first_center } from '../../data/centers/first_center'
