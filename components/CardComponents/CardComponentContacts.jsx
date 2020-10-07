@@ -3,10 +3,8 @@ import { Card, Button } from 'react-bootstrap'
 
 import { Carousel } from 'react-bootstrap'
 import { ModalCallback } from '../Modal_Callback/Modal_Callback'
+import { ModalContacts } from '../Modal_Contacts/Modal_Contacts'
 import ReactMarkdown from "react-markdown";
-
-import { ModalContacts } from '../../components/Modal_Contacts/Modal_Contacts'
-
 
 // import styles
 import style from '../../styles/contacts_page.module.scss'
