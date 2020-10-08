@@ -10,7 +10,7 @@ import { administrators } from '../../data/pages/persons/administrators'
 import { trainers } from '../../data/pages/persons/trainers'
 
 // import styles
-import style from '../../styles/components/TabContainer.module.scss'
+import style from '../../styles/pages/contacts_page.module.scss'
 
 export default function PersonsPage() {
     return (

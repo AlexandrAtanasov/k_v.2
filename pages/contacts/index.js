@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { 
     Row,
     Col,
@@ -11,6 +12,9 @@ import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 import { ModalCallback } from '../../components/Modal_Callback/Modal_Callback'
 import { ModalContacts } from '../../components/Modal_Contacts/Modal_Contacts'
 import ReactMarkdown from "react-markdown";
+import LazyLoad from 'react-lazy-load';
+
+import loadGMaps from '../../data/pages/contacts/maps';
 
 // import styles
 import style from '../../styles/pages/contacts_page.module.scss'
@@ -19,6 +23,14 @@ import style from '../../styles/pages/contacts_page.module.scss'
 import { contacts } from '../../data/pages/contacts/contacts'
 
 export default function LocationsPage() {
+
+    const [loaded, setLoaded] = useState(false);
+    useEffect(() => {
+        loadGMaps(() => {
+            setLoaded(true);
+        });
+    });
+
     return (
         <MainLayout
             title='Centers contacts page'
@@ -56,7 +68,7 @@ export default function LocationsPage() {
                                 contacts.map( elem => {
                                     return (
                                         <Tab.Pane eventKey={elem.id} key={elem.id}>
-                                            <Card>
+                                            <Card id="card_contacts">
                                                 <Card.Body>
                                                     <Card.Title>
                                                         {elem.title}
@@ -65,7 +77,15 @@ export default function LocationsPage() {
                                                         source={elem.text} 
                                                     />
                                                 </Card.Body>
-                                                <script type="text/javascript" charSet="utf-8" async src={`${elem.map}`}></script>
+                                                {/* <LazyLoad throttle={300}>
+                                                    <script type="text/javascript" charSet="utf-8" defer src={`${elem.map}`}></script>
+                                                </LazyLoad> */}
+                                                {/* <div dangerouslySetInnerHTML={{ __html: `<script type="text/javascript" charSet="utf-8" async src={\`${elem.map}\`}></script>` }}>
+  
+                                                </div> */}
+                                                <div className="maps-component">
+                                                    {loaded}
+                                                </div>
                                             </Card>
                                         </Tab.Pane>
                                     )
