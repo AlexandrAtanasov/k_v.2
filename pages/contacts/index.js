@@ -2,22 +2,22 @@ import {
     Row,
     Col,
     Tab,
-    Nav
+    Nav,
+    Button,
+    Card
 } from 'react-bootstrap'
 import { MainLayout } from '../../layouts/MainLayout'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
-import { CardComponentContacts } from "../../components/CardComponents/CardComponentContacts"
+import { ModalCallback } from '../../components/Modal_Callback/Modal_Callback'
+import { ModalContacts } from '../../components/Modal_Contacts/Modal_Contacts'
+import ReactMarkdown from "react-markdown";
 
 // import styles
-import style from '../../styles/components/TabContainer.module.scss'
+import style from '../../styles/pages/contacts_page.module.scss'
 
 // import data
-import { first_center } from '../../data/centers/first_center'
-import { second_center } from '../../data/centers/second_center'
-import { third_center } from '../../data/centers/third_center'
+import { contacts } from '../../data/pages/contacts/contacts'
 
-
-// TODO: add styles
 export default function LocationsPage() {
     return (
         <MainLayout
@@ -27,55 +27,63 @@ export default function LocationsPage() {
             <HeadingComponent 
                 heading='Centers contacts Page'
             />
-            <Tab.Container id="persons_cards" defaultActiveKey="first" >
+            <Tab.Container id="persons_cards" defaultActiveKey="1" >
                 
                 <Row 
                     className={` ${style.margin} justify-content-md-center`}
                 >
                     <Nav variant="pills">
-                        <Col lg='auto'>
-                            <Nav.Item>
-                                <Nav.Link eventKey="first" className={style.button_outline_none}>
-                                    Center #1
-                                </Nav.Link>
-                            </Nav.Item>
-                        </Col>
-                        <Col lg='auto'>
-                            <Nav.Item>
-                                <Nav.Link eventKey="second" className={style.button_outline_none}>
-                                    Center #2
-                                </Nav.Link>
-                            </Nav.Item>
-                        </Col>
-                        <Col lg='auto'>
-                            <Nav.Item>
-                                <Nav.Link eventKey="third" className={style.button_outline_none}>
-                                    Center #3
-                                </Nav.Link>
-                            </Nav.Item>
-                        </Col>
+                        {
+                            contacts.map( elem => {
+                                return (
+                                    <Col lg='auto' key={elem.id}>
+                                        <Nav.Item>
+                                            <Nav.Link eventKey={elem.id} className={style.button_outline_none}>
+                                                {elem.header}
+                                            </Nav.Link>
+                                        </Nav.Item>
+                                    </Col>
+                                )
+                            })
+                        }
                     </Nav>
                 </Row>
 
                 <Row className="justify-content-md-center">
                     <Col>
                         <Tab.Content>
-                            <Tab.Pane eventKey="first">
-                                <CardComponentContacts 
-                                    data={first_center}
-                                />
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="second">
-                                <CardComponentContacts 
-                                    data={second_center}
-                                />
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="third">
-                                <CardComponentContacts 
-                                    data={third_center}
-                                />
-                            </Tab.Pane>
+                            {
+                                contacts.map( elem => {
+                                    return (
+                                        <Tab.Pane eventKey={elem.id} key={elem.id}>
+                                            <Card>
+                                                <Card.Body>
+                                                    <Card.Title>
+                                                        {elem.title}
+                                                    </Card.Title>
+                                                    <ReactMarkdown
+                                                        source={elem.text} 
+                                                    />
+                                                </Card.Body>
+                                                <script type="text/javascript" charSet="utf-8" async src={`${elem.map}`}></script>
+                                            </Card>
+                                        </Tab.Pane>
+                                    )
+                                })
+                            }
                         </Tab.Content>
+
+                        <div className={` ${style.div_for_button} `} >
+                            <Button className="button_green_color" href="#callback">
+                                <ModalCallback />
+                            </Button>
+                        </div>
+                        <div className={` ${style.div_for_button} `}>
+                            <Button className="button_green_color" href="#callToCenters">
+                                <ModalContacts />
+                            </Button>
+                        </div>
+                        
                     </Col>
                 </Row>
                 
