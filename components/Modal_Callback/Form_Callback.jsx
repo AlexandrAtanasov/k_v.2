@@ -1,15 +1,32 @@
 import React from 'react';
-import { useFormik } from 'formik';
 import { Form, Button } from 'react-bootstrap'
-
-import { server } from '../../config'
-
+import { useFormik } from 'formik';
 import emailjs from 'emailjs-com';
+
+// import { server } from '../../config'
 
 // import localization data
 import { local } from '../../data/localization_data/components/Modal_Callback/Form_Callback'
 
-// TODO: validation 
+// TODO: normal validation 
+
+const validate = values => {
+    const errors = {};
+    if (!values.userName) {
+      errors.userName = 'Введите имя';
+    } else if ( values.userName.length > 30 ) {
+      errors.userName = 'Значение должно быть короче 30 символов';
+    }
+ 
+    if (!values.userNumber) {
+      errors.userNumber = 'Введите номер телефона';
+    } else if (!/^[0-9]+$/i.test(values.userNumber)) {
+      errors.userNumber = 'Номер должен содержать только цифры';
+    }
+
+    return errors;
+  };
+
 
 const OrderCallForm = () => {
 
@@ -21,24 +38,35 @@ const OrderCallForm = () => {
   // could come from props, but since we don't want to prefill this form,
   // we just use an empty string. If you don't do this, React will yell
   // at you.
-  const formik = useFormik({
-    initialValues: {
-      userName: '',
-      userNumber: '',
-      userLocation: '',
-    },
-    onSubmit: values => {
-        console.log(JSON.stringify(values, null, 2))
-        emailjs.send(service, template, values, user)
-        .then(function(response) {
-           console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-           console.log('FAILED...', error);
-        });
-        // go to main after submit
-        // window.location.href = "/";
-    },
-  });
+    const formik = useFormik({
+        initialValues: {
+            userName: '',
+            userNumber: '',
+            userLocation: 'Пользователь не указал адрес!',
+        },
+        validate,
+        onSubmit: values => {
+            console.log(JSON.stringify(values, null, 2))
+            emailjs.send(service, template, values, user)
+            .then(function(response) {
+                alert(`${values.userName}, скоро вам перезвонят из центра Кинезис!`);
+                console.log('SUCCESS!', response.status, response.text);
+                window.location.href = "/";
+            }, function(error) {
+                alert(`${values.userName}, что-то пошло не так!`);
+                console.log('FAILED...', error);
+            });
+            // go to main after submit
+        },
+    });
+
+    const basicNavbarNav = document.getElementById("basic-navbar-nav");
+    const basicBavbarNavButton = document.getElementById("basic-navbar-nav-button");
+
+    if (basicNavbarNav.classList.contains('show')) {
+        basicBavbarNavButton.click();
+    } 
+
     return (
         <Form onSubmit={formik.handleSubmit}>
             <Form.Group controlId="formBasicName">
@@ -47,8 +75,11 @@ const OrderCallForm = () => {
                     type="text"
                     name="userName"
                     onChange={formik.handleChange}
-                    value={formik.values.firstName}
+                    value={formik.values.userName}
                 />
+                <Form.Text className="text-muted">
+                    {formik.errors.userName ? `${formik.errors.userName}` : null}
+                </Form.Text>
             </Form.Group>
 
             <Form.Group controlId="formBasicNumber">
@@ -56,11 +87,13 @@ const OrderCallForm = () => {
                 <Form.Control 
                     type='tel' 
                     name="userNumber"
+                    placeholder={local.form_number_info}
                     onChange={formik.handleChange}
                     value={formik.values.userNumber}
                 />
                 <Form.Text className="text-muted">
-                    {local.form_number_info}
+                    {formik.errors.userNumber ? `${formik.errors.userNumber}` : null}
+                    {/* {local.form_number_info} */}
                 </Form.Text>
             </Form.Group>
 
