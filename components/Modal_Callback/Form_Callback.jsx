@@ -34,10 +34,10 @@ const OrderCallForm = () => {
     const template = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
     const user = process.env.NEXT_PUBLIC_EMAIL_USER_ID;
 
-  // Notice that we have to initialize ALL of fields with values. These
-  // could come from props, but since we don't want to prefill this form,
-  // we just use an empty string. If you don't do this, React will yell
-  // at you.
+    // Notice that we have to initialize ALL of fields with values. These
+    // could come from props, but since we don't want to prefill this form,
+    // we just use an empty string. If you don't do this, React will yell
+    // at you.
     const formik = useFormik({
         initialValues: {
             userName: '',
@@ -51,12 +51,12 @@ const OrderCallForm = () => {
             .then(function(response) {
                 alert(`${values.userName}, скоро вам перезвонят из центра Кинезис!`);
                 console.log('SUCCESS!', response.status, response.text);
+                // go to main after submit 
                 window.location.href = "/";
             }, function(error) {
                 alert(`${values.userName}, что-то пошло не так!`);
                 console.log('FAILED...', error);
             });
-            // go to main after submit
         },
     });
 
