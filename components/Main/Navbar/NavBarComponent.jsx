@@ -9,6 +9,10 @@ import { ModalContacts } from '../../Modal_Contacts/Modal_Contacts'
 
 import useDocumentScrollThrottled from './useDocumentScrollThrottled'
 
+// import data
+import {resolvable_menu} from '../../../data/pages/resolvable/resolvable_menu'
+
+// import styles
 import style from '../../../styles/components/NavBarComponent.module.scss'
 
 
@@ -43,11 +47,6 @@ export function NavBarComponent() {
         { id: 2, pid: 'Mollit-voluptate-voluptate' },
         { id: 3, pid: 'Nostrud-duis-veniam-non-ipsum' },
         { id: 4, pid: 'Sale_of_exercise_equipment' },
-    ]
-    const resolvable_menu = [
-        { id: 1, pid: 'In-laborum-tempor' },
-        { id: 2, pid: 'Culpa-consequat-culpa' },
-        { id: 3, pid: 'Elit-qui-officia-tempor-quis' }
     ]
 
     // close dropdown by click outside. start
@@ -218,7 +217,7 @@ export function NavBarComponent() {
                                     <div key={menu.id}>
                                         <Link href={`/resolvable/[pid]`} as={`/resolvable/${menu.pid}`} passHref>
                                             <NavDropdown.Item>
-                                                {menu.pid}
+                                                {menu.title}
                                             </NavDropdown.Item>
                                         </Link>
                                         <NavDropdown.Divider />

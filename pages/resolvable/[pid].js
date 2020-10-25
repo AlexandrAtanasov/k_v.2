@@ -21,7 +21,7 @@ import path from 'path'
 
 
 export async function getStaticPaths() {
-    const pagesDirectory = path.join(process.cwd(), '/data/pages/resolvable_pages/')
+    const pagesDirectory = path.join(process.cwd(), '/data/pages/resolvable/resolvable_pages/')
     const filenames = fs.readdirSync(pagesDirectory)
     const paths = filenames.map((filename) => {
         return (
@@ -35,22 +35,28 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const pagesDirectory = path.join(process.cwd(), '/data/pages/resolvable_pages/')
+    const pagesDirectory = path.join(process.cwd(), '/data/pages/resolvable/resolvable_pages/')
     const filenames = fs.readdirSync(pagesDirectory)
     const pageFileName = filenames.filter(filename => filename.slice(0, -5) == context.params.pid);
     const pageFilePath = path.join(pagesDirectory, pageFileName[0])
     const page = fs.readFileSync(pageFilePath, 'utf8')
-   
+    
+    // load markdown
+    const parsedPage = JSON.parse(page)
+    const mdText = fs.readFileSync(pagesDirectory + parsedPage.text, 'utf8')
+
     return {
         props: {
             page,
+            mdText
         },
     }
 }
 
 
-export default function ResolvablePage ( {page} ) {
+export default function ResolvablePage ( {page, mdText} ) {
     const data = JSON.parse(page)
+    const text = mdText
 
     // SWR
     // 
@@ -84,19 +90,21 @@ export default function ResolvablePage ( {page} ) {
     // )
   
     // static layout
+
+    
     return (
         <MainLayout
             title={data.title}
-            description={`Description for ${data.id} page`}
+            description={data.description}
         >
             <HeadingComponent 
                 heading='Resolvable Page'
             />
             <CardComponent
                 cardHeader={data.header}
-                cardTitle={data.title}
-                cardText={data.text}
+                // cardTitle={data.title}
                 cardImg={data.img}
+                cardText={text}
             />
         </MainLayout>
     )
