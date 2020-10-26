@@ -2,7 +2,10 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import ReactMarkdown from "react-markdown";
 
-export function CardComponentWithoutHeader ( {cardTitle, cardText} ) {
+// import styles
+import style from '../../styles/components/CardComponentImg.module.scss' 
+
+export function CardComponentWithoutHeader ( {cardTitle, cardText, cardImg} ) {
     return (
         <Card>
             <Card.Body>
@@ -13,6 +16,11 @@ export function CardComponentWithoutHeader ( {cardTitle, cardText} ) {
                     source={cardText} 
                 />
             </Card.Body>
+            <Card.Img 
+                src={cardImg} 
+                variant="bottom"
+                className={`${style.height}`}
+            />
         </Card>
     )
 }

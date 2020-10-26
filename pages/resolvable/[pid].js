@@ -1,5 +1,5 @@
 import { MainLayout } from '../../layouts/MainLayout'
-import { CardComponent } from '../../components/CardComponents/CardComponent'
+import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 // import { useRouter } from 'next/router'
 // import { server } from '../../config'
@@ -101,11 +101,11 @@ export default function ResolvablePage ( {page, mdText} ) {
             <HeadingComponent 
                 heading='Resolvable Page'
             />
-            <CardComponent
-                cardHeader={data.header}
+            <CardComponentWithoutHeader
+                // cardHeader={data.header}
                 // cardTitle={data.title}
-                cardImg={data.img}
                 cardText={text}
+                cardImg={data.img}
             />
         </MainLayout>
     )
