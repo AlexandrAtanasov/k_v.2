@@ -1,6 +1,7 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { CardComponent } from '../../components/CardComponents/CardComponent'
 import { CardComponentImg } from '../../components/CardComponents/CardComponentImg'
+import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 // import { useRouter } from 'next/router'
 // import { server } from '../../config'
@@ -22,7 +23,7 @@ import path from 'path'
 
 
 export async function getStaticPaths() {
-    const pagesInfoDirectory = path.join(process.cwd(), '/data/pages/additional_pages/')
+    const pagesInfoDirectory = path.join(process.cwd(), '/data/pages/additional/additional_pages_info/')
     const filenames = fs.readdirSync(pagesInfoDirectory)
     const paths = filenames.map((filename) => {
         return (
@@ -36,27 +37,29 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const pagesInfoDirectory = path.join(process.cwd(), '/data/pages/additional_pages/')
+    const pagesInfoDirectory = path.join(process.cwd(), '/data/pages/additional/additional_pages_info/')
     const filenames = fs.readdirSync(pagesInfoDirectory)
     const pageFileName = filenames.filter(filename => filename.slice(0, -5) == context.params.pid);
     const pageFilePath = path.join(pagesInfoDirectory, pageFileName[0])
     const page = fs.readFileSync(pageFilePath, 'utf8')
    
     // load markdown
-    const pagesTextDirectory = path.join(process.cwd(), '/data/pages/resolvable/resolvable_pages_texts/')
+    const pagesTextDirectory = path.join(process.cwd(), '/data/pages/additional/additional_pages_texts/')
     const parsedPage = JSON.parse(page)
     const mdText = fs.readFileSync(pagesTextDirectory + parsedPage.text, 'utf8')
 
     return {
         props: {
             page,
+            mdText
         },
     }
 }
 
 
-export default function AdditionalPage ( {page} ) {
+export default function AdditionalPage ( {page, mdText} ) {
     const data = JSON.parse(page)
+    const text = mdText
 
     // SWR
     // 
@@ -91,14 +94,14 @@ export default function AdditionalPage ( {page} ) {
   
     // static layout
    
-   {if (data.link == "Sale_of_exercise_equipment") {
+   {if (data.link == "prodazha-trenazherov") {
        return (
         <MainLayout
             title={data.title}
             description={`Description for ${data.id} page`}
         >
             <HeadingComponent 
-                heading={data.header}
+                heading={data.title}
             />
             {
                 data.equipment.map( elem => {
@@ -106,8 +109,8 @@ export default function AdditionalPage ( {page} ) {
                         <CardComponentImg 
                             key={elem.header}
                             cardTitle={elem.title}
-                            cardText={elem.text}
                             cardImg={elem.img}
+                            cardText={elem.text}
                         />
                     )
                 })
@@ -125,11 +128,11 @@ export default function AdditionalPage ( {page} ) {
             <HeadingComponent 
                 heading='Additional Page'
             />
-            <CardComponent
-                cardHeader={data.header}
-                cardTitle={data.title}
-                cardText={data.text}
+            <CardComponentWithoutHeader
+                // cardHeader={data.header}
+                // cardTitle={data.title}
                 cardImg={data.img}
+                cardText={text}
             />
         </MainLayout>
     )
