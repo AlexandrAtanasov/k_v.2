@@ -22,8 +22,8 @@ import path from 'path'
 
 
 export async function getStaticPaths() {
-    const pagesDirectory = path.join(process.cwd(), '/data/pages/additional_pages/')
-    const filenames = fs.readdirSync(pagesDirectory)
+    const pagesInfoDirectory = path.join(process.cwd(), '/data/pages/additional_pages/')
+    const filenames = fs.readdirSync(pagesInfoDirectory)
     const paths = filenames.map((filename) => {
         return (
             { params: { pid: filename.slice(0, -5) } }
@@ -36,12 +36,17 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const pagesDirectory = path.join(process.cwd(), '/data/pages/additional_pages/')
-    const filenames = fs.readdirSync(pagesDirectory)
+    const pagesInfoDirectory = path.join(process.cwd(), '/data/pages/additional_pages/')
+    const filenames = fs.readdirSync(pagesInfoDirectory)
     const pageFileName = filenames.filter(filename => filename.slice(0, -5) == context.params.pid);
-    const pageFilePath = path.join(pagesDirectory, pageFileName[0])
+    const pageFilePath = path.join(pagesInfoDirectory, pageFileName[0])
     const page = fs.readFileSync(pageFilePath, 'utf8')
    
+    // load markdown
+    const pagesTextDirectory = path.join(process.cwd(), '/data/pages/resolvable/resolvable_pages_texts/')
+    const parsedPage = JSON.parse(page)
+    const mdText = fs.readFileSync(pagesTextDirectory + parsedPage.text, 'utf8')
+
     return {
         props: {
             page,

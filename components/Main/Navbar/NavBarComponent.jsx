@@ -10,7 +10,9 @@ import { ModalContacts } from '../../Modal_Contacts/Modal_Contacts'
 import useDocumentScrollThrottled from './useDocumentScrollThrottled'
 
 // import data
+import {local} from '../../../data/localization_data/components/Main/Navbar/Navbar'
 import {resolvable_menu} from '../../../data/pages/resolvable/resolvable_menu'
+import {additional_menu} from '../../../data/pages/additional/additional_menu'
 
 // import styles
 import style from '../../../styles/components/NavBarComponent.module.scss'
@@ -42,12 +44,12 @@ export function NavBarComponent() {
     // scroll logic end
 
     // TODO: make some storage for menugit
-    const additional_menu = [
-        { id: 1, pid: 'Et-nostrud-ullamco-nulla' },
-        { id: 2, pid: 'Mollit-voluptate-voluptate' },
-        { id: 3, pid: 'Nostrud-duis-veniam-non-ipsum' },
-        { id: 4, pid: 'Sale_of_exercise_equipment' },
-    ]
+    // const additional_menu = [
+    //     { id: 1, pid: 'Et-nostrud-ullamco-nulla' },
+    //     { id: 2, pid: 'Mollit-voluptate-voluptate' },
+    //     { id: 3, pid: 'Nostrud-duis-veniam-non-ipsum' },
+    //     { id: 4, pid: 'Sale_of_exercise_equipment' },
+    // ]
 
     // close dropdown by click outside. start
     const node = useRef();
@@ -190,39 +192,61 @@ export function NavBarComponent() {
                             <NavDropdown.Divider />
                             <Link href={`/news`} passHref>
                                 <NavDropdown.Item>
-                                    News
+                                    {local.menu_news}
                                 </NavDropdown.Item>
                             </Link>
-                            <NavDropdown.Divider />
                         </NavDropdown>
 
-                        <NavDropdown title="Additional" id="basic-nav-dropdown">
-                            {additional_menu.map(menu => {
-                                return(
-                                    <div key={menu.id}>
-                                        <Link href={`/additional/[pid]`} as={`/additional/${menu.pid}`} passHref>
-                                            <NavDropdown.Item>
-                                                {menu.pid}
-                                            </NavDropdown.Item>
-                                        </Link>
-                                        <NavDropdown.Divider />
-                                    </div>
-                                )
-                            })}
-                        </NavDropdown>
 
-                        <NavDropdown title="Resolvable" id="basic-nav-dropdown">
+                        <NavDropdown title={local.menu_resolvable} id="basic-nav-dropdown">
                             {resolvable_menu.map(menu => {
-                                return(
-                                    <div key={menu.id}>
+                                if (menu.id == 1) {
+                                    return (
                                         <Link href={`/resolvable/[pid]`} as={`/resolvable/${menu.pid}`} passHref>
                                             <NavDropdown.Item>
                                                 {menu.title}
                                             </NavDropdown.Item>
                                         </Link>
-                                        <NavDropdown.Divider />
+                                    )
+                                } else {
+                                    return (
+                                        <div key={menu.id}>
+                                            <NavDropdown.Divider />
+                                            <Link href={`/resolvable/[pid]`} as={`/resolvable/${menu.pid}`} passHref>
+                                                <NavDropdown.Item>
+                                                    {menu.title}
+                                                </NavDropdown.Item>
+                                            </Link>
+                                        </div>
+                                    )
+                                }
+                            })}
+                        </NavDropdown>
+
+                        <NavDropdown title={local.menu_additional} id="basic-nav-dropdown">
+                            {additional_menu.map(menu => {
+                                if (menu.id == 1) {
+                                    return (
+                                    <div key={menu.id}>
+                                        <Link href={`/additional/[pid]`} as={`/additional/${menu.pid}`} passHref>
+                                            <NavDropdown.Item>
+                                                {menu.title}
+                                            </NavDropdown.Item>
+                                        </Link>
                                     </div>
-                                )
+                                    )
+                                } else {
+                                    return (
+                                        <div key={menu.id}>
+                                            <NavDropdown.Divider />
+                                            <Link href={`/additional/[pid]`} as={`/additional/${menu.pid}`} passHref>
+                                                <NavDropdown.Item>
+                                                    {menu.title}
+                                                </NavDropdown.Item>
+                                            </Link>
+                                        </div>
+                                    )
+                                }
                             })}
                         </NavDropdown>
 
