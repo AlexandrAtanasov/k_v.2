@@ -16,5 +16,6 @@ export const resolvable_menu = [
     { id: 15, title:"Женское здоровье", pid: 'zhenskoe-zdorovie' },
     { id: 16, title:"Мужское здоровье", pid: 'muzhskoe-zdorovie' },
     { id: 17, title:"Занятия для пожилых людей", pid: 'zanyatiya-dlya-pozhilyh-lyudej' },
-    { id: 18, title:"Профилактика заболеваний", pid: 'profilaktika-zabolevanij' }
+	{ id: 18, title:"Профилактика заболеваний", pid: 'profilaktika-zabolevanij' },
+	{ id: 19, title:"Опущение внутренних органов", pid: 'opushchenie-vnutrennih-organov' }
 ];

@@ -135,13 +135,13 @@ export function NavBarComponent() {
                         
                         <NavDropdown title="Prices and Sales" id="basic-nav-dropdown">
                             <Link href={`/price`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Price
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
                             <Link href={`/sales`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Sales
                                 </NavDropdown.Item>
                             </Link>
@@ -149,49 +149,49 @@ export function NavBarComponent() {
 
                         <NavDropdown title="About" id="basic-nav-dropdown">
                             <Link href={`/persons`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Persons
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
                             <Link href={`/radio`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Radio
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
                             <Link href={`/vacancy`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Vacancy
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
                             <Link href={`/rules`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Rules
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
                             <Link href={`/methodology`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Authors page
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
                             <Link href={`/organizations`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Organizations
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
                             <Link href={`/reviews`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Reviews
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
                             <Link href={`/news`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     {local.menu_news}
                                 </NavDropdown.Item>
                             </Link>
@@ -202,8 +202,15 @@ export function NavBarComponent() {
                             {resolvable_menu.map(menu => {
                                 if (menu.id == 1) {
                                     return (
-                                        <Link href={`/resolvable/[pid]`} as={`/resolvable/${menu.pid}`} passHref>
-                                            <NavDropdown.Item>
+                                        <Link 
+                                            href={`/resolvable/[pid]`} 
+                                            as={`/resolvable/${menu.pid}`} 
+                                            passHref
+                                            key={menu.id}
+                                        >
+                                            <NavDropdown.Item 
+                                                className={`${style.lineHeight} `}
+                                            >
                                                 {menu.title}
                                             </NavDropdown.Item>
                                         </Link>
@@ -212,8 +219,14 @@ export function NavBarComponent() {
                                     return (
                                         <div key={menu.id}>
                                             <NavDropdown.Divider />
-                                            <Link href={`/resolvable/[pid]`} as={`/resolvable/${menu.pid}`} passHref>
-                                                <NavDropdown.Item>
+                                            <Link 
+                                                href={`/resolvable/[pid]`} 
+                                                as={`/resolvable/${menu.pid}`} 
+                                                passHref
+                                            >
+                                                <NavDropdown.Item
+                                                    className={`${style.lineHeight} `}
+                                                >
                                                     {menu.title}
                                                 </NavDropdown.Item>
                                             </Link>
@@ -229,7 +242,7 @@ export function NavBarComponent() {
                                     return (
                                     <div key={menu.id}>
                                         <Link href={`/additional/[pid]`} as={`/additional/${menu.pid}`} passHref>
-                                            <NavDropdown.Item>
+                                            <NavDropdown.Item className={`${style.lineHeight} `} >
                                                 {menu.title}
                                             </NavDropdown.Item>
                                         </Link>
@@ -240,7 +253,7 @@ export function NavBarComponent() {
                                         <div key={menu.id}>
                                             <NavDropdown.Divider />
                                             <Link href={`/additional/[pid]`} as={`/additional/${menu.pid}`} passHref>
-                                                <NavDropdown.Item>
+                                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                                     {menu.title}
                                                 </NavDropdown.Item>
                                             </Link>
@@ -251,16 +264,16 @@ export function NavBarComponent() {
                         </NavDropdown>
 
                         <NavDropdown title="Contacts" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#callback"> 
+                            <NavDropdown.Item href="#callback" className={`${style.lineHeight} `}> 
                                 <ModalCallback />
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#callToCenters">
+                            <NavDropdown.Item href="#callToCenters" className={`${style.lineHeight} `}>
                                 <ModalContacts />
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <Link href={`/contacts`} passHref>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item className={`${style.lineHeight} `}>
                                     How to find us
                                 </NavDropdown.Item>
                             </Link>
