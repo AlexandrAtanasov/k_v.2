@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
+import { ModalCallback } from '../Modal_Callback/Modal_Callback'
 import ReactMarkdown from "react-markdown";
 
 // import styles
@@ -15,6 +16,9 @@ export function CardComponentWithoutHeader ( {cardTitle, cardText, cardImg} ) {
                 <ReactMarkdown
                     source={cardText} 
                 />
+                <Button className="button_green_color" href="#callback">
+                    <ModalCallback />
+                </Button>
             </Card.Body>
             <Card.Img 
                 src={cardImg} 

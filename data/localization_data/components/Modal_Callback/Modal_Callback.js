@@ -1,4 +1,4 @@
 export const local = {
-    link_text: 'Order callback',
-    modal_header_title: 'Callback form'
+    link_text: 'Заказать звонок',
+    modal_header_title: 'Заполните форму и мы Вам перезвоним!'
 }

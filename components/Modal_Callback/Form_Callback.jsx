@@ -13,15 +13,15 @@ import { local } from '../../data/localization_data/components/Modal_Callback/Fo
 const validate = values => {
     const errors = {};
     if (!values.userName) {
-      errors.userName = 'Введите имя';
+      errors.userName = `${local.errors.userName_null}`;
     } else if ( values.userName.length > 30 ) {
-      errors.userName = 'Значение должно быть короче 30 символов';
+      errors.userName = `${local.errors.userName_long}`;
     }
  
     if (!values.userNumber) {
-      errors.userNumber = 'Введите номер телефона';
+      errors.userNumber = `${local.errors.userNumber_null}`;
     } else if (!/^[0-9]+$/i.test(values.userNumber)) {
-      errors.userNumber = 'Номер должен содержать только цифры';
+      errors.userNumber = `${local.errors.userNumber_numb}`;
     }
 
     return errors;

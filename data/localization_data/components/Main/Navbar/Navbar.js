@@ -1,6 +1,7 @@
 export const local = {
       menu_additional: 'Дополнительные услуги',
       menu_resolvable: 'Решаемые проблемы',
+      menu_contacts: 'Контакты',
       menu_news: 'Новости',
       form_number_info: 'Phone number like - +7 (999) 999-99-99',
       form_location_label: 'Select Location',

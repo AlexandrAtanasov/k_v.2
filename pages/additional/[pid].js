@@ -7,6 +7,8 @@ import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 // import { server } from '../../config'
 // import useSWR from 'swr'
 
+import { local } from '../../data/localization_data/pages/additional/additional'
+
 import fs from 'fs'
 import path from 'path'
 
@@ -94,39 +96,13 @@ export default function AdditionalPage ( {page, mdText} ) {
   
     // static layout
    
-//    {if (data.link == "prodazha-trenazherov") {
-//        return (
-//         <MainLayout
-//             title={data.title}
-//             description={`Description for ${data.id} page`}
-//         >
-//             <HeadingComponent 
-//                 heading={data.title}
-//             />
-//             {
-//                 data.equipment.map( elem => {
-//                     return (
-//                         <CardComponentImg 
-//                             key={elem.header}
-//                             cardTitle={elem.title}
-//                             cardImg={elem.img}
-//                             cardText={text}
-//                         />
-//                     )
-//                 })
-//             }
-//         </MainLayout>
-//        )
-//     }}
-   
-   
     return (
         <MainLayout
             title={data.title}
             description={`Description for ${data.id} page`}
         >
             <HeadingComponent 
-                heading='Additional Page'
+                heading={local.additional_title}
             />
             <CardComponentWithoutHeader
                 // cardHeader={data.header}

@@ -263,7 +263,7 @@ export function NavBarComponent() {
                             })}
                         </NavDropdown>
 
-                        <NavDropdown title="Contacts" id="basic-nav-dropdown">
+                        <NavDropdown title={local.menu_contacts} id="basic-nav-dropdown">
                             <NavDropdown.Item href="#callback" className={`${style.lineHeight} `}> 
                                 <ModalCallback />
                             </NavDropdown.Item>
