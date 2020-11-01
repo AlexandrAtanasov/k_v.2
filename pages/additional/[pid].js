@@ -94,30 +94,30 @@ export default function AdditionalPage ( {page, mdText} ) {
   
     // static layout
    
-   {if (data.link == "prodazha-trenazherov") {
-       return (
-        <MainLayout
-            title={data.title}
-            description={`Description for ${data.id} page`}
-        >
-            <HeadingComponent 
-                heading={data.title}
-            />
-            {
-                data.equipment.map( elem => {
-                    return (
-                        <CardComponentImg 
-                            key={elem.header}
-                            cardTitle={elem.title}
-                            cardImg={elem.img}
-                            cardText={elem.text}
-                        />
-                    )
-                })
-            }
-        </MainLayout>
-       )
-    }}
+//    {if (data.link == "prodazha-trenazherov") {
+//        return (
+//         <MainLayout
+//             title={data.title}
+//             description={`Description for ${data.id} page`}
+//         >
+//             <HeadingComponent 
+//                 heading={data.title}
+//             />
+//             {
+//                 data.equipment.map( elem => {
+//                     return (
+//                         <CardComponentImg 
+//                             key={elem.header}
+//                             cardTitle={elem.title}
+//                             cardImg={elem.img}
+//                             cardText={text}
+//                         />
+//                     )
+//                 })
+//             }
+//         </MainLayout>
+//        )
+//     }}
    
    
     return (

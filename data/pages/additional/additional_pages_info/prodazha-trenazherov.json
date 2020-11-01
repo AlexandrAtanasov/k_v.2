@@ -3,26 +3,6 @@
     "link": "/additional/service/prodazha-trenazherov",
     "title": "Продажа тренажёров",
 	"description":"Центры «КИНЕЗИС» является официальным дилером завода спортивного оборудования «АRMS». Тренажёры для занятий дома. Необходима консультация врача. Кинезис Пермь.",
-    "equipment": [
-        {
-            "title": "Продажа тренажёров",
-            "text": "equipment.md",
-            "img": "/img/main/carousel/img_1.png"
-        },
-		{
-            "title": "Реабилитационный тренажер Effect",
-            "text": "Reabilitacionnyj trenazher Effect.md",
-            "img": "/img/main/carousel/img_1.png"
-        },
-		{
-            "title": "Реабилитационный тренажер Sanitas",
-            "text": "Reabilitacionnyj trenazher Sanitas.md",
-            "img": "/img/main/carousel/img_1.png"
-        },
-		{
-            "title": "Реабилитационный тренажер Биотонус-1",
-            "text": "Reabilitacionnyj trenazher Biotonus-1.md",
-            "img": "/img/main/carousel/img_1.png"
-        }
-    ]
+	"text": "equipment.md",
+    "img": "/img/main/carousel/img_1.png"
 }
