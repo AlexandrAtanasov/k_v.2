@@ -14,7 +14,7 @@ import { ModalContacts } from '../../components/Modal_Contacts/Modal_Contacts'
 import ReactMarkdown from "react-markdown";
 import LazyLoad from 'react-lazy-load';
 
-import loadGMaps from '../../data/pages/contacts/maps';
+import loadMaps from '../../data/pages/contacts/maps';
 
 // import styles
 import style from '../../styles/pages/contacts_page.module.scss'
@@ -26,7 +26,7 @@ export default function LocationsPage() {
 
     const [loaded, setLoaded] = useState(false);
     useEffect(() => {
-        loadGMaps(() => {
+        loadMaps(() => {
             setLoaded(true);
         });
     });

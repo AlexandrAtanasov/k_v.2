@@ -277,7 +277,7 @@ export function NavBarComponent() {
                             <NavDropdown.Divider />
                             <Link href={`/contacts`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} `}>
-                                    How to find us
+                                    {local.menu_how_to_find_us}
                                 </NavDropdown.Item>
                             </Link>
                         </NavDropdown>
