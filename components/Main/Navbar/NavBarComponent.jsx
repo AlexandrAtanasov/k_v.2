@@ -133,7 +133,10 @@ export function NavBarComponent() {
                             </Nav.Link>
                         </Link>
                         
-                        <NavDropdown title="Prices and Sales" id="basic-nav-dropdown">
+                        <NavDropdown 
+                            title="Prices and Sales" 
+                            id="basic-nav-dropdown"
+                        >
                             <Link href={`/price`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} `}>
                                     Price
