@@ -15,11 +15,11 @@ import style from '../../styles/pages/contacts_page.module.scss'
 export default function PersonsPage() {
     return (
         <MainLayout
-            title='Persons page'
-            description='Description for Persons page'
+            title='Персонал'
+            description='Сотрудники центров Кинезис'
         >
             <HeadingComponent 
-                heading='Persons Page'
+                heading='Наша команда'
             />
             <Tab.Container id="persons_cards" defaultActiveKey="first" >
                 
@@ -30,14 +30,14 @@ export default function PersonsPage() {
                         <Col lg='auto'>
                             <Nav.Item>
                                 <Nav.Link eventKey="first" className={style.button_outline_none}>
-                                    Doctors
+                                    Доктора
                                 </Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col lg='auto'>
                             <Nav.Item>
                                 <Nav.Link eventKey="second" className={style.button_outline_none}>
-                                    Administrators
+                                    Администраторы
                                 </Nav.Link>
                             </Nav.Item>
                         </Col>

@@ -1,15 +1,15 @@
 export const trainers = [
     {
       id: '1',
-      title: 'Et nostrud ullamco nulla',
-      text: 'Labore et commodo anim sunt laboris nisi do nulla cupidatat pariatur aliquip.',
-      img: '/img/persons/trainers/tren (0).png'
+      title: 'Тарасова Юлия',
+      text: 'Старший инструктор-методист на Крупской 31',
+      img: '/img/persons/trainers/Tarasova.jpg'
     },
     {
       id: '2',
-      title: 'Mollit voluptate voluptate',
-      text: 'Dolor elit laboris qui culpa. Incididunt anim voluptate excepteur minim ea.',
-      img: '/img/persons/trainers/tren (1).png'
+      title: 'Зозуля Надежда',
+      text: 'Старший инструктор-методист на Екатерининской 165',
+      img: '/img/persons/trainers/Zozuliya.jpg'
     },
     {
       id: '3',
