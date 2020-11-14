@@ -1,7 +1,7 @@
 export const local = {
-    form_title: "Our social networks",
+    form_title: "Наши социальные сети",
     link_second: {
         link: "/other_info",
-        text: "Other information"
+        text: "Дополнительная информация"
     },
 }

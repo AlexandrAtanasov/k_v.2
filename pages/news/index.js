@@ -8,11 +8,11 @@ import { news }  from '../../data/pages/news/news'
 export default function NewsPage() {
     return (
         <MainLayout
-            title='News page'
-            description='Description for News page'
+            title='Новости'
+            description='Новости сети центров кинезитерапии Кинезис'
         >
             <HeadingComponent 
-                heading='News Page'
+                heading='Новости'
             />
             <CardComponentSocialLinks
                 cardTitle={news[0].title}

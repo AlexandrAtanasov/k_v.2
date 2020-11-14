@@ -1,7 +1,7 @@
 export const news = [
     {
       "id": 1, 
-      "title":"Title News", 
-      "text":"Insert here text. Velit et velit excepteur amet nisi pariatur esse veniam incididunt.", 
+      "title":"Новости", 
+      "text":"Информацию об акциях, расписние работы, полезные статьи и всю актуальную информацию о центрах Кинезис, Вы можете найти в наших социальных сетях.", 
     },
   ]
