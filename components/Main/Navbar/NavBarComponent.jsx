@@ -189,7 +189,7 @@ export function NavBarComponent() {
                             <NavDropdown.Divider />
                             <Link href={`/reviews`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} `}>
-                                    Reviews
+                                    Отзывы
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />

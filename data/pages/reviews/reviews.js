@@ -1,7 +1,7 @@
 export const reviews = [
     {
       "id": 1, 
-      "title":"Reviews News", 
-      "text":"Insert here text. Velit et velit excepteur amet nisi pariatur esse veniam incididunt.", 
+      "title":"Отзывы", 
+      "text":"Обратную связь от наших клиентов о нашей работе, а так же всю актуальную информацию о центрах Кинезис вы можете найти в наших социальных сетях.", 
     },
   ]

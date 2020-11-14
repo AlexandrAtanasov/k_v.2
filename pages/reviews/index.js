@@ -7,11 +7,11 @@ import { reviews }  from '../../data/pages/reviews/reviews'
 export default function ReviewsPage() {
     return (
         <MainLayout
-            title='Reviews page'
-            description='Description for Reviews page'
+            title='Отзывы'
+            description='Отзывы о центрах Кинезис'
         >
             <HeadingComponent 
-                heading='Reviews Page'
+                heading='Отзывы'
             />
             <CardComponentSocialLinks
                 cardTitle={reviews[0].title}
