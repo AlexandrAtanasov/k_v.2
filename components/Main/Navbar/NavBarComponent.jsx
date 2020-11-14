@@ -153,7 +153,7 @@ export function NavBarComponent() {
                         <NavDropdown title="About" id="basic-nav-dropdown">
                             <Link href={`/persons`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} `}>
-                                    Persons
+                                    Наша команда
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />

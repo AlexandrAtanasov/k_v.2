@@ -44,7 +44,7 @@ export default function PersonsPage() {
                         <Col lg='auto'>
                             <Nav.Item>
                                 <Nav.Link eventKey="third" className={style.button_outline_none}>
-                                    Trainers
+                                    Инструкторы
                                 </Nav.Link>
                             </Nav.Item>
                         </Col>

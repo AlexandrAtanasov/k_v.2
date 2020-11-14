@@ -13,20 +13,56 @@ export const trainers = [
     },
     {
       id: '3',
-      title: 'Nostrud duis veniam non ipsum',
+      title: 'Чомоляк Евгений',
       text: 'Id pariatur ullamco incididunt est nisi dolor.',
       img: '/img/persons/trainers/tren (2).png'
     },
     {
       id: '4',
-      title: 'Deserunt aliquip voluptate',
-      text: 'Reprehenderit consectetur nostrud consequat commodo in.',
-      img: '/img/persons/trainers/tren (3).png'
+      title: 'Головетдинова Галина',
+      text: 'Инструктор',
+      img: '/img/persons/trainers/Golovatdinova.jpg'
     },
     {
       id: '5',
-      title: 'Anim fugiat minim nulla sint duis',
-      text: 'Anim laborum non proident id. Ipsum sint amet excepteur minim.',
+      title: 'Гущина Екатерина',
+      text: 'Инструктор',
+      img: '/img/persons/trainers/Guschina.jpg'
+    },
+    {
+      id: '6',
+      title: 'Гурьянова Анна',
+      text: 'Инструктор',
       img: '/img/persons/trainers/tren (4).png'
+    },
+    {
+      id: '7',
+      title: 'Кынкурогов Василий',
+      text: 'Инструктор',
+      img: '/img/persons/trainers/Kynkurogov.jpg'
+    },
+    {
+      id: '8',
+      title: 'Наумова Ирина',
+      text: 'Инструктор',
+      img: '/img/persons/trainers/Naumova.jpg'
+    },
+    {
+      id: '9',
+      title: 'Райнхард Ольга',
+      text: 'Инструктор',
+      img: '/img/persons/trainers/Rainhard.jpg'
+    },
+    {
+      id: '10',
+      title: 'Шапарь Алена',
+      text: 'Инструктор',
+      img: '/img/persons/trainers/tren (4).png'
+    },
+    {
+      id: '11',
+      title: 'Зворыгин Иван',
+      text: 'Инструктор',
+      img: '/img/persons/trainers/Zvorigin.jpg'
     },
   ]

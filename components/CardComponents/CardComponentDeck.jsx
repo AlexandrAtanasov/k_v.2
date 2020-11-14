@@ -10,14 +10,19 @@ export function CardComponentDeck( {data} ) {
 
     return (
         <Card 
-            className={` ${style.margin}`}
+            className={` ${style.margin} `}
             border="light" 
         >
             <Card.Body className={` ${style.padding}`}>
-                <CardDeck>
+                <CardDeck
+                    className={`${style.deck_justify}`} 
+                >
                     {elements.map(elem => {
                         return(
-                            <Card key={elem.id}>
+                            <Card 
+                                key={elem.id}
+                                className={`${style.min_width}`}    
+                            >
                                 <Card.Img variant="top" src={elem.img} />
                                 <Card.Body>
                                 <Card.Title>
