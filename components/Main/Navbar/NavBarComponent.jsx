@@ -159,7 +159,7 @@ export function NavBarComponent() {
                             <NavDropdown.Divider />
                             <Link href={`/radio`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} `}>
-                                    Radio
+                                    Радиопередачи
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider />
