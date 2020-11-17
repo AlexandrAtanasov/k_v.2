@@ -45,7 +45,17 @@ $color: #8ab549;;
     margin: 0.2rem 0!important;
 }
 
-.longMenuStyle {
+// .longMenuStyle {
+//     overflow-y: scroll;
+//     height: 100%;
+// }
+
+.fixedTop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
     overflow-y: scroll;
-    height: 100%;
+    max-height: 100%;
 }

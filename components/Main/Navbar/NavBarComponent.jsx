@@ -89,28 +89,28 @@ export function NavBarComponent() {
      * On click make scroll for Resolvable Menu 
      * and return to Fixed style when click out
      */
-    const [longMenuStyle, setLongMenuStyle] = useState("");
-    const handleClickMakeLongMenu = () => {
-        longMenuStyle == style.longMenuStyle ? setLongMenuStyle("") : setLongMenuStyle(style.longMenuStyle)
-    }
-    const handleClickMakeFixedMenu = (ref) => {
-        useEffect(() => {
-        /**
-         * Alert if clicked on outside of element
-         */
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                setLongMenuStyle("")
-            }
-        }
-        // Bind the event listener
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            // Unbind the event listener on clean up
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-        }, [ref]);
-    }
+    // const [longMenuStyle, setLongMenuStyle] = useState("");
+    // const handleClickMakeLongMenu = () => {
+    //     longMenuStyle == style.longMenuStyle ? setLongMenuStyle("") : setLongMenuStyle(style.longMenuStyle)
+    // }
+    // const handleClickMakeFixedMenu = (ref) => {
+    //     useEffect(() => {
+    //     /**
+    //      * Alert if clicked on outside of element
+    //      */
+    //     function handleClickOutside(event) {
+    //         if (ref.current && !ref.current.contains(event.target)) {
+    //             setLongMenuStyle("")
+    //         }
+    //     }
+    //     // Bind the event listener
+    //     document.addEventListener("mousedown", handleClickOutside);
+    //     return () => {
+    //         // Unbind the event listener on clean up
+    //         document.removeEventListener("mousedown", handleClickOutside);
+    //     };
+    //     }, [ref]);
+    // }
     /**
      * End shitty logic code for for Resolvable Menu
      */
@@ -121,9 +121,10 @@ const longMenu = useRef(null);
         <>
             <Navbar
                 collapseOnSelect
-                className={`${style.header} ${shadowStyle} ${hiddenStyle} ${longMenuStyle}`}
+                // className={`${style.header} ${shadowStyle} ${hiddenStyle} ${longMenuStyle}`}
+                className={`${style.header} ${shadowStyle} ${hiddenStyle} ${style.fixedTop}`}
                 expand="lg"
-                fixed="top"
+                // fixed="top"
                 // sticky="top"
                 ref={node}
             >
@@ -227,8 +228,8 @@ const longMenu = useRef(null);
                             title={local.menu_resolvable} 
                             id="basic-nav-dropdown"
                             ref={longMenu}
-                            onClick={handleClickMakeFixedMenu(longMenu)}
-                            onClick={handleClickMakeLongMenu}
+                            // onClick={handleClickMakeFixedMenu(longMenu)}
+                            // onClick={handleClickMakeLongMenu}
                         >
                             {resolvable_menu.map(menu => {
                                 if (menu.id == 1) {
