@@ -85,47 +85,14 @@ export function NavBarComponent() {
     }, []);
     // close dropdown by click outside. end
 
-    /**
-     * On click make scroll for Resolvable Menu 
-     * and return to Fixed style when click out
-     */
-    // const [longMenuStyle, setLongMenuStyle] = useState("");
-    // const handleClickMakeLongMenu = () => {
-    //     longMenuStyle == style.longMenuStyle ? setLongMenuStyle("") : setLongMenuStyle(style.longMenuStyle)
-    // }
-    // const handleClickMakeFixedMenu = (ref) => {
-    //     useEffect(() => {
-    //     /**
-    //      * Alert if clicked on outside of element
-    //      */
-    //     function handleClickOutside(event) {
-    //         if (ref.current && !ref.current.contains(event.target)) {
-    //             setLongMenuStyle("")
-    //         }
-    //     }
-    //     // Bind the event listener
-    //     document.addEventListener("mousedown", handleClickOutside);
-    //     return () => {
-    //         // Unbind the event listener on clean up
-    //         document.removeEventListener("mousedown", handleClickOutside);
-    //     };
-    //     }, [ref]);
-    // }
-    /**
-     * End shitty logic code for for Resolvable Menu
-     */
-
 const longMenu = useRef(null);
 
     return (
         <>
             <Navbar
                 collapseOnSelect
-                // className={`${style.header} ${shadowStyle} ${hiddenStyle} ${longMenuStyle}`}
                 className={`${style.header} ${shadowStyle} ${hiddenStyle} ${style.fixedTop}`}
                 expand="lg"
-                // fixed="top"
-                // sticky="top"
                 ref={node}
             >
                 <Link href={'/'} passHref>
