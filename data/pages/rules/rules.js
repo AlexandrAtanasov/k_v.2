@@ -1,8 +1,8 @@
 export const rules = [
     {
       id: '1',
-      header: 'Rules',
-      title: 'Dear ppl',
-      text: 'My favorite search engine is [Duck Duck Go](https://duckduckgo.com). \n My favorite search engine is [Duck Duck Go](https://duckduckgo.com).',
+      header: 'Правила посещения',
+      title: 'Уважаемые клиенты!',
+      text: 'Мы заботимся о Вашем комфорте и нацелены на получение наилучшего результата от занятий, поэтому просим Вас ознакомиться со следующей информацией.  \n  ##### Правила посещения  \n  [Скачать "Правила посещения центров ООО "КИНЕЗИС"](./download_data/rules/VisitingRules.doc).  \n  ##### Условия и порядок предоставления услуг.  \n  [Скачать "Условия и порядок предоставления услуг"](/download_data/rules/ConditionsAndOtherRules.doc).',
     },
 ]

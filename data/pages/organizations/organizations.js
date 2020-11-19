@@ -1,18 +1,18 @@
 export const organizations = [
     {
       id: '1',
-      title: 'Organization #1',
-      text: 'Labore et commodo anim sunt laboris nisi do nulla cupidatat pariatur aliquip.',
+      title: 'Министерство здравоохранения Пермского края',
+      text: 'Адрес: 614006, г. Пермь, Ленина, 51. Телефон: [8-342-217–79–00](tel:83422177900). Телефон/Факс: [8-342-217–76–81](tel:83422177681). Почта: [info@minzdrav.permkrai.ru](mailto:nfo@minzdrav.permkrai.ru).',
     },
     {
       id: '2',
-      title: 'Organization #2',
-      text: 'Esse do reprehenderit quis sunt ea ad id dolore deserunt eu.',
+      title: 'Управление Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по Пермскому краю',
+      text: 'Адрес: 614016, г. Пермь, ул. Куйбышева, 50. Телефон: [8-342-239-35-63](tel:83422393563). Телефон/Факс: [8-342-239-31-24](tel:83422393124). Почта: [urpn@59.rospotrebnadzor.ru](mailto:urpn@59.rospotrebnadzor.ru).',
     },
     {
       id: '3',
-      title: 'Organization #3',
-      text: 'Id ullamco ea ut in Lorem voluptate ea.',
+      title: 'Территориальный орган Росздравнадзора по Пермскому краю',
+      text: 'Адрес: 614068, г.Пермь, ул.Петропавловская, д.111. Телефон/Факс: [8-342-237-01-57](tel:83422370157). Почта: [info@reg59.roszdravnadzor.ru](mailto:info@reg59.roszdravnadzor.ru).',
     },
     
   ]

@@ -1,6 +1,9 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
+import ReactMarkdown from "react-markdown";
+import { Card } from 'react-bootstrap'
+
 
 // import data
 import { organizations } from '../../data/pages/organizations/organizations'
@@ -8,20 +11,25 @@ import { organizations } from '../../data/pages/organizations/organizations'
 export default function OrganizationsPage() {
     return (
         <MainLayout
-            title='Organizations Page'
-            description='Description for Organizations page'
+            title='Вышетоящие организации'
+            description='Кинезис - центр кинезитерапии. Адреса и телефоны надзорных органов и вышестоящих организаций.'
         >
             <HeadingComponent 
-                heading='Organizations Page'
+                heading='Вышетоящие организации'
             />
             {
                 organizations.map( elem => {
                     return (
-                        <CardComponentWithoutHeader
-                            key={elem.id}
-                            cardTitle={elem.title}
-                            cardText={elem.text}
-                        />
+                        <Card key={elem.id}>
+                            <Card.Body>
+                                <Card.Title>
+                                    {elem.title}
+                                </Card.Title>
+                                <ReactMarkdown
+                                    source={elem.text} 
+                                />
+                            </Card.Body>
+                        </Card>
                     )
                 })
             }

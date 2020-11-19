@@ -1,6 +1,8 @@
 import { MainLayout } from '../../layouts/MainLayout'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
-import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
+// import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
+import ReactMarkdown from "react-markdown";
+import { Card } from 'react-bootstrap'
 
 // import data
 import { rules } from '../../data/pages/rules/rules'
@@ -8,20 +10,25 @@ import { rules } from '../../data/pages/rules/rules'
 export default function RulesPage() {
     return (
         <MainLayout
-            title='Rules page'
-            description='Description for rules page'
+            title='Правила посещения'
+            description='Правила посещения сети центров кинезитерапии Кинезис'
         >
             <HeadingComponent 
-                heading='Rules Page'
+                heading='Правила посещения'
             />
             {
                 rules.map( elem => {
                     return (
-                        <CardComponentWithoutHeader 
-                            key={elem.id}
-                            cardTitle={elem.title}
-                            cardText={elem.text}
-                        />
+                        <Card key={elem.id}>
+                            <Card.Body>
+                                <Card.Title>
+                                    {elem.title}
+                                </Card.Title>
+                                <ReactMarkdown
+                                    source={elem.text} 
+                                />
+                            </Card.Body>
+                        </Card>
                     )
                 })
             }

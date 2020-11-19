@@ -1,5 +1,5 @@
 import { MainLayout } from '../../layouts/MainLayout'
-import { CardComponentImg } from '../../components/CardComponents/CardComponentImg'
+import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
@@ -8,21 +8,21 @@ import { authors_column } from '../../data/pages/authors_column/authors_column'
 export default function AuthorsPage() {
     return (
         <MainLayout
-            title='Authors page'
-            description='Description for Authors page'
+            title='Авторская колонка'
+            description='Авторская колонка основателя сети центров кинезитерапии Кинезис Эльвиры Некрасовой'
         >
             <HeadingComponent 
-                heading='Authors / Methodology Page'
+                heading='Авторская колонка'
             />
             {
                 authors_column.map( elem => {
                     return (
-                        <CardComponentImg 
+                        <CardComponentWithoutHeader 
                             key={elem.id}
                             cardTitle={elem.title}
                             cardText={elem.text}
                             cardImg={elem.img}
-                        />
+                    />
                     )
                 })
             }

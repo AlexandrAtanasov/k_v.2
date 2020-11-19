@@ -167,13 +167,13 @@ const longMenu = useRef(null);
                             <NavDropdown.Divider className={`${style.dropdownDivider} `}  />
                             <Link href={`/methodology`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} ${style.wordBreak} `}>
-                                    Authors page
+                                    Авторская колонка
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider className={`${style.dropdownDivider} `}  />
                             <Link href={`/organizations`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} ${style.wordBreak} `} >
-                                    Organizations
+                                    Вышестоящие организации
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider className={`${style.dropdownDivider} `}  />

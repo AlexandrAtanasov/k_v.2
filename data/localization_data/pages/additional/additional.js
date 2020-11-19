@@ -1,3 +1,3 @@
 export const local = {
-    additional_title: 'Дополнительные услуги',
+    additional_title: 'Прочие услуги',
 }
