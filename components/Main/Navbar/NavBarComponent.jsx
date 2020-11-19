@@ -138,7 +138,7 @@ const longMenu = useRef(null);
                         </NavDropdown>
 
                         <NavDropdown 
-                            title="About" 
+                            title="О нас" 
                             id="basic-nav-dropdown"
                         >
                             <Link href={`/persons`} passHref>
@@ -155,13 +155,13 @@ const longMenu = useRef(null);
                             <NavDropdown.Divider className={`${style.dropdownDivider} `}  />
                             <Link href={`/vacancy`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} ${style.wordBreak} `}>
-                                    Vacancy
+                                    Вакансии
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider className={`${style.dropdownDivider} `}  />
                             <Link href={`/rules`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} ${style.wordBreak} `}>
-                                    Rules
+                                    Правила посещения
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider className={`${style.dropdownDivider} `}  />

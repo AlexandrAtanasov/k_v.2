@@ -1,21 +1,8 @@
 export const vacancy = [
-    {
-      id: '1',
-      header: 'Vacancy #1',
-      title: 'Vacancy #1',
-      text: 'Labore et commodo anim sunt laboris nisi do nulla cupidatat pariatur aliquip.',
-    },
-    {
-      id: '2',
-      header: 'Vacancy #2',
-      title: 'Vacancy #2',
-      text: 'Esse do reprehenderit quis sunt ea ad id dolore deserunt eu.',
-    },
-    {
-      id: '3',
-      header: 'Vacancy #3',
-      title: 'Vacancy #3',
-      text: 'Id ullamco ea ut in Lorem voluptate ea.',
-    },
-    
-  ]
+  {
+    id: '1',
+    header: 'Vacancy #1',
+    title: 'Открыта вакансия врача',
+    text: '##### Обязанности:  \n  *   Проведение консультаций, тестирований, осмотров.  \n  *   Соблюдение методики лечения.  \n  * Контроль работы инструкторов.   \n  \n  ##### Требования:  \n  *   Образование ЛФК/ортопед/невролог/хирург.  \n  *   Знание тренажёрного зала.  \n  *   Знание кинезитерапии, как способа лечения и реабилитации.  \n  *   Грамотная речь.  \n  *   Умение находить общий язык с пациентами.  \n  *   Трудолюбие и доброжелательность.  \n  ###### Условия:  \n  *   Сменный график работы.  \n  *   Дружный коллектив.  \n  *   Обучение.  \n  *   Удобный график работы, составляется с учетом пожеланий работника.  \n  *   Возможность заниматься кинезитерапией БЕСПЛАТНО!  \n  Ждём ваши резюме: [kinesisperm@yandex.ru](mailto:kinesisperm@yandex.ru).  \n  Более подробную информацию можно узнать по номеру: [8 (342) 258-16-58](tel:83422581658).',
+  },
+]
