@@ -50,6 +50,32 @@ $color: #8ab549;;
     right: 0;
     left: 0;
     z-index: 1030;
-    overflow-y: scroll;
+    // overflow-y: visible;
     max-height: 100%;
+}
+
+// carousel media query
+@media (max-width: 576px) {
+
+    .fixedTop {
+        overflow-y: scroll;
+    }
+}
+// Средние девайсы («таблетки», >= 768px)
+@media (min-width: 768px) {
+    .fixedTop {
+        overflow-y: scroll;
+    }
+}
+// Большие девайсы (десктопы, >= 992px)
+@media (min-width: 992px) { 
+    .fixedTop {
+        overflow-y: visible;
+    }
+}
+// Экстрабольшие девайсы (большие десктопы, >= 1200px)
+@media (min-width: 1200px) {
+    .fixedTop {
+        overflow-y: visible;
+    }
 }

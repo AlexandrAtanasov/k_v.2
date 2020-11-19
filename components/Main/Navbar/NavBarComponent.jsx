@@ -25,17 +25,17 @@ export function NavBarComponent() {
     const [shouldShowShadow, setShouldShowShadow] = useState(false);
     const MINIMUM_SCROLL = 80;
     const TIMEOUT_DELAY = 400;  
-    // useDocumentScrollThrottled(callbackData => {
-    //   const { previousScrollTop, currentScrollTop } = callbackData;
-    //   const isScrolledDown = previousScrollTop < currentScrollTop;
-    //   const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+    useDocumentScrollThrottled(callbackData => {
+      const { previousScrollTop, currentScrollTop } = callbackData;
+      const isScrolledDown = previousScrollTop < currentScrollTop;
+      const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
   
-    //   setShouldShowShadow(currentScrollTop > 2);
+      setShouldShowShadow(currentScrollTop > 2);
   
-    //   setTimeout(() => {
-    //     setShouldHideHeader(isScrolledDown && isMinimumScrolled);
-    //   }, TIMEOUT_DELAY);
-    // });
+      setTimeout(() => {
+        setShouldHideHeader(isScrolledDown && isMinimumScrolled);
+      }, TIMEOUT_DELAY);
+    });
     const shadowStyle = shouldShowShadow ? style.shadow : '';
     const hiddenStyle = shouldHideHeader ? style.hidden : '';
     // scroll logic end
