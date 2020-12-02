@@ -1,3 +1,3 @@
 export const local = {
-    form_title: 'Our contacts'
+    form_title: 'Наши контакты'
 }

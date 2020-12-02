@@ -132,7 +132,7 @@ const longMenu = useRef(null);
                             <NavDropdown.Divider className={`${style.dropdownDivider} `}  />
                             <Link href={`/sales`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} ${style.wordBreak} `}>
-                                    Sales
+                                    Акции и скидки
                                 </NavDropdown.Item>
                             </Link>
                         </NavDropdown>

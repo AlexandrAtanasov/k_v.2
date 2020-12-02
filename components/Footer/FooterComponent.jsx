@@ -30,11 +30,11 @@ export function FooterComponent() {
                         <FooterContactsComponent />
                     </Col>
                 </Row>
-                <Row className="justify-content-md-center">
+                {/* <Row className="justify-content-md-center">
                     <Col md="auto">
                         <FooterNavComponent/>
                     </Col>
-                </Row>
+                </Row> */}
             </Container>
 
         </footer>

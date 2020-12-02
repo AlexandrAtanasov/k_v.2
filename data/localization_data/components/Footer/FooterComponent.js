@@ -1,3 +1,3 @@
 export const local = {
-    company_name: 'KNZ LTD'
+    company_name: 'ООО КИНЕЗИС'
 }
