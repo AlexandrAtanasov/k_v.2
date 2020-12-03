@@ -8,13 +8,13 @@ export const trainers = [
     {
       id: '2',
       title: 'Зозуля Надежда',
-      text: 'Старший инструктор-методист на Екатерининской 165',
+      text: 'Старший инструктор-методист на Ленина 87',
       img: '/img/persons/trainers/Zozuliya.jpg'
     },
     {
       id: '3',
       title: 'Чомоляк Евгений',
-      text: 'Id pariatur ullamco incididunt est nisi dolor.',
+      text: 'Инструктор',
       img: '/img/persons/trainers/tren (2).png'
     },
     {
