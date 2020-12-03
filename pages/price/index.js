@@ -19,15 +19,21 @@ import { price_abonement_support_info } from '../../data/pages/price/price_abone
 // import data - price individual
 import { price_individual } from '../../data/pages/price/price_individual/price_individual.js'
 import { price_individual_info } from '../../data/pages/price/price_individual/price_individual_info.js'
+// import data - price individual at home
+import { price_individual_home } from '../../data/pages/price/price_individual_home/price_individual_home.js'
+import { price_individual_home_info } from '../../data/pages/price/price_individual_home/price_individual_home_info.js'
+// import data - price individual rehab
+import { price_individual_rehab } from '../../data/pages/price/price_individual_rehab/price_individual_rehab.js'
+import { price_individual_rehab_info } from '../../data/pages/price/price_individual_rehab/price_individual_rehab_info.js'
 
 export default function PricePage() {
     return (
         <MainLayout
-            title='Price page'
-            description='Description for Price page'
+            title='Стоимость услуг'
+            description='Стоимость услуг сети центров кинезитерапии Кинезис'
         >
             <HeadingComponent 
-                heading='Price Page'
+                heading='Стоимость услуг'
             />
             {/* <div
                 style={{marginTop: '56px'}}
@@ -233,6 +239,85 @@ export default function PricePage() {
                 </Card.Body>
             </Card>
       
+            {/* Individual at home */}
+            <Card>
+                <Card.Header
+                    className={` card_component_header `}
+                >
+                    {price_individual_home_info.header}
+                </Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        {price_individual_home_info.text}
+                    </Card.Text>
+                    <Table responsive>
+                        <thead>
+                            <tr>
+                                <th>Услуга</th>
+                                <th>Стоимость, рублей</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                price_individual_home.map( elem => {
+                                    return (
+                                        <>
+                                            <tr key={elem.id}>
+                                                <td>
+                                                    {elem.id}
+                                                </td>
+                                                <td>
+                                                    {elem.cost}
+                                                </td>
+                                            </tr>
+                                        </>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </Table>
+                </Card.Body>
+            </Card>
+            
+            {/* Individual rehab */}
+            <Card>
+                <Card.Header
+                    className={` card_component_header `}
+                >
+                    {price_individual_rehab_info.header}
+                </Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        {price_individual_rehab_info.text}
+                    </Card.Text>
+                    <Table responsive>
+                        <thead>
+                            <tr>
+                                <th>Услуга</th>
+                                <th>Стоимость, рублей</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                price_individual_rehab.map( elem => {
+                                    return (
+                                        <>
+                                            <tr key={elem.id}>
+                                                <td>
+                                                    {elem.id}
+                                                </td>
+                                                <td>
+                                                    {elem.cost}
+                                                </td>
+                                            </tr>
+                                        </>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </Table>
+                </Card.Body>
+            </Card>
     
         </MainLayout>
     )

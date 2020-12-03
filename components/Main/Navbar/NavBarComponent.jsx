@@ -116,17 +116,17 @@ const longMenu = useRef(null);
                         
                         <Link href={'/'} passHref>
                             <Nav.Link>
-                                Home
+                                Главная страница
                             </Nav.Link>
                         </Link>
                         
                         <NavDropdown 
-                            title="Prices and Sales" 
+                            title="Цены и акции" 
                             id="basic-nav-dropdown"
                         >
                             <Link href={`/price`} passHref>
                                 <NavDropdown.Item className={`${style.lineHeight} ${style.wordBreak} `}>
-                                    Price
+                                    Стоимость услуг
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider className={`${style.dropdownDivider} `}  />
