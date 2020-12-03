@@ -6,6 +6,20 @@ import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 // import data
 import { price_carousel } from '../../data/pages/price/price_carousel/price_carousel'
 
+
+// import data - services abonement
+import { price_services } from '../../data/pages/price/price_services/price_services.js'
+import { price_services_info } from '../../data/pages/price/price_services/price_services_info.js'
+// import data - price abonement
+import { price_abonement } from '../../data/pages/price/price_abonement/price_abonement.js'
+import { price_abonement_info } from '../../data/pages/price/price_abonement/price_abonement_info.js'
+// import data - price abonement support
+import { price_abonement_support } from '../../data/pages/price/price_abonement_support/price_abonement_support.js'
+import { price_abonement_support_info } from '../../data/pages/price/price_abonement_support/price_abonement_support_info.js'
+// import data - price individual
+import { price_individual } from '../../data/pages/price/price_individual/price_individual.js'
+import { price_individual_info } from '../../data/pages/price/price_individual/price_individual_info.js'
+
 export default function PricePage() {
     return (
         <MainLayout
@@ -22,152 +36,204 @@ export default function PricePage() {
                     data={price_carousel}
                 />
             </div> */}
-            <Card>
-                <Card.Header
-                    className={` card_component_header `}
-                >
-                    Price
-                </Card.Header>
-                <Card.Body>
-                    <Card.Title>
-                        Price #1
-                    </Card.Title>
-                    <Card.Text>
-                        Commodo veniam aliquip reprehenderit officia consequat esse culpa. Laborum ex fugiat ullamco commodo minim sunt ex aute velit labore. Occaecat culpa deserunt tempor esse. Labore Lorem minim consequat labore nisi laborum esse Lorem reprehenderit non veniam. Laborum consectetur id non laborum in irure voluptate amet officia non cillum exercitation irure est. Elit amet elit in sint laboris velit tempor dolore cillum quis commodo. Officia deserunt dolor qui aliquip ex et consectetur consequat id id laboris eiusmod dolore do.
-                    </Card.Text>
-                    <Table responsive>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <th key={index}>Table heading</th>
-                                ))}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <td key={index}>Table cell {index}</td>
-                                ))}
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <td key={index}>Table cell {index}</td>
-                                ))}
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <td key={index}>Table cell {index}</td>
-                                ))}
-                            </tr>
-                        </tbody>
-                    </Table>
-            
-                    {/* <OrderCallButton /> */}
-                </Card.Body>
-            </Card>
-      
-            <Card>
-                <Card.Header
-                    className={` card_component_header `}
-                >
-                    Price
-                </Card.Header>
-                <Card.Body>
-                    <Card.Title>
-                        Price #2
-                    </Card.Title>
-                    <Card.Text>
-                        Commodo veniam aliquip reprehenderit officia consequat esse culpa. Laborum ex fugiat ullamco commodo minim sunt ex aute velit labore. Occaecat culpa deserunt tempor esse. Labore Lorem minim consequat labore nisi laborum esse Lorem reprehenderit non veniam. Laborum consectetur id non laborum in irure voluptate amet officia non cillum exercitation irure est. Elit amet elit in sint laboris velit tempor dolore cillum quis commodo. Officia deserunt dolor qui aliquip ex et consectetur consequat id id laboris eiusmod dolore do.
-                    </Card.Text>
 
-                    <Table responsive>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <th key={index}>Table heading</th>
-                                ))}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <td key={index}>Table cell {index}</td>
-                                ))}
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <td key={index}>Table cell {index}</td>
-                                ))}
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <td key={index}>Table cell {index}</td>
-                                ))}
-                            </tr>
-                        </tbody>
-                    </Table>
-            
-                    {/* <OrderCallButton /> */}
-                </Card.Body>
-            </Card>
-      
+            {/* Services */}
             <Card>
                 <Card.Header
                     className={` card_component_header `}
                 >
-                    Price
+                    {price_services_info.header}
                 </Card.Header>
                 <Card.Body>
-                    <Card.Title>
-                        Price #2
-                    </Card.Title>
                     <Card.Text>
-                        Commodo veniam aliquip reprehenderit officia consequat esse culpa. Laborum ex fugiat ullamco commodo minim sunt ex aute velit labore. Occaecat culpa deserunt tempor esse. Labore Lorem minim consequat labore nisi laborum esse Lorem reprehenderit non veniam. Laborum consectetur id non laborum in irure voluptate amet officia non cillum exercitation irure est. Elit amet elit in sint laboris velit tempor dolore cillum quis commodo. Officia deserunt dolor qui aliquip ex et consectetur consequat id id laboris eiusmod dolore do.
+                        {price_services_info.text}
                     </Card.Text>
-
                     <Table responsive>
                         <thead>
                             <tr>
-                                <th>#</th>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <th key={index}>Table heading</th>
-                                ))}
+                                <th>Услуга</th>
+                                <th>Продолжительность</th>
+                                <th>Стоимость, рублей</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <td key={index}>Table cell {index}</td>
-                                ))}
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <td key={index}>Table cell {index}</td>
-                                ))}
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                {Array.from({ length: 12 }).map((_, index) => (
-                                    <td key={index}>Table cell {index}</td>
-                                ))}
-                            </tr>
+                            {
+                                price_services.map( elem => {
+                                    return (
+                                        <>
+                                            <tr key={elem.id}>
+                                                <td>
+                                                    {elem.id}
+                                                </td>
+                                                <td>
+                                                    {elem.duration}
+                                                </td>
+                                                <td>
+                                                    {elem.cost}
+                                                </td>
+                                            </tr>
+                                        </>
+                                    )
+                                })
+                            }
                         </tbody>
                     </Table>
-            
-                    {/* <OrderCallButton /> */}
+                </Card.Body>
+            </Card>
+
+            {/* Abonement */}
+            <Card>
+                <Card.Header
+                    className={` card_component_header `}
+                >
+                    {price_abonement_info.header}
+                </Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        {price_abonement_info.text}
+                    </Card.Text>
+                    <Table responsive>
+                        <thead>
+                            <tr>
+                                <th>Спецификация</th>
+                                <th>Количество занятий</th>
+                                <th>Срок действия</th>
+                                <th>Продолжительность занятия</th>
+                                <th>Стоимость, рублей</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                price_abonement.map( elem => {
+                                    return (
+                                        <>
+                                            <tr key={elem.id}>
+                                                <td>
+                                                    {elem.id}
+                                                </td>
+                                                <td>
+                                                    {elem.numb_classes}
+                                                </td>
+                                                <td>
+                                                    {elem.period}
+                                                </td>
+                                                <td>
+                                                    {elem.duration}
+                                                </td>
+                                                <td>
+                                                    {elem.cost}
+                                                </td>
+                                            </tr>
+                                        </>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </Table>
+                </Card.Body>
+            </Card>
+           
+            {/* Abonement support */}
+            <Card>
+                <Card.Header
+                    className={` card_component_header `}
+                >
+                    {price_abonement_support_info.header}
+                </Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        {price_abonement_support_info.text}
+                    </Card.Text>
+                    <Table responsive>
+                        <thead>
+                            <tr>
+                                <th>Спецификация</th>
+                                <th>Количество занятий</th>
+                                <th>Срок действия</th>
+                                <th>Продолжительность занятия</th>
+                                <th>Стоимость, рублей</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                price_abonement_support.map( elem => {
+                                    return (
+                                        <>
+                                            <tr key={elem.id}>
+                                                <td>
+                                                    {elem.id}
+                                                </td>
+                                                <td>
+                                                    {elem.numb_classes}
+                                                </td>
+                                                <td>
+                                                    {elem.period}
+                                                </td>
+                                                <td>
+                                                    {elem.duration}
+                                                </td>
+                                                <td>
+                                                    {elem.cost}
+                                                </td>
+                                            </tr>
+                                        </>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </Table>
+                </Card.Body>
+            </Card>
+
+            {/* Individual */}
+            <Card>
+                <Card.Header
+                    className={` card_component_header `}
+                >
+                    {price_individual_info.header}
+                </Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        {price_individual_info.text}
+                    </Card.Text>
+                    <Table responsive>
+                        <thead>
+                            <tr>
+                                <th>Спецификация</th>
+                                <th>Количество занятий</th>
+                                <th>Продолжительность занятия</th>
+                                <th>Стоимость, рублей</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                price_individual.map( elem => {
+                                    return (
+                                        <>
+                                            <tr key={elem.id}>
+                                                <td>
+                                                    {elem.id}
+                                                </td>
+                                                <td>
+                                                    {elem.numb_classes}
+                                                </td>
+                                                <td>
+                                                    {elem.duration}
+                                                </td>
+                                                <td>
+                                                    {elem.cost}
+                                                </td>
+                                            </tr>
+                                        </>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </Table>
                 </Card.Body>
             </Card>
       
+    
         </MainLayout>
     )
 }  
