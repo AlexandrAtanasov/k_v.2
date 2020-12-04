@@ -1,21 +1,26 @@
 export const licenses = [
     {
       id: '1',
-      title: 'License #1',
-      text: 'Labore et commodo anim sunt laboris nisi do nulla cupidatat pariatur aliquip.',
-      img: '/img/licenses/license_1.png'
+      title: 'Лицензия медицинской деятельности',
+      text: '',
+      img: '/img/main/licenses/license (1).jpg'
     },
     {
       id: '2',
-      title: 'License #2',
-      text: 'Et exercitation nostrud adipisicing deserunt ipsum tempor.',
-      img: '/img/licenses/license_1.png'
+      title: 'Приложение к Лицензии медицинской деятельности',
+      text: '',
+      img: '/img/main/licenses/license (4).jpg'
     },
     {
       id: '3',
-      title: 'License #3',
-      text: 'Esse do reprehenderit quis sunt ea ad id dolore deserunt eu.',
-      img: '/img/licenses/license_1.png'
+      title: 'Санитарно-эпидемиологическое заключение',
+      text: '',
+      img: '/img/main/licenses/license (2).jpg'
     },
-    
+    {
+      id: '4',
+      title: 'Приложение к Санитарно-эпидемиологическому заключению',
+      text: '',
+      img: '/img/main/licenses/license (3).jpg'
+    } 
   ]

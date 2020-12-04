@@ -19,24 +19,18 @@ export const doctors = [
     },
     {
       id: '4',
-      title: 'Леканова Елена',
-      text: 'Врач',
-      img: '/img/persons/doctors/doc (2).png'
-    },
-    {
-      id: '5',
       title: 'Попова Наталья',
       text: 'Врач-кинезитерапевт. Детский врач ортопед-травматолог',
       img: '/img/persons/doctors/Popova.jpg'
     },
     {
-      id: '6',
+      id: '5',
       title: 'Шаяхметов Марсель',
       text: 'Врач-кинезитерапевт',
       img: '/img/persons/doctors/Sayhmetov.jpg'
     },
     {
-      id: '7',
+      id: '6',
       title: 'Шевнин Константин',
       text: 'Врач травматолог-ортопед, врач ЛФК',
       img: '/img/persons/doctors/Shevnin.jpg'

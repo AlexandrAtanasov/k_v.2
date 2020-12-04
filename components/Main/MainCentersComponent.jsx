@@ -1,4 +1,6 @@
+import { Card, Button } from 'react-bootstrap'
 import { CardComponentImg } from '../CardComponents/CardComponentImg'
+import ReactMarkdown from "react-markdown";
 
 // import data
 import { about_centers } from '../../data/main/about_centers/about_centers'
@@ -10,12 +12,21 @@ export function MainCentersComponent( ) {
             {
                 about_centers.map( elem => {
                     return (
-                        <CardComponentImg 
-                        key={elem.id}
-                        cardTitle={elem.title}
-                        cardText={elem.text}
-                        cardImg={elem.img}
-                        />
+                        <Card key={elem.id}>
+                            <Card.Body>
+                                <Card.Title>
+                                    {elem.title}
+                                </Card.Title>
+                                <ReactMarkdown
+                                    source={elem.text} 
+                                />
+                            </Card.Body>
+                            <Card.Img 
+                                src={elem.img} 
+                                variant="bottom"
+                                // className={`${style.height}`}
+                            />
+                        </Card>
                         )
                     })
             }

@@ -32,15 +32,15 @@ export default function HomePage() {
         cardImg={authors_column[0].img}
       />
       <HeadingComponent 
-        heading='Our Centers'
+        heading='Наши центры'
       />
       <MainCentersComponent/>
       <HeadingComponent 
-        heading='Our Doctors'
+        heading='Наши доктора'
       />
       <MainDoctorsComponent />
       <HeadingComponent 
-        heading='Our Licenses'
+        heading='Лицензции и заключения'
       />
       <MainLicensesComponent/>
      </MainLayout>

@@ -1,21 +1,21 @@
 export const about_centers = [
     {
       id: '1',
-      title: 'Center #1',
-      text: 'Fugiat aute laborum nisi minim sint ea quis ipsum.',
-      img: '/img/main/about_centers/about_centers.jpg'
+      title: 'Медицинский центр кинезитерапии на Крупской 31',
+      text: 'Оказываемые услуги:  \n  - Прием врача-кинезитерапевта.  \n  - Прием врача ЛФК.  \n  - Занятия кинезитерапией с инструктором-методистом.  \n  - Кинезитейпирование.',
+      img: '/img/main/about_centers/krupskoy.jpg'
     },
     {
       id: '2',
-      title: 'Center #2',
-      text: 'Lorem ullamco aliqua nisi magna veniam duis magna ut consequat Lorem incididunt cupidatat pariatur.',
-      img: '/img/main/about_centers/about_centers.jpg'
+      title: 'Медицинский центр кинезитерапии на Ленина 87',
+      text: 'Совершенно новый центр кинезитерапии «Кинезис» на Ленина 87:  \n  - Центр расположен в самом центре города Пермь – на центральной улице Ленина.  \n  - Транспортная доступность для микрорайонов: ДКЖ, Парковый, Гознак, Нагорный.  \n  - Новое оборудование, современное напольное покрытие.  \n  - Удобная входная группа для маломобильных групп населения – 1 этаж.  \n  - Медицинская лицензия.  \n  - Новый ремонт и обновлённый дизайн для Вашего комфорта.  \n  - Все душевые оборудованы бочками для обливания ледяной водой. Криотерапия (лечение холодом), как часть лечения сосудистых заболеваний!',
+      img: '/img/main/about_centers/lenina.jpg'
     },
     {
       id: '3',
-      title: 'Center #3',
-      text: 'Nulla officia irure veniam sint quis nisi quis sit elit.',
-      img: '/img/main/about_centers/about_centers.jpg'
+      title: 'Физкультурно-оздоровительный центр на Маршала Рыбалко 85в',
+      text: 'Оказываемые услуги:  \n  - Занятия кинезитерапией с инструктором-методистом.',
+      img: '/img/main/about_centers/marshala.jpg'
     },
     
   ]
