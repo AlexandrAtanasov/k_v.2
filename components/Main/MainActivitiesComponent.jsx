@@ -1,18 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
-import { activities } from '../../data/main/activities/main_actvities'
 import { HeadingComponent } from '../Heading/HeadingComponent'
 import { CardDeck, Card, Container, Row, Col, Image, Nav, NavDropdown, Navbar } from 'react-bootstrap'
 
 // import styles
 import style from '../../styles/main_activities.module.scss'
 
+// import data
+import { activities } from '../../data/main/activities/main_actvities'
+
 export function MainActivitiesComponent() {
     return (
         <div className={` ${style.activities_column_container} backgroundColor_darkgreen `} >
             <div style={{color: 'white'}}>
                 <HeadingComponent 
-                    heading='What we do'
+                    heading='С чем мы работаем'
                 />
             </div>
             {/* TODO: make navigation (or not)*/}

@@ -16,15 +16,15 @@ export default function HomePage() {
   
   return (
     <MainLayout
-      title='Main page'
-      description='Description for Main page'
+      title='Кинезис'
+      description='Кинезис - кинезитерапия в Перми'
     >
       <CarouselComponent
         data={carousel}
       />
       <MainActivitiesComponent />
       <HeadingComponent 
-        heading='Authors column'
+        heading='Авторская колонка'
       />
       <CardComponentImg 
         cardTitle={authors_column[0].title}
