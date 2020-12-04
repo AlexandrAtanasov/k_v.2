@@ -99,12 +99,12 @@ const longMenu = useRef(null);
                     <Navbar.Brand>
                         <img
                             alt="logo"
-                            src={`/img/main/navbar/logoooo.png`}
+                            src={`/img/main/navbar/Logo.jpg`}
                             width="auto"
                             height="30"
                             className="d-inline-block align-top"
                         />{' '}
-                        KKK
+                        Кинезис
                     </Navbar.Brand>
                 </Link>
                 <Navbar.Toggle 
