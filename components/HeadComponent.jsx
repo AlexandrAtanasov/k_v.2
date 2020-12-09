@@ -6,7 +6,7 @@ export function HeadComponent( {title, description} ) {
         <React.Fragment>
             <Head>
                 <title>
-                    {title} | Basic Title
+                    {title} | Кинезитерапия в Перми
                 </title>
                 <meta 
                     name='description' 
