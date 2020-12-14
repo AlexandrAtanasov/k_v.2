@@ -3,24 +3,30 @@ export const licenses = [
       id: '1',
       title: 'Лицензия медицинской деятельности',
       text: '',
-      img: '/img/main/licenses/license (1).jpg'
+      img: '/img/main/licenses/licence_001.jpg'
     },
     {
       id: '2',
-      title: 'Приложение к Лицензии медицинской деятельности',
+      title: 'Лицензия медицинской деятельности',
       text: '',
-      img: '/img/main/licenses/license (4).jpg'
+      img: '/img/main/licenses/licence_002.jpg'
     },
     {
       id: '3',
-      title: 'Санитарно-эпидемиологическое заключение',
+      title: 'Приложение к Лицензии медицинской деятельности',
       text: '',
-      img: '/img/main/licenses/license (2).jpg'
+      img: '/img/main/licenses/licence_003.jpg'
     },
     {
       id: '4',
+      title: 'Санитарно-эпидемиологическое заключение',
+      text: '',
+      img: '/img/main/licenses/licence_004.jpg'
+    },
+    {
+      id: '5',
       title: 'Приложение к Санитарно-эпидемиологическому заключению',
       text: '',
-      img: '/img/main/licenses/license (3).jpg'
+      img: '/img/main/licenses/licence_005.jpg'
     } 
   ]
