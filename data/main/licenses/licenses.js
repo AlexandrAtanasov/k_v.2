@@ -1,13 +1,13 @@
 export const licenses = [
     {
       id: '1',
-      title: 'Лицензия медицинской деятельности',
+      title: 'Лицензия медицинской деятельности (1 лист)',
       text: '',
       img: '/img/main/licenses/licence_001.jpg'
     },
     {
       id: '2',
-      title: 'Лицензия медицинской деятельности',
+      title: 'Лицензия медицинской деятельности (2 лист)',
       text: '',
       img: '/img/main/licenses/licence_002.jpg'
     },
