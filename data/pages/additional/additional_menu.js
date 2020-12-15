@@ -1,5 +1,5 @@
 export const additional_menu = [
-    { id: 1, title:"Кинезитейпирование", pid: 'kinezitejpirovanie' },
+    { id: 1, title:"Кинезиотейпирование", pid: 'kinezitejpirovanie' },
     { id: 2, title:"Кинезитерапия для детей дошкольного возраста", pid: 'kineziterapiya-dlya-detej-doshkolnogo-vozrasta' },
     { id: 3, title:"Лечение на дому", pid: 'lechenie-na-domu' },
     { id: 4, title:"Реабилитационные занятия для инвалидов", pid: 'reabilitacionnye-zanyatiya-dlya-invalidov' },
