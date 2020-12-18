@@ -2,23 +2,23 @@ export const carousel = [
   {
     "id": 1, 
     "src": "/img/main/carousel/img_1.png", 
-    "alt":"First", 
-    "h3":"First img", 
-    "p":"Est sit deserunt"
+    "alt":"Скидка 10%", 
+    "h3":"Скидка 10 %", 
+    "p":"Скидка на первый цикл кинезитерапии"
   },
   {
     "id": 2, 
     "src": 
     "/img/main/carousel/img_2.png", 
-    "alt":"Second", 
-    "h3":"Second img", 
-    "p":"Qui cillum nisi commodo"
+    "alt":"Вакансия", 
+    "h3":"Открыта вакансия", 
+    "p":"Сеть центров кинезитерапии ищет врача. Подробности по контактному телефону"
   },
   {
     "id": 3, 
     "src": "/img/main/carousel/img_3.png", 
-    "alt":"Fird", 
-    "h3":"Third img", 
-    "p":"Culpa et elit cupidatat"
+    "alt":"Акция без названия", 
+    "h3":"Акция без названия", 
+    "p":"Подробности об акции без названия"
   },
 ]
