@@ -1,6 +1,9 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
 
+// import styles
+import style from '../../styles/components/Carousel.module.scss'
+
 export function CarouselComponent( {data} ) {
 
     return (
@@ -14,8 +17,16 @@ export function CarouselComponent( {data} ) {
                             alt={img.alt}
                         />
                         <Carousel.Caption className="d-flex flex-column h-100 align-items-center justify-content-center">
-                            <h3>{img.h3}</h3>
-                            <p>{img.p}</p>
+                            <h3
+                                className={` ${style.h3_background} `}
+                            >
+                                {img.h3}
+                            </h3>
+                            <p
+                                className={` ${style.p_background} `}
+                            >
+                                {img.p}
+                            </p>
                         </Carousel.Caption>
                     </Carousel.Item>            
                 )
