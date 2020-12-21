@@ -4,7 +4,7 @@ export const price_abonement = [
       "numb_classes": "12 / 6", 
       "period": "40 дней", 
       "duration": "Без ограничений", 
-      "cost": "10800 / 6400" 
+      "cost": "10800 / 6200" 
     },
     {
       "id": "2 цикл", 
