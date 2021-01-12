@@ -54,12 +54,6 @@ export const trainers = [
       img: '/img/persons/trainers/Rainhard.jpg'
     },
     {
-      id: '10',
-      title: 'Шапарь Алена',
-      text: 'Инструктор',
-      img: '/img/persons/trainers/tren (4).png'
-    },
-    {
       id: '11',
       title: 'Зворыгин Иван',
       text: 'Инструктор',

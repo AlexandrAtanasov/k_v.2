@@ -34,13 +34,13 @@ export default function PersonsPage() {
                                 </Nav.Link>
                             </Nav.Item>
                         </Col>
-                        <Col lg='auto'>
+                        {/* <Col lg='auto'>
                             <Nav.Item>
                                 <Nav.Link eventKey="second" className={style.button_outline_none}>
                                     Администраторы
                                 </Nav.Link>
                             </Nav.Item>
-                        </Col>
+                        </Col> */}
                         <Col lg='auto'>
                             <Nav.Item>
                                 <Nav.Link eventKey="third" className={style.button_outline_none}>
@@ -59,11 +59,11 @@ export default function PersonsPage() {
                                     data={doctors}
                                 />
                             </Tab.Pane>
-                            <Tab.Pane eventKey="second">
+                            {/* <Tab.Pane eventKey="second">
                                 <CardComponentDeck 
                                     data={administrators}
                                 />
-                            </Tab.Pane>
+                            </Tab.Pane> */}
                             <Tab.Pane eventKey="third">
                                 <CardComponentDeck 
                                     data={trainers}
