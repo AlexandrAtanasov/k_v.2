@@ -7,6 +7,7 @@ import { MainLicensesComponent } from '../components/Main/MainLicensesComponent'
 import { CardComponentImg } from '../components/CardComponents/CardComponentImg'
 import { HeadingComponent } from '../components/Heading/HeadingComponent'
 import { MainCentersComponent } from '../components/Main/MainCentersComponent'
+import { MainStartIntro } from '../components/Main/MainStartIntro'
 
 // import data
 import { carousel } from '../data/main/carousel/main_carousel'
@@ -24,13 +25,9 @@ export default function HomePage() {
       />
       <MainActivitiesComponent />
       <HeadingComponent 
-        heading='Авторская колонка'
+        heading='С чего начать?'
       />
-      <CardComponentImg 
-        cardTitle={authors_column[0].title}
-        cardText={authors_column[0].text}
-        cardImg={authors_column[0].img}
-      />
+      <MainStartIntro />
       <HeadingComponent 
         heading='Наши центры'
       />

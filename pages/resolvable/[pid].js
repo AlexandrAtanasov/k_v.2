@@ -99,7 +99,7 @@ export default function ResolvablePage ( {page, mdText} ) {
             description={data.description}
         >
             <HeadingComponent 
-                heading='Решаемые проблемы'
+                heading='Что мы лечим'
             />
             <CardComponentWithoutHeader
                 // cardHeader={data.header}

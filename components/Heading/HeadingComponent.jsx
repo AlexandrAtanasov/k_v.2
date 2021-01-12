@@ -8,7 +8,7 @@ export function HeadingComponent( { heading } ) {
     return (
         <Container className={` ${style.heading_container} `}>
             <h1
-                className={` ${style.heading_h1} `}
+                className={` ${style.heading} `}
             >
                 { heading }
             </h1>
