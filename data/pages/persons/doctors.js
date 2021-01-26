@@ -3,7 +3,7 @@ export const doctors = [
       id: '1',
       title: 'Некрасова Эльвира Витальевна',
       text: 'Директор и основатель сети центров кинезитерапии «КИНЕЗИС», кинезитерапевт-эксперт, преподаватель ПГМУ им. Е.А.Вагнера, стаж работы в кинезитерапии более 15 лет.',
-      img: '/img/persons/doctors/Nekrasova2.jpg'
+      img: '/img/persons/doctors/Nekrasova_1.jpg'
     },
     {
       id: '2',
@@ -15,25 +15,25 @@ export const doctors = [
       id: '3',
       title: 'Шевнин Константин Васильевич',
       text: 'Кинезитерапевт, врач ЛФК и спортивной медицины, травматолог-ортопед, специалист по массажу.',
-      img: '/img/persons/doctors/Shevnin.jpg'
+      img: '/img/persons/doctors/Shevnin_1.jpg'
     },
     {
       id: '4',
       title: 'Шаяхметов Марсель Асхатович',
       text: 'Кинезитерапевт, специалист по медицинской реабилитации. Специалист по прикладному кинезиологическому массажу.',
-      img: '/img/persons/doctors/Sayhmetov.jpg'
+      img: '/img/persons/doctors/Sayhmetov_1.jpg'
     },
     {
       id: '5',
       title: 'Попова Наталья Александровна',
       text: 'Кинезитерапевт, врач ЛФК и спортивной медицины, травматолог-ортопед.',
-      img: '/img/persons/doctors/Popova.jpg'
+      img: '/img/persons/doctors/Popova_1.jpg'
     },
     {
       id: '6',
       title: 'Цыганов Данил Сергеевич',
       text: 'Кинезитерапевт, врач ЛФК и спортивной медицине, специалист по реабилитации.',
-      img: '/img/persons/doctors/doc (1).png'
+      img: '/img/persons/doctors/Cyganov.jpg'
     },
     {
       id: '7',
