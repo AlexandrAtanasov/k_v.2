@@ -38,7 +38,6 @@ export function MainStartIntro( ) {
                                     className={`${style.min_width} ${style.align}`}    
                                 >
                                     <Card.Img 
-                                        style={{ 'height': '150px', 'width': '150px'}} 
                                         variant="top" 
                                         src={elem.img} 
                                     />
