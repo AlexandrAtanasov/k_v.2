@@ -61,7 +61,7 @@ export const activities = [
     },
     {
       id: 11,
-      text: 'Физиотерапия',
+      text: 'Реабилитация после травм и операций',
       img: '/img/main/activities/physiotherapy.png',
       link: '/additional/Mollit-voluptate-voluptate',
     }

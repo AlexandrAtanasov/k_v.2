@@ -30,7 +30,7 @@ export default function PersonsPage() {
                         <Col lg='auto'>
                             <Nav.Item>
                                 <Nav.Link eventKey="first" className={style.button_outline_none}>
-                                    Доктора
+                                    Врачи
                                 </Nav.Link>
                             </Nav.Item>
                         </Col>

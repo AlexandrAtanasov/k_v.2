@@ -35,7 +35,7 @@ export default function HomePage() {
       />
       <MainCentersComponent/>
       <HeadingComponent 
-        heading='Наши доктора'
+        heading='Наши врачи'
       />
       <MainDoctorsComponent />
       <HeadingComponent 
