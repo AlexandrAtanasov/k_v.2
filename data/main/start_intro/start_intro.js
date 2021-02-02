@@ -3,24 +3,24 @@ export const start_intro = [
       id: '1',
       title: 'Осмотр у врача - кинезитерапевта',
       text: 'Разбор болезни, объяснение принципов кинезитерапии, сбор жалоб и методов исследования (МРТ, КТ, рентген)',
-      img: '/img/main/consultation_steps/doctor_1.png'
+      img: '/img/main/consultation_steps/doctor.jpg'
     },
     {
       id: '2',
       title: 'Миофасциальная диагностика',
       text: 'Помогает распознать даже скрытые заболевания костно-мышечной системы',
-      img: '/img/main/consultation_steps/diagnostics_1.png'
+      img: '/img/main/consultation_steps/diagnostics.jpg'
     },
     {
       id: '3',
       title: 'Функциональное тестирование',
       text: 'Диагностическое тестирование проводится в реабилитационном зале на специальных безопасных тренажерах',
-      img: '/img/main/consultation_steps/exercises_1.png'
+      img: '/img/main/consultation_steps/exercises.jpg'
     },
     {
       id: '4',
       title: 'Составление индивидуальной программы лечения',
       text: 'По результатам консультации врач-кинезитерапевт назначает индивидуальную программу лечения и профилактики, учитывая особенности каждого пациента, а так же сопутствующие заболевания',
-      img: '/img/main/consultation_steps/plan_1.png'
+      img: '/img/main/consultation_steps/plan.jpg'
     }
   ]
