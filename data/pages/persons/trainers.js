@@ -33,7 +33,7 @@ export const trainers = [
       id: '6',
       title: 'Гурьянова Анна',
       text: 'Инструктор',
-      img: '/img/persons/trainers/tren (4).png'
+      img: '/img/persons/trainers/Gurianova.jpg'
     },
     {
       id: '7',
@@ -58,5 +58,11 @@ export const trainers = [
       title: 'Зворыгин Иван',
       text: 'Инструктор',
       img: '/img/persons/trainers/Zvorigin.jpg'
+    },
+    {
+      id: '12',
+      title: 'Тиунов Николай',
+      text: 'Инструктор',
+      img: '/img/persons/trainers/Tiunov.jpg'
     },
   ]
