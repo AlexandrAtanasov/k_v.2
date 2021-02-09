@@ -25,6 +25,9 @@ import { price_individual_home_info } from '../../data/pages/price/price_individ
 // import data - price individual rehab
 import { price_individual_rehab } from '../../data/pages/price/price_individual_rehab/price_individual_rehab.js'
 import { price_individual_rehab_info } from '../../data/pages/price/price_individual_rehab/price_individual_rehab_info.js'
+// import data - price massage
+import { price_massage } from '../../data/pages/price/price_massage/price_massage.js'
+import { price_massage_info } from '../../data/pages/price/price_massage/price_massage_info.js'
 
 export default function PricePage() {
     return (
@@ -318,7 +321,52 @@ export default function PricePage() {
                     </Table>
                 </Card.Body>
             </Card>
-    
+                            
+            {/* Massage */}
+            <Card>
+                <Card.Header
+                    className={` card_component_header `}
+                >
+                    {price_massage_info.header}
+                </Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        {price_massage_info.text}
+                    </Card.Text>
+                    <Table responsive>
+                        <thead>
+                            <tr>
+                                <th>Продолжительность, минут</th>
+                                <th>Стоимость, рублей</th>
+                                <th>Стоимость для клиентов центра, рублей</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                price_massage.map( elem => {
+                                    return (
+                                        <>
+                                            <tr key={elem.id}>
+                                                <td>
+                                                    {elem.duration}
+                                                </td>
+                                                <td>
+                                                    {elem.cost}
+                                                </td>
+                                                <td>
+                                                    {elem.cost_club}
+                                                </td>
+                                            </tr>
+                                        </>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </Table>
+                </Card.Body>
+            </Card>
+
+      
         </MainLayout>
     )
 }  
