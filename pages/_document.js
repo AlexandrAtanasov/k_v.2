@@ -9,7 +9,6 @@ class MyDocument extends Document {
   render() {
 
     ReactGA.initialize('263380978');
-    ReactGA.pageview(window.location.pathname + window.location.search);
 
     return (
       <Html className="h-100">
