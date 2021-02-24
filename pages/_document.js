@@ -1,10 +1,16 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+// tags
 import { YMInitializer } from 'react-yandex-metrika';
+import ReactGA from 'react-ga';
 
 class MyDocument extends Document {
   
   render() {
-    // const yandex_tag = process.env.NEXT_PUBLIC_YANDEX_USER;
+
+    ReactGA.initialize('263380978');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     return (
       <Html className="h-100">
         <Head>
