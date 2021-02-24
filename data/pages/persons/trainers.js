@@ -15,7 +15,7 @@ export const trainers = [
       id: '3',
       title: 'Чомоляк Евгений',
       text: 'Инструктор',
-      img: '/img/persons/trainers/tren (2).png'
+      img: '/img/persons/trainers/blank.jpg'
     },
     {
       id: '4',

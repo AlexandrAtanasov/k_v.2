@@ -6,7 +6,7 @@ import { HeadingComponent } from '../../components/Heading/HeadingComponent'
 
 // import data
 import { doctors } from '../../data/pages/persons/doctors'
-import { administrators } from '../../data/pages/persons/administrators'
+// import { administrators } from '../../data/pages/persons/administrators'
 import { trainers } from '../../data/pages/persons/trainers'
 
 // import styles
