@@ -1,8 +1,10 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { YMInitializer } from 'react-yandex-metrika';
 
 class MyDocument extends Document {
-
+  
   render() {
+    // const yandex_tag = process.env.NEXT_PUBLIC_YANDEX_USER;
     return (
       <Html className="h-100">
         <Head>
@@ -10,12 +12,7 @@ class MyDocument extends Document {
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossOrigin="anonymous" />
             <script src="//code.jivosite.com/widget.js" data-jv-id="j5UxZwUNyF" async></script>
 
-            {/* <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-            <script type="text/javascript">
-              (function() {
-                emailjs.init("user_CC844BqNZGwSxOC7pxkNc")
-              })();
-            </script> */}
+            <YMInitializer accounts={[54542998]} />
 
         </Head>
         <body className="h-100">

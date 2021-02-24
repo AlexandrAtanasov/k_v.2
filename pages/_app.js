@@ -7,6 +7,7 @@ import '../styles/main.scss'
 import '../styles/global_colors.scss'
 
 
+
 export default function MyApp({ Component, pageProps }) {
     return (
         <>
@@ -16,6 +17,7 @@ export default function MyApp({ Component, pageProps }) {
                 // stopDelayMs="100"
                 // height="3"
             />
+
             <Component {...pageProps} />
         </>
     )

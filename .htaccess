@@ -1,3 +1,108 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+
+
+Redirect 301 /artrit.html /resolvable/problem/artrit
+Redirect 301 /resolvable/problem/artrit /resolvable/artrit
+
+Redirect 301 /artroz.html /resolvable/problem/artroz
+Redirect 301 /resolvable/problem/artroz /resolvable/artroz
+
+Redirect 301 /osteohondroz.html /resolvable/problem/osteohondroz
+Redirect 301 /resolvable/problem/osteohondroz /resolvable/osteohondroz
+
+Redirect 301 /skolioz.html /resolvable/problem/scolioz
+Redirect 301 /resolvable/problem/scolioz /resolvable/scolioz
+
+Redirect 301 /ploskostopie.html /resolvable/problem/ploskostopie
+Redirect 301 /resolvable/problem/ploskostopie /resolvable/ploskostopie
+
+Redirect 301 /grizha_pozvonochnika.html /resolvable/problem/gryzha-pozvonochnika
+Redirect 301 /resolvable/problem/gryzha-pozvonochnika /resolvable/gryzha-pozvonochnika
+
+Redirect 301 /lechenie_spini.html /resolvable/problem/boli-v-spine
+Redirect 301 /resolvable/problem/boli-v-spine /resolvable/boli-v-spine
+
+Redirect 301 /golovnye-boli-i-golovokruzheniya.html /resolvable/problem/golovnie-boli-i-golovokruzheniya
+Redirect 301 /resolvable/problem/golovnie-boli-i-golovokruzheniya /resolvable/golovnie-boli-i-golovokruzheniya
+
+Redirect 301 /profilaktika.html /resolvable/problem/profilaktika-zabolevanij
+Redirect 301 /resolvable/problem/profilaktika-zabolevanij /resolvable/profilaktika-zabolevanij
+
+Redirect 301 /zanyatiya-dlya-pozhilykh-lyudey.html /resolvable/problem/zanyatiya-dlya-pozhilyh-lyudej
+Redirect 301 /resolvable/problem/zanyatiya-dlya-pozhilyh-lyudej /resolvable/-dlya-pozhilyh-lyudej
+
+Redirect 301 /reabilitaciya-posle-yendoprotezirovan.html /resolvable/problem/reabilitaciya-posle-endoprotezirovaniya
+Redirect 301 /resolvable/problem/reabilitaciya-posle-endoprotezirovaniya /resolvable/reabilitaciya-posle-endoprotezirovaniya
+
+Redirect 301 /vosstanovlenie-posle-insulta.html /resolvable/problem/reabilitaciya-posle-insulta
+Redirect 301 /resolvable/problem/reabilitaciya-posle-insulta /resolvable/reabilitaciya-posle-insulta
+
+Redirect 301 /profilaktika-izbytochnogo-vesa.html /resolvable/problem/profilaktika-izbytochnogo-vesa
+Redirect 301 /resolvable/problem/profilaktika-izbytochnogo-vesa /resolvable/profilaktika-izbytochnogo-vesa
+
+Redirect 301 /zhenskoe-i-muzhskoe-zdorove.html /resolvable/problem/zhenskoe-zdorovie
+Redirect 301 /resolvable/problem/zhenskoe-zdorovie /resolvable/zhenskoe-zdorovie
+
+Redirect 301 /narushenie-osanki.html /resolvable/problem/narusheniya-osanki
+Redirect 301 /resolvable/problem/narusheniya-osanki /resolvable/narusheniya-osanki
+
+Redirect 301 /vosstanovlenie-posle-kompressionnykh.html /resolvable/problem/vosstanovlenie-posle-kompressionnyh-perelomov
+Redirect 301 /resolvable/problem/vosstanovlenie-posle-kompressionnyh-perelomov /resolvable/vosstanovlenie-posle-kompressionnyh-perelomov
+
+
+
+Redirect 301 /children-programms.html /additional/service/kineziterapiya-dlya-detej-doshkolnogo-vozrasta
+Redirect 301 /additional/service/kineziterapiya-dlya-detej-doshkolnogo-vozrasta /additional/kineziterapiya-dlya-detej-doshkolnogo-vozrasta
+
+Redirect 301 /kineziteypirovanie.html /additional/service/kinezitejpirovanie
+Redirect 301 /additional/service/kinezitejpirovanie /additional/kinezitejpirovanie
+
+Redirect 301 /lechenie-na-domu.html /additional/service/lechenie-na-domu
+Redirect 301 /additional/service/lechenie-na-domu /additional/lechenie-na-domu
+
+Redirect 301 /kineziterapiya-dlya-detey-doshkolnogo.html /additional/service/kineziterapiya-dlya-detej-doshkolnogo-vozrasta
+Redirect 301 /additional/service/kineziterapiya-dlya-detej-doshkolnogo-vozrasta /additional/kineziterapiya-dlya-detej-doshkolnogo-vozrasta
+
+Redirect 301 /reabilitacionnye-zanyatiya-dlya-invali.html /additional/service/reabilitacionnye-zanyatiya-dlya-invalidov
+Redirect 301 /additional/service/reabilitacionnye-zanyatiya-dlya-invalidov /additional/reabilitacionnye-zanyatiya-dlya-invalidov
+
+Redirect 301 /prodazha-trenazherov.html /additional/service/prodazha-trenazherov
+Redirect 301 /additional/service/prodazha-trenazherov /additional/prodazha-trenazherov
+
+
+
+Redirect 301 /about.html /methodology
+Redirect 301 /normativnaya-dokumentaciya.html /organizations
+Redirect 301 /personal-2.html /persons
+Redirect 301 /vakansii.html /vacancy
+
+
+
+Redirect 301 /o-centrakh.html /centers
+Redirect 301 /centers /contacts
+Redirect 301 /contact.html /contacts
+
+
+
+Redirect 301 /ceny.html /price
+Redirect 301 /individual /price
+
+
+
+Redirect 301 /novosti.html /news
+Redirect 301 /otzyvy.html /reviews
+
+
+
+Redirect 301 /normalizaciya-arterialnogo-davleniya.html /
+Redirect 301 /korrekciya-figury.html /
+RedirectMatch 302 \/clients\.html.* /
+Redirect 301 /massazh.html /
+
+
+
+
+
