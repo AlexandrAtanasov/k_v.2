@@ -1,0 +1,13 @@
+User-agent: Yandex
+ Allow: *
+ Disallow: */admin
+ Disallow: /resolvable/problem/*/*
+ Disallow: /additional/service/*/*
+
+User-agent: *
+ Allow: *
+ Disallow: */admin
+ Disallow: /resolvable/problem/*/*
+ Disallow: /additional/service/*/*
+ Host: https://kinezis59.ru/
+ 
