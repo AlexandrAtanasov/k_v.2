@@ -13,7 +13,7 @@ export default function MyApp({ Component, pageProps }) {
     
     return (
         <>
-            <YMInitializer accounts={[54542998]} />
+            <YMInitializer accounts={[]} options={{accurateTrackBounce: true}, {trackLinks: true}, {}} />
             <NextNprogress/>
             <Component {...pageProps} />
         </>

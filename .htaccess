@@ -1,7 +1,8 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
 
 
 Redirect 301 /artrit.html /resolvable/problem/artrit
