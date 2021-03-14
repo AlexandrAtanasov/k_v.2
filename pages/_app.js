@@ -9,9 +9,6 @@ import withYM from "next-ym";
 import '../styles/main.scss'
 import '../styles/global_colors.scss'
 
-// tags
-// import { YMInitializer } from 'react-yandex-metrika';
-
 export default withYM("54928126", Router)(MyApp);
 
 function MyApp({ Component, pageProps }) {
