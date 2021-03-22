@@ -4,6 +4,7 @@ import NextNprogress from 'nextjs-progressbar';
 
 import Router from "next/router";
 import withYM from "next-ym";
+import FacebookPixel from '../components/FacebookPixel/FacebookPixel'
 
 // import styles
 import '../styles/main.scss'
@@ -15,9 +16,10 @@ function MyApp({ Component, pageProps }) {
     
     return (
         <>
-            {/* <YMInitializer accounts={[54928126]} options={{accurateTrackBounce: true}, {trackLinks: true}} /> */}
             <NextNprogress/>
-            <Component {...pageProps} />
+            <FacebookPixel>
+                <Component {...pageProps} />
+            </FacebookPixel>
         </>
     )
 }
