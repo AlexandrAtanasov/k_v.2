@@ -1,0 +1,9 @@
+{	
+	"id": "06",
+    "link": "/additional/service/nutritionist",
+    "title": "Диетолог",
+    "header": "Диетолог",
+	"description":"Услуги специалиста по диетологии в центрах кинезитерапии Кинезис.",
+    "text": "nutritionist.md",
+    "img": "/img/persons/doctors/Gladkih3.png"
+}

@@ -4,4 +4,5 @@ export const additional_menu = [
     { id: 3, title:"Лечение на дому", pid: 'lechenie-na-domu' },
     { id: 4, title:"Реабилитационные занятия для инвалидов", pid: 'reabilitacionnye-zanyatiya-dlya-invalidov' },
     { id: 5, title:"Продажа тренажёров", pid: 'prodazha-trenazherov' },
+    { id: 6, title:"Консультация диетолога", pid: 'nutritionist' },
 ];
