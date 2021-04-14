@@ -36,7 +36,7 @@ export const doctors = [
       img: '/img/persons/doctors/blank.jpg'
     },
     {
-      id: '',
+      id: '8',
       title: 'Быстрова Лариса Юрьевна',
       text: 'Кандидат медицинских наук, интернатура СПБ, врач невролог-эксперт, врач ЛФК, реабилитолог, специалист по кинезитейпированию.',
       img: '/img/persons/doctors/Bistrova2.jpg'
