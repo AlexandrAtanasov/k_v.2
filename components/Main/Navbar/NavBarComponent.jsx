@@ -153,7 +153,12 @@ const longMenu = useRef(null);
                                 </NavDropdown.Item>
                             </Link>
                             <NavDropdown.Divider className={`${style.dropdownDivider} `}  />
-                            <Link href={`/vacancy`} passHref>
+                            <Link 
+                                // href={`/vacancy`}
+                                href={`/[vacancy]`} 
+                                as={`/vacancy`}  
+                                passHref
+                            >
                                 <NavDropdown.Item className={`${style.lineHeight} ${style.wordBreak} `}>
                                     Вакансии
                                 </NavDropdown.Item>
