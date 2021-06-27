@@ -20,11 +20,15 @@ export function CardComponentWithoutHeader ( {cardTitle, cardText, cardImg} ) {
                     <ModalCallback />
                 </Button>
             </Card.Body>
-            <Card.Img 
-                src={cardImg} 
-                variant="bottom"
-                className={`${style.height}`}
-            />
+            {
+                cardImg ? 
+                    <Card.Img 
+                        src={cardImg} 
+                        variant="bottom"
+                        className={`${style.height}`}
+                    />
+                : null
+            }
         </Card>
     )
 }

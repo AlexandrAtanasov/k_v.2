@@ -3,25 +3,11 @@ import { CardComponent } from '../../components/CardComponents/CardComponent'
 import { CardComponentImg } from '../../components/CardComponents/CardComponentImg'
 import { CardComponentWithoutHeader } from '../../components/CardComponents/CardComponentWithoutHeader'
 import { HeadingComponent } from '../../components/Heading/HeadingComponent'
-// import { useRouter } from 'next/router'
-// import { server } from '../../config'
-// import useSWR from 'swr'
 
 import { local } from '../../data/localization_data/pages/additional/additional'
 
 import fs from 'fs'
 import path from 'path'
-
-
-// fetch for swr
-// const fetcher = async (url) => {
-//     const res = await fetch(url)
-//     const data = await res.json()
-//     if (res.status !== 200) {
-//         throw new Error(data.message)
-//     }
-//     return data
-// }
 
 
 export async function getStaticPaths() {
@@ -63,39 +49,6 @@ export default function AdditionalPage ( {page, mdText} ) {
     const data = JSON.parse(page)
     const text = mdText
 
-    // SWR
-    // 
-    // some logic for swr
-    // const initialData = props.data
-    // const { data, error } = useSWR(
-    //     () => query.resolvable && `/api/resolvable/${query.resolvable}`,
-    //         fetcher, 
-    //         { initialData }
-    // )
-    // 
-    // some html for swr
-    // then something go wrong
-    // if (error) return (
-    //     <MainLayout
-    //         title='Oops!'
-    //         description={`Something go wrong`}
-    //     >
-    //         <p>{error.message}</p>
-    //     </MainLayout>
-    // )
-    // 
-    // then data is loading
-    // if (!data) return (
-    //     <MainLayout
-    //         title='Loading data'
-    //         description={`Loading data for this page`}
-    //     >
-    //         <p>Loading...</p>
-    //     </MainLayout>
-    // )
-  
-    // static layout
-   
     return (
         <MainLayout
             title={data.title}
@@ -107,8 +60,8 @@ export default function AdditionalPage ( {page, mdText} ) {
             <CardComponentWithoutHeader
                 // cardHeader={data.header}
                 // cardTitle={data.title}
-                cardImg={data.img}
                 cardText={text}
+                cardImg={data.img}
             />
         </MainLayout>
     )
