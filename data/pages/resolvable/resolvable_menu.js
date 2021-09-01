@@ -18,5 +18,5 @@ export const resolvable_menu = [
     { id: 17, title:"Занятия для пожилых людей", pid: 'zanyatiya-dlya-pozhilyh-lyudej' },
 	{ id: 18, title:"Профилактика заболеваний", pid: 'profilaktika-zabolevanij' },
 	{ id: 19, title:"Опущение внутренних органов", pid: 'opushchenie-vnutrennih-organov' },
-	{ id: 20, title:"Реабилитация после COVID-19", pid: 'rehabilitation-after-covid-19' }
 ];
+	// { id: 20, title:"Реабилитация после COVID-19", pid: 'rehabilitation-after-covid-19' }
