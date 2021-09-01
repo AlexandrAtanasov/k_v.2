@@ -4,34 +4,34 @@ export const price_abonement = [
       "numb_classes": "12 / 6", 
       "period": "40 дней", 
       "duration": "Без ограничений", 
-      "cost": "10800 / 6200" 
+      "cost": "12000 / 6900" 
     },
     {
       "id": "2 цикл", 
       "numb_classes": "12 / 6", 
       "period": "40 дней", 
       "duration": "Без ограничений", 
-      "cost": "9100 / 5400" 
+      "cost": "10100 / 6000" 
     },
     {
       "id": "3 цикл", 
       "numb_classes": "12 / 6", 
       "period": "40 дней", 
       "duration": "Без ограничений", 
-      "cost": "8500 / 4900" 
+      "cost": "9500 / 5500" 
     },
     {
       "id": "Единый цикл", 
       "numb_classes": "36", 
       "period": "120 дней", 
       "duration": "Без ограничений", 
-      "cost": "25100" 
+      "cost": "27800" 
     },
     {
       "id": "Разовое занятие", 
       "numb_classes": "1", 
       "period": "-", 
       "duration": "Без ограничений", 
-      "cost": "1050" 
+      "cost": "1200" 
     },
 ]
