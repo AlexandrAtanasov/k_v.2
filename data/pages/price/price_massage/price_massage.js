@@ -1,42 +1,32 @@
 export const price_massage = [
     {
-      "duration": "10", 
-      "cost": "270" ,
-      "cost_club": "250" 
-    },
-    {
       "duration": "15", 
-      "cost": "400" ,
-      "cost_club": "370" 
+      "cost": "450" ,
+      "cost_club": "405" 
     },
     {
       "duration": "20", 
-      "cost": "500" ,
-      "cost_club": "480" 
+      "cost": "550" ,
+      "cost_club": "495" 
     },
     {
       "duration": "25", 
-      "cost": "650" ,
-      "cost_club": "600" 
+      "cost": "700" ,
+      "cost_club": "630" 
     },
     {
       "duration": "30", 
-      "cost": "750" ,
-      "cost_club": "710" 
+      "cost": "800" ,
+      "cost_club": "720" 
     },
     {
       "duration": "40", 
-      "cost": "1000" ,
+      "cost": "1150" ,
       "cost_club": "930" 
     },
     {
       "duration": "60", 
       "cost": "1300" ,
-      "cost_club": "1150" 
-    },
-    {
-      "duration": "90", 
-      "cost": "2000" ,
-      "cost_club": "1800" 
-    },
+      "cost_club": "1035" 
+    }
 ]
