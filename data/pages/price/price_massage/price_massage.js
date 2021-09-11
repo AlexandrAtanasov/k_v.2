@@ -2,12 +2,12 @@ export const price_massage = [
     {
       "duration": "15", 
       "cost": "450" ,
-      "cost_club": "400" 
+      "cost_club": "405" 
     },
     {
       "duration": "20", 
       "cost": "550" ,
-      "cost_club": "500" 
+      "cost_club": "495" 
     },
     {
       "duration": "25", 
@@ -16,13 +16,13 @@ export const price_massage = [
     },
     {
       "duration": "30", 
-      "cost": "800" ,
-      "cost_club": "750" 
+      "cost": "850" ,
+      "cost_club": "765" 
     },
     {
       "duration": "40", 
       "cost": "1150" ,
-      "cost_club": "1050" 
+      "cost_club": "1035" 
     },
     {
       "duration": "60", 
