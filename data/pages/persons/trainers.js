@@ -49,20 +49,20 @@ export const trainers = [
     },
     {
       id: '9',
-      title: 'Райнхард Ольга',
+      title: 'Тюрин Денис',
       text: 'Инструктор',
-      img: '/img/persons/trainers/Rainhard.jpg'
+      img: '/img/persons/trainers/Тюрин Денис.jpg'
     },
     {
       id: '11',
-      title: 'Зворыгин Иван',
+      title: 'Шумик Николай',
       text: 'Инструктор',
-      img: '/img/persons/trainers/Zvorigin.jpg'
+      img: '/img/persons/trainers/Шумик Николай.jpg'
     },
     {
       id: '12',
-      title: 'Тиунов Николай',
+      title: 'Штейникова Вероника',
       text: 'Инструктор',
-      img: '/img/persons/trainers/Tiunov.jpg'
+      img: '/img/persons/trainers/Штейникова Вероника.jpg'
     },
   ]
