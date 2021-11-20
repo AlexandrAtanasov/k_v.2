@@ -5,4 +5,5 @@ export const additional_menu = [
     { id: 4, title:"Реабилитационные занятия для инвалидов", pid: 'reabilitacionnye-zanyatiya-dlya-invalidov' },
     { id: 5, title:"Продажа тренажёров", pid: 'prodazha-trenazherov' },
     { id: 6, title:"Консультация диетолога", pid: 'nutritionist' },
+    { id: 7, title:"Кинезио-массаж", pid: 'kinezio-massage' },
 ];

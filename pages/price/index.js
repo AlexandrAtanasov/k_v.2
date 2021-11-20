@@ -25,6 +25,9 @@ import { price_individual_home_info } from '../../data/pages/price/price_individ
 // import data - price individual rehab
 import { price_individual_rehab } from '../../data/pages/price/price_individual_rehab/price_individual_rehab.js'
 import { price_individual_rehab_info } from '../../data/pages/price/price_individual_rehab/price_individual_rehab_info.js'
+// import data - price kinezio-massage
+import { price_kinezio_massage } from '../../data/pages/price/price_massage/price_kinezio_massage.js'
+import { price_kinezio_massage_info } from '../../data/pages/price/price_massage/price_kinezio_massage_info.js'
 // import data - price massage
 import { price_massage } from '../../data/pages/price/price_massage/price_massage.js'
 import { price_massage_info } from '../../data/pages/price/price_massage/price_massage_info.js'
@@ -311,6 +314,46 @@ export default function PricePage() {
                                             <tr key={elem.id}>
                                                 <td>
                                                     {elem.id}
+                                                </td>
+                                                <td>
+                                                    {elem.cost}
+                                                </td>
+                                            </tr>
+                                        </>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </Table>
+                </Card.Body>
+            </Card>
+                            
+            {/* Kinezio Massage */}
+            <Card>
+                <Card.Header
+                    className={` card_component_header `}
+                >
+                    {price_kinezio_massage_info.header}
+                </Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        {price_kinezio_massage_info.text}
+                    </Card.Text>
+                    <Table responsive>
+                        <thead>
+                            <tr>
+                                <th>Продолжительность, минут</th>
+                                <th>Стоимость, рублей</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                price_kinezio_massage.map( elem => {
+                                    return (
+                                        <>
+                                            <tr key={elem.id}>
+                                                <td>
+                                                    {elem.duration}
                                                 </td>
                                                 <td>
                                                     {elem.cost}
