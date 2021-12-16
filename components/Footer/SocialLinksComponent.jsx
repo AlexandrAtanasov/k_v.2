@@ -28,7 +28,7 @@ export function SocialLinksComponent() {
                     </Button>
                     <Button 
                         as='a' 
-                        href="https://vk.com/kinezis59" 
+                        href="https://vk.com/kinezis_centr" 
                         target="_blank" 
                         variant="secondary"
                         className="social_links_color"
