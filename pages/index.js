@@ -7,6 +7,7 @@ import { MainLicensesComponent } from '../components/Main/MainLicensesComponent'
 import { HeadingComponent } from '../components/Heading/HeadingComponent'
 import { MainCentersComponent } from '../components/Main/MainCentersComponent'
 import { MainStartIntro } from '../components/Main/MainStartIntro'
+import { MainVideo } from '../components/Main/MainVideo'
 
 // import data
 import { carousel } from '../data/main/carousel/main_carousel'
@@ -17,7 +18,8 @@ export default function HomePage() {
     <MainLayout
       title='Кинезис'
       description='Кинезис - кинезитерапия в Перми'
-    >
+      >
+      <MainVideo/>
       <CarouselComponent
         data={carousel}
       />
