@@ -19,7 +19,6 @@ export default function HomePage() {
       title='Кинезис'
       description='Кинезис - кинезитерапия в Перми'
       >
-      <MainVideo/>
       <CarouselComponent
         data={carousel}
       />
