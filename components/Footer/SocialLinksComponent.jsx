@@ -24,7 +24,8 @@ export function SocialLinksComponent() {
                         variant="secondary"
                         className="social_links_color"
                     >
-                        <i className="fab fa-instagram"></i>
+                        {/* <i className="fab fa-instagram"></i> */}
+                        Inst
                     </Button>
                     <Button 
                         as='a' 
