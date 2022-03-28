@@ -36,7 +36,7 @@ export function SocialLinksComponent() {
                     >
                         <i className="fab fa-vk"></i>
                     </Button>
-                    <Button 
+                    {/* <Button 
                         as='a' 
                         href="https://www.facebook.com/kinezisperm/" 
                         target="_blank" 
@@ -44,7 +44,7 @@ export function SocialLinksComponent() {
                         className="social_links_color"
                     >
                         <i className="fab fa-facebook"></i>
-                    </Button>
+                    </Button> */}
                 </ButtonGroup>
             </form>
         </Container>
